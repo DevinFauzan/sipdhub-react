@@ -1,0 +1,11 @@
+/* Footer.css */
+.footer {
+  background-color: #f1f1f1; /* Light background for footer */
+  color: black; /* Text color */
+  text-align: center; /* Center align footer text */
+  padding: 10px 0; /* Padding for footer */
+  position: relative; /* Position for footers */
+  bottom: 0; /* Align to bottom */
+  width: calc(100% - 240px); /* Adjust width to account for the sidebar */
+  left: 240px; /* Ensure it right-aligns */
+}

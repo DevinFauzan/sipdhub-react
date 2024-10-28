@@ -1,0 +1,11 @@
+.dashboard {
+    display: flex; /* Create a flexible layout */
+    height: 100vh; /* Full height of the viewport */
+  }
+  
+  .main-content {
+    flex: 1; /* Fill remaining space */
+    padding-left: 220px; /* Space for sidebar */
+    overflow: auto; /* Add scroll if content overflows */
+  }
+  

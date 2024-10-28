@@ -1,0 +1,21 @@
+/* Header.css */
+.header {
+  display: flex; /* Align items in a row */
+  align-items: center; /* Center items vertically */
+  background-color: #007bff; /* Header background color */
+  padding: 10px 20px; /* Padding around the header */
+  color: white; /* White text */
+  width: calc(100% - 240px); /* Adjust width to account for the sidebar - change 240 to the width of your sidebar */
+  position: relative; /* Adjust positioning if needed */
+  left: 240px; /* Ensure it appears to the right of the sidebar */
+}
+
+.header-logo {
+  height: 50px; /* Height of the header logo */
+  margin-right: 20px; /* Space between logo and title */
+}
+
+.header-title {
+  font-size: 1.5em; /* Font size for the header title */
+  flex: 1; /* Take available space */
+}

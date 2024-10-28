@@ -1,0 +1,116 @@
+/* General reset for padding, margin, and box sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .login-background {
+    display: flex; /* Create a flexible layout */
+    height: 100vh; /* Full viewport height */
+    background: linear-gradient(to right, #4ca1af, #c4e0e5); /* Gradient background */
+  }
+  
+  .login-left {
+    flex: 1; /* Left section for the graphic */
+    position: relative; /* Needed to position child elements absolutely */
+    display: flex;
+    align-items: start; /* Align items to the start of the flex container */
+    justify-content: center; /* Center graphic horizontally */
+    padding: 50px; /* Add some padding */
+  }
+  
+  .top-left-image {
+    position: absolute; /* Positioning element absolutely within the left section */
+    top: 20px; /* Distance from the top */
+    left: 20px; /* Distance from the left */
+    max-width: 80px; /* Set a max width for the top-left image */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .login-graphic {
+    margin: auto;
+    max-width: 100%; /* Keep graphic responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .login-container {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center items */
+    justify-content: center; /* Center items */
+    height: 80vh; /* Full height */
+    color: black; /* Text color */
+    background-color: white; /* Clean white background */
+    padding: 20px;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 400px; /* Limit width */
+    margin: auto; /* Center the container */
+    margin-right: 50px;
+  }
+  
+  .login-header {
+    text-align: center; /* Center align header text */
+    margin-bottom: 30px; /* Space below header */
+  }
+  
+  .login-logo {
+    height: 100px; /* Logo size */
+  }
+  
+  .login-title {
+    font-weight: bold;
+    font-size: 2em; /* Increased font size */
+    margin: 10px 0; /* Margin above and below title */
+  }
+  
+  .login-subtitle {
+    font-size: 1.1em; /* Subtitle size */
+    margin-bottom: 5px; /* Space below subtitles */
+  }
+  
+  .login-form-container {
+    background: rgba(255, 255, 255, 0.95); /* Slight transparency for the form background */
+    padding: 30px; /* Inner padding for the form area */
+    border-radius: 10px; /* Rounded corners */
+    width: 100%; /* Full width of the container */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for form */
+  }
+  
+  .form-group {
+    margin-bottom: 15px; /* Space between input fields */
+  }
+  
+  .form-label {
+    display: block; /* Label block display */
+    margin-bottom: 5px; /* Space below label */
+    font-weight: bold; /* Bold labels for visibility */
+  }
+  
+  .form-input {
+    width: 100%; /* Full width input fields */
+    padding: 10px; /* Padding for better UX */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #ccc; /* Light border color for input */
+    outline: none; /* Remove outline */
+    font-size: 1em; /* Font size for input */
+    color: black;
+    background-color: white;
+  }
+  
+  .login-button {
+    width: 100%; /* Full width button */
+    padding: 10px; /* Padding inside the button */
+    background-color: #007bff; /* Primary button color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth hover effect */
+  }
+  
+  .login-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+  
