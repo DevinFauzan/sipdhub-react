@@ -8,8 +8,7 @@ const Header: React.FC = () => {
       <button id="sidebarToggleTop" className="btn btn-link d-md-none rounded-circle mr-3">
         <i className="fa fa-bars"></i>
       </button>
-
-      <ul className="navbar-nav ml-auto">
+      <ul className="navbar-nav ml-auto  ">
         <li className="nav-item dropdown no-arrow d-sm-none">
           <a className="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i className="fas fa-search fa-fw"></i>

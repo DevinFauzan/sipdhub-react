@@ -1,3 +1,2209 @@
 body {
     font-family: 'Open Sans', sans-serif;
+    font-family: 'Work Sans', sans-serif;
 }
+
+.glass-effect {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Warna putih dengan transparansi */
+    backdrop-filter: blur(10px);
+    /* Efek blur di belakang */
+    border-radius: 10px;
+    /* Sudut melengkung */
+    padding: 20px;
+    /* Ruang di dalam elemen */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    /* Bayangan untuk kedalaman */
+}
+
+.diagonal-gradient {
+    height: 100vh;
+    /* Tinggi elemen */
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    /* Dari merah muda ke oranye */
+}
+
+.fira-sans-thin {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.fira-sans-extralight {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.fira-sans-light {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.fira-sans-regular {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.fira-sans-medium {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.fira-sans-semibold {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.fira-sans-bold {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.fira-sans-extrabold {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.fira-sans-black {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.fira-sans-thin-italic {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.fira-sans-extralight-italic {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.fira-sans-light-italic {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.fira-sans-regular-italic {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.fira-sans-medium-italic {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.fira-sans-semibold-italic {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.fira-sans-bold-italic {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.fira-sans-extrabold-italic {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.fira-sans-black-italic {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+
+.nunito-thin {
+    font-family: "Nunito", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.nunito-extralight {
+    font-family: "Nunito", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.nunito-light {
+    font-family: "Nunito", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.nunito-regular {
+    font-family: "Nunito", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.nunito-medium {
+    font-family: "Nunito", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.nunito-semibold {
+    font-family: "Nunito", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.nunito-bold {
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.nunito-extrabold {
+    font-family: "Nunito", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.nunito-black {
+    font-family: "Nunito", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.nunito-thin-italic {
+    font-family: "Nunito", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.nunito-extralight-italic {
+    font-family: "Nunito", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.nunito-light-italic {
+    font-family: "Nunito", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.nunito-regular-italic {
+    font-family: "Nunito", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.nunito-medium-italic {
+    font-family: "Nunito", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.nunito-semibold-italic {
+    font-family: "Nunito", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.nunito-bold-italic {
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.nunito-extrabold-italic {
+    font-family: "Nunito", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.nunito-black-italic {
+    font-family: "Nunito", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+
+
+
+
+/** Custom Grid Container **/
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 2fr);
+    /* 6 kolom */
+    // gap: 10px; /* Jarak antar item */
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: 10px;
+    // margin: -10px;
+}
+
+.grid-item {
+    // background-color: #4CAF50; /* Warna latar belakang */
+    color: white;
+    /* Warna teks */
+    padding: 20px;
+    /* Padding */
+    text-align: center;
+    /* Teks di tengah */
+}
+
+/* Media Query untuk responsivitas */
+@media (max-width: 1200px) {
+    .grid-container {
+        grid-template-columns: repeat(5, 1fr);
+        /* 5 kolom */
+    }
+}
+
+@media (max-width: 992px) {
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+        /* 4 kolom */
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 kolom */
+    }
+}
+
+/** End Custom Grid Container **/
+
+
+.multi-dashboard-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.dashboard-grid {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    background: #F9F9F9;
+
+    // height: 100vh; /* Tinggi elemen */
+    // background: linear-gradient(45deg, #ff7e5f, #feb47b); /* Dari merah muda ke oranye */
+}
+
+.dashboard-title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.widget-grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: -10px;
+}
+
+.widget-title {
+    margin-top: 30;
+    font-size: 16px;
+}
+
+.widget-grid>div {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.widget-title-wrapper {
+    color: #333;
+}
+
+.widget-icon {
+    transition: all 0.3s ease;
+}
+
+.widget-icon.icon-style-1 {
+    background: var(--tw-color-sky-50);
+    color: var(--tw-color-blue-500);
+}
+
+.widget-icon.icon-style-1:hover {
+    background: var(--tw-color-sky-100);
+    color: var(--tw-color-blue-600);
+}
+
+.col-4 {
+    width: 33.333%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-8 {
+    width: 66.666%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+
+    .col-4,
+    .col-6,
+    .col-8 {
+        width: 100%;
+    }
+}
+
+
+
+
+/** Custom Gap untuk flex & grd container **/
+/* Kelas untuk gap dari 1 hingga 10 */
+.gap-1 {
+    gap: 0.25rem;
+    /* 4px */
+}
+
+.gap-2 {
+    gap: 0.5rem;
+    /* 8px */
+}
+
+.gap-3 {
+    gap: 0.75rem;
+    /* 12px */
+}
+
+.gap-4 {
+    gap: 1rem;
+    /* 16px */
+}
+
+.gap-5 {
+    gap: 1.25rem;
+    /* 20px */
+}
+
+.gap-6 {
+    gap: 1.5rem;
+    /* 24px */
+}
+
+.gap-7 {
+    gap: 1.75rem;
+    /* 28px */
+}
+
+.gap-8 {
+    gap: 2rem;
+    /* 32px */
+}
+
+.gap-9 {
+    gap: 2.25rem;
+    /* 36px */
+}
+
+.gap-10 {
+    gap: 2.5rem;
+    /* 40px */
+}
+
+/** End Custom Gap **/
+
+
+/** Custom Padding **/
+/* Kelas untuk padding dari 1 hingga 15 */
+.p-1 {
+    padding: 0.25rem;
+    /* 4px */
+}
+
+.p-2 {
+    padding: 0.5rem;
+    /* 8px */
+}
+
+.p-3 {
+    padding: 0.75rem;
+    /* 12px */
+}
+
+.p-4 {
+    padding: 1rem;
+    /* 16px */
+}
+
+.p-5 {
+    padding: 1.25rem;
+    /* 20px */
+}
+
+.p-6 {
+    padding: 1.5rem;
+    /* 24px */
+}
+
+.p-7 {
+    padding: 1.75rem;
+    /* 28px */
+}
+
+.p-8 {
+    padding: 2rem;
+    /* 32px */
+}
+
+.p-9 {
+    padding: 2.25rem;
+    /* 36px */
+}
+
+.p-10 {
+    padding: 2.5rem;
+    /* 40px */
+}
+
+.p-11 {
+    padding: 2.75rem;
+    /* 44px */
+}
+
+.p-12 {
+    padding: 3rem;
+    /* 48px */
+}
+
+.p-13 {
+    padding: 3.25rem;
+    /* 52px */
+}
+
+.p-14 {
+    padding: 3.5rem;
+    /* 56px */
+}
+
+.p-15 {
+    padding: 3.75rem;
+    /* 60px */
+}
+
+
+/* Padding Top */
+.pt-1 {
+    padding-top: 0.25rem;
+    /* 4px */
+}
+
+.pt-2 {
+    padding-top: 0.5rem;
+    /* 8px */
+}
+
+.pt-3 {
+    padding-top: 0.75rem;
+    /* 12px */
+}
+
+.pt-4 {
+    padding-top: 1rem;
+    /* 16px */
+}
+
+.pt-5 {
+    padding-top: 1.25rem;
+    /* 20px */
+}
+
+.pt-6 {
+    padding-top: 1.5rem;
+    /* 24px */
+}
+
+.pt-7 {
+    padding-top: 1.75rem;
+    /* 28px */
+}
+
+.pt-8 {
+    padding-top: 2rem;
+    /* 32px */
+}
+
+.pt-9 {
+    padding-top: 2.25rem;
+    /* 36px */
+}
+
+.pt-10 {
+    padding-top: 2.5rem;
+    /* 40px */
+}
+
+.pt-11 {
+    padding-top: 2.75rem;
+    /* 44px */
+}
+
+.pt-12 {
+    padding-top: 3rem;
+    /* 48px */
+}
+
+.pt-13 {
+    padding-top: 3.25rem;
+    /* 52px */
+}
+
+.pt-14 {
+    padding-top: 3.5rem;
+    /* 56px */
+}
+
+.pt-15 {
+    padding-top: 3.75rem;
+    /* 60px */
+}
+
+/* Padding Right */
+.pr-1 {
+    padding-right: 0.25rem;
+    /* 4px */
+}
+
+.pr-2 {
+    padding-right: 0.5rem;
+    /* 8px */
+}
+
+.pr-3 {
+    padding-right: 0.75rem;
+    /* 12px */
+}
+
+.pr-4 {
+    padding-right: 1rem;
+    /* 16px */
+}
+
+.pr-5 {
+    padding-right: 1.25rem;
+    /* 20px */
+}
+
+.pr-6 {
+    padding-right: 1.5rem;
+    /* 24px */
+}
+
+.pr-7 {
+    padding-right: 1.75rem;
+    /* 28px */
+}
+
+.pr-8 {
+    padding-right: 2rem;
+    /* 32px */
+}
+
+.pr-9 {
+    padding-right: 2.25rem;
+    /* 36px */
+}
+
+.pr-10 {
+    padding-right: 2.5rem;
+    /* 40px */
+}
+
+.pr-11 {
+    padding-right: 2.75rem;
+    /* 44px */
+}
+
+.pr-12 {
+    padding-right: 3rem;
+    /* 48px */
+}
+
+.pr-13 {
+    padding-right: 3.25rem;
+    /* 52px */
+}
+
+.pr-14 {
+    padding-right: 3.5rem;
+    /* 56px */
+}
+
+.pr-15 {
+    padding-right: 3.75rem;
+    /* 60px */
+}
+
+/* Padding Bottom */
+.pb-1 {
+    padding-bottom: 0.25rem;
+    /* 4px */
+}
+
+.pb-2 {
+    padding-bottom: 0.5rem;
+    /* 8px */
+}
+
+.pb-3 {
+    padding-bottom: 0.75rem;
+    /* 12px */
+}
+
+.pb-4 {
+    padding-bottom: 1rem;
+    /* 16px */
+}
+
+.pb-5 {
+    padding-bottom: 1.25rem;
+    /* 20px */
+}
+
+.pb-6 {
+    padding-bottom: 1.5rem;
+    /* 24px */
+}
+
+.pb-7 {
+    padding-bottom: 1.75rem;
+    /* 28px */
+}
+
+.pb-8 {
+    padding-bottom: 2rem;
+    /* 32px */
+}
+
+.pb-9 {
+    padding-bottom: 2.25rem;
+    /* 36px */
+}
+
+.pb-10 {
+    padding-bottom: 2.5rem;
+    /* 40px */
+}
+
+.pb-11 {
+    padding-bottom: 2.75rem;
+    /* 44px */
+}
+
+.pb-12 {
+    padding-bottom: 3rem;
+    /* 48px */
+}
+
+.pb-13 {
+    padding-bottom: 3.25rem;
+    /* 52px */
+}
+
+.pb-14 {
+    padding-bottom: 3.5rem;
+    /* 56px */
+}
+
+.pb-15 {
+    padding-bottom: 3.75rem;
+    /* 60px */
+}
+
+/* Padding Left */
+.pl-1 {
+    padding-left: 0.25rem;
+    /* 4px */
+}
+
+.pl-2 {
+    padding-left: 0.5rem;
+    /* 8px */
+}
+
+.pl-3 {
+    padding-left: 0.75rem;
+    /* 12px */
+}
+
+.pl-4 {
+    padding-left: 1rem;
+    /*  16px */
+}
+
+.pl-5 {
+    padding-left: 1.25rem;
+    /* 20px */
+}
+
+.pl-6 {
+    padding-left: 1.5rem;
+    /* 24px */
+}
+
+.pl-7 {
+    padding-left: 1.75rem;
+    /* 28px */
+}
+
+.pl-8 {
+    padding-left: 2rem;
+    /* 32px */
+}
+
+.pl-9 {
+    padding-left: 2.25rem;
+    /* 36px */
+}
+
+.pl-10 {
+    padding-left: 2.5rem;
+    /* 40px */
+}
+
+.pl-11 {
+    padding-left: 2.75rem;
+    /* 44px */
+}
+
+.pl-12 {
+    padding-left: 3rem;
+    /* 48px */
+}
+
+.pl-13 {
+    padding-left: 3.25rem;
+    /* 52px */
+}
+
+.pl-14 {
+    padding-left: 3.5rem;
+    /* 56px */
+}
+
+.pl-15 {
+    padding-left: 3.75rem;
+    /* 60px */
+}
+
+/* Padding Sumbu Y (Vertikal) */
+.py-1 {
+    padding-top: 0.25rem;
+    /* 4px */
+    padding-bottom: 0.25rem;
+    /* 4px */
+}
+
+.py-2 {
+    padding-top: 0.5rem;
+    /* 8px */
+    padding-bottom: 0.5rem;
+    /* 8px */
+}
+
+.py-3 {
+    padding-top: 0.75rem;
+    /* 12px */
+    padding-bottom: 0.75rem;
+    /* 12px */
+}
+
+.py-4 {
+    padding-top: 1rem;
+    /* 16px */
+    padding-bottom: 1rem;
+    /* 16px */
+}
+
+.py-5 {
+    padding-top: 1.25rem;
+    /* 20px */
+    padding-bottom: 1.25rem;
+    /* 20px */
+}
+
+.py-6 {
+    padding-top: 1.5rem;
+    /* 24px */
+    padding-bottom: 1.5rem;
+    /* 24px */
+}
+
+.py-7 {
+    padding-top: 1.75rem;
+    /* 28px */
+    padding-bottom: 1.75rem;
+    /* 28px */
+}
+
+.py-8 {
+    padding-top: 2rem;
+    /* 32px */
+    padding-bottom: 2rem;
+    /* 32px */
+}
+
+.py-9 {
+    padding-top: 2.25rem;
+    /* 36px */
+    padding-bottom: 2.25rem;
+    /* 36px */
+}
+
+.py-10 {
+    padding-top: 2.5rem;
+    /* 40px */
+    padding-bottom: 2.5rem;
+    /* 40px */
+}
+
+.py-11 {
+    padding-top: 2.75rem;
+    /* 44px */
+    padding-bottom: 2.75rem;
+    /* 44px */
+}
+
+.py-12 {
+    padding-top: 3rem;
+    /* 48px */
+    padding-bottom: 3rem;
+    /* 48px */
+}
+
+.py-13 {
+    padding-top: 3.25rem;
+    /* 52px */
+    padding-bottom: 3.25rem;
+    /* 52px */
+}
+
+.py-14 {
+    padding-top: 3.5rem;
+    /* 56px */
+    padding-bottom: 3.5rem;
+    /* 56px */
+}
+
+.py-15 {
+    padding-top: 3.75rem;
+    /* 60px */
+    padding-bottom: 3.75rem;
+    /* 60px */
+}
+
+/* Padding Sumbu X (Horizontal) */
+.px-1 {
+    padding-left: 0.25rem;
+    /* 4px */
+    padding-right: 0.25rem;
+    /* 4px */
+}
+
+.px-2 {
+    padding-left: 0.5rem;
+    /* 8px */
+    padding-right: 0.5rem;
+    /* 8px */
+}
+
+.px-3 {
+    padding-left: 0.75rem;
+    /* 12px */
+    padding-right: 0.75rem;
+    /* 12px */
+}
+
+.px-4 {
+    padding-left: 1rem;
+    /* 16px */
+    padding-right: 1rem;
+    /* 16px */
+}
+
+.px-5 {
+    padding-left: 1.25rem;
+    /* 20px */
+    padding-right: 1.25rem;
+    /* 20px */
+}
+
+.px-6 {
+    padding-left: 1.5rem;
+    /* 24px */
+    padding-right: 1.5rem;
+    /* 24px */
+}
+
+.px-7 {
+    padding-left: 1.75rem;
+    /* 28px */
+    padding-right: 1.75rem;
+    /* 28px */
+}
+
+.px-8 {
+    padding-left: 2rem;
+    /* 32px */
+    padding-right: 2rem;
+    /* 32px */
+}
+
+.px-9 {
+    padding-left: 2.25rem;
+    /* 36px */
+    padding-right: 2.25rem;
+    /* 36px */
+}
+
+.px-10 {
+    padding-left: 2.5rem;
+    /* 40px */
+    padding-right: 2.5rem;
+    /* 40px */
+}
+
+.px-11 {
+    padding-left: 2.75rem;
+    /* 44px */
+    padding-right: 2.75rem;
+    /* 44px */
+}
+
+.px-12 {
+    padding-left: 3rem;
+    /* 48px */
+    padding-right: 3rem;
+    /* 48px */
+}
+
+.px-13 {
+    padding-left: 3.25rem;
+    /*  52px */
+    padding-right: 3.25rem;
+    /* 52px */
+}
+
+.px-14 {
+    padding-left: 3.5rem;
+    /* 56px */
+    padding-right: 3.5rem;
+    /* 56px */
+}
+
+.px-15 {
+    padding-left: 3.75rem;
+    /* 60px */
+    padding-right: 3.75rem;
+    /* 60px */
+}
+
+/** End Custom Padding **/
+
+
+/** Custom Margin **/
+
+.m-1 {
+    margin: 0.25rem;
+    /* 4px */
+}
+
+.m-2 {
+    margin: 0.5rem;
+    /* 8px */
+}
+
+.m-3 {
+    margin: 0.75rem;
+    /* 12px */
+}
+
+.m-4 {
+    margin: 1rem;
+    /* 16px */
+}
+
+.m-5 {
+    margin: 1.25rem;
+    /* 20px */
+}
+
+.m-6 {
+    margin: 1.5rem;
+    /* 24px */
+}
+
+.m-7 {
+    margin: 1.75rem;
+    /* 28px */
+}
+
+.m-8 {
+    margin: 2rem;
+    /* 32px */
+}
+
+.m-9 {
+    margin: 2.25rem;
+    /* 36px */
+}
+
+.m-10 {
+    margin: 2.5rem;
+    /* 40px */
+}
+
+.m-11 {
+    margin: 2.75rem;
+    /* 44px */
+}
+
+.m-12 {
+    margin: 3rem;
+    /* 48px */
+}
+
+.m-13 {
+    margin: 3.25rem;
+    /* 52px */
+}
+
+.m-14 {
+    margin: 3.5rem;
+    /* 56px */
+}
+
+.m-15 {
+    margin: 3.75rem;
+    /* 60px */
+}
+
+/* Margin Top */
+.mt-1 {
+    margin-top: 0.25rem;
+    /* 4px */
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+    /* 8px */
+}
+
+.mt-3 {
+    margin-top: 0.75rem;
+    /* 12px */
+}
+
+.mt-4 {
+    margin-top: 1rem;
+    /* 16px */
+}
+
+.mt-5 {
+    margin-top: 1.25rem;
+    /* 20px */
+}
+
+.mt-6 {
+    margin-top: 1.5rem;
+    /* 24px */
+}
+
+.mt-7 {
+    margin-top: 1.75rem;
+    /* 28px */
+}
+
+.mt-8 {
+    margin-top: 2rem;
+    /* 32px */
+}
+
+.mt-9 {
+    margin-top: 2.25rem;
+    /* 36px */
+}
+
+.mt-10 {
+    margin-top: 2.5rem;
+    /* 40px */
+}
+
+.mt-11 {
+    margin-top: 2.75rem;
+    /* 44px */
+}
+
+.mt-12 {
+    margin-top: 3rem;
+    /* 48px */
+}
+
+.mt-13 {
+    margin-top: 3.25rem;
+    /* 52px */
+}
+
+.mt-14 {
+    margin-top: 3.5rem;
+    /* 56px */
+}
+
+.mt-15 {
+    margin-top: 3.75rem;
+    /* 60px */
+}
+
+/* Margin Right */
+.mr-1 {
+    margin-right: 0.25rem;
+    /* 4px */
+}
+
+.mr-2 {
+    margin-right: 0.5rem;
+    /* 8px */
+}
+
+.mr-3 {
+    margin-right: 0.75rem;
+    /* 12px */
+}
+
+.mr-4 {
+    margin-right: 1rem;
+    /* 16px */
+}
+
+.mr-5 {
+    margin-right: 1.25rem;
+    /* 20px */
+}
+
+.mr-6 {
+    margin-right: 1.5rem;
+    /* 24px */
+}
+
+.mr-7 {
+    margin-right: 1.75rem;
+    /* 28px */
+}
+
+.mr-8 {
+    margin-right: 2rem;
+    /* 32px */
+}
+
+.mr-9 {
+    margin-right: 2.25rem;
+    /* 36px */
+}
+
+.mr-10 {
+    margin-right: 2.5rem;
+    /* 40px */
+}
+
+.mr-11 {
+    margin-right: 2.75rem;
+    /* 44px */
+}
+
+.mr-12 {
+    margin-right: 3rem;
+    /* 48px */
+}
+
+.mr-13 {
+    margin-right: 3.25rem;
+    /* 52px */
+}
+
+.mr-14 {
+    margin-right: 3.5rem;
+    /* 56px */
+}
+
+.mr-15 {
+    margin-right: 3.75rem;
+    /* 60px */
+}
+
+/* Margin Bottom */
+.mb-1 {
+    margin-bottom: 0.25rem;
+    /* 4px */
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem;
+    /* 8px */
+}
+
+.mb-3 {
+    margin-bottom: 0.75rem;
+    /* 12px */
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+    /* 16px */
+}
+
+.mb-5 {
+    margin-bottom: 1.25rem;
+    /* 20px */
+}
+
+.mb-6 {
+    margin-bottom: 1.5rem;
+    /* 24px */
+}
+
+.mb-7 {
+    margin-bottom: 1.75rem;
+    /* 28px */
+}
+
+.mb-8 {
+    margin-bottom: 2rem;
+    /* 32px */
+}
+
+.mb-9 {
+    margin-bottom: 2.25rem;
+    /* 36px */
+}
+
+.mb-10 {
+    margin-bottom: 2.5rem;
+    /* 40px */
+}
+
+.mb-11 {
+    margin-bottom: 2.75rem;
+    /* 44px */
+}
+
+.mb-12 {
+    margin-bottom: 3rem;
+    /* 48px */
+}
+
+.mb-13 {
+    margin-bottom: 3.25rem;
+    /* 52px */
+}
+
+.mb-14 {
+    margin-bottom: 3.5rem;
+    /* 56px */
+}
+
+.mb-15 {
+    margin-bottom: 3.75rem;
+    /* 60px */
+}
+
+/* Margin Left */
+.ml-1 {
+    margin-left: 0.25rem;
+    /* 4px */
+}
+
+.ml-2 {
+    margin-left: 0.5rem;
+    /* 8px */
+}
+
+.ml-3 {
+    margin-left: 0.75rem;
+    /* 12px */
+}
+
+.ml-4 {
+    margin-left: 1rem;
+    /* 16px */
+}
+
+.ml-5 {
+    margin-left: 1.25rem;
+    /* 20px */
+}
+
+.ml-6 {
+    margin-left: 1.5rem;
+    /* 24px */
+}
+
+.ml-7 {
+    margin-left: 1.75rem;
+    /* 28px */
+}
+
+.ml-8 {
+    margin-left: 2rem;
+    /* 32px */
+}
+
+.ml-9 {
+    margin-left: 2.25rem;
+    /* 36px */
+}
+
+.ml-10 {
+    margin-left: 2.5rem;
+    /* 40px */
+}
+
+.ml-11 {
+    margin-left: 2.75rem;
+    /* 44px */
+}
+
+.ml-12 {
+    margin-left: 3rem;
+    /* 48px */
+}
+
+.ml-13 {
+    margin-left: 3.25rem;
+    /* 52px */
+}
+
+.ml-14 {
+    margin-left: 3.5rem;
+    /* 56px */
+}
+
+.ml-15 {
+    margin-left: 3.75rem;
+    /* 60px */
+}
+
+/* Margin Sumbu Y (Vertikal) */
+.my-1 {
+    margin-top: 0.25rem;
+    /* 4px */
+    margin-bottom: 0.25rem;
+    /* 4px */
+}
+
+.my-2 {
+    margin-top: 0.5rem;
+    /* 8px */
+    margin-bottom: 0.5rem;
+    /* 8px */
+}
+
+.my-3 {
+    margin-top: 0.75rem;
+    /* 12px */
+    margin-bottom: 0.75rem;
+    /* 12px */
+}
+
+.my-4 {
+    margin-top: 1rem;
+    /* 16px */
+    margin-bottom: 1rem;
+    /* 16px */
+}
+
+.my-5 {
+    margin-top: 1.25rem;
+    /* 20px */
+    margin-bottom: 1.25rem;
+    /* 20px */
+}
+
+.my-6 {
+    margin-top: 1.5rem;
+    /* 24px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+}
+
+.my-7 {
+    margin-top: 1.75rem;
+    /* 28px */
+    margin-bottom: 1.75rem;
+    /* 28px */
+}
+
+.my-8 {
+    margin-top: 2rem;
+    /* 32px */
+    margin-bottom: 2rem;
+    /* 32px */
+}
+
+.my-9 {
+    margin-top: 2.25rem;
+    /* 36px */
+    margin-bottom: 2.25rem;
+    /* 36px */
+}
+
+.my-10 {
+    margin-top: 2.5rem;
+    /* 40px */
+    margin-bottom: 2.5rem;
+    /* 40px */
+}
+
+.my-11 {
+    margin-top: 2.75rem;
+    /* 44px */
+    margin-bottom: 2.75rem;
+    /* 44px */
+}
+
+.my-12 {
+    margin-top: 3rem;
+    /* 48px */
+    margin-bottom: 3rem;
+    /* 48px */
+}
+
+.my-13 {
+    margin-top: 3.25rem;
+    /* 52px */
+    margin-bottom: 3.25rem;
+    /* 52px */
+}
+
+.my-14 {
+    margin-top: 3.5rem;
+    /* 56px */
+    margin-bottom: 3.5rem;
+    /* 56px */
+}
+
+.my-15 {
+    margin-top: 3.75rem;
+    /* 60px */
+    margin-bottom: 3.75rem;
+    /* 60px */
+}
+
+/* Margin Sumbu X (Horizontal) */
+.mx-1 {
+    margin-left: 0.25rem;
+    /* 4px */
+    margin-right: 0.25rem;
+    /* 4px */
+}
+
+.mx-2 {
+    margin-left: 0.5rem;
+    /* 8px */
+    margin-right: 0.5rem;
+    /* 8px */
+}
+
+.mx-3 {
+    margin-left: 0.75rem;
+    /* 12px */
+    margin-right: 0.75rem;
+    /* 12px */
+}
+
+.mx-4 {
+    margin-left: 1rem;
+    /* 16px */
+    margin-right: 1rem;
+    /* 16px */
+}
+
+.mx-5 {
+    margin-left: 1.25rem;
+    /* 20px */
+    margin-right: 1.25rem;
+    /* 20px */
+}
+
+.mx-6 {
+    margin-left: 1.5rem;
+    /* 24px */
+    margin-right: 1.5rem;
+    /* 24px */
+}
+
+.mx-7 {
+    margin-left: 1.75rem;
+    /* 28px */
+    margin-right: 1.75rem;
+    /* 28px */
+}
+
+.mx-8 {
+    margin-left: 2rem;
+    /* 32px */
+    margin-right: 2rem;
+    /* 32px */
+}
+
+.mx-9 {
+    margin-left: 2.25rem;
+    /* 36px */
+    margin-right: 2.25rem;
+    /* 36px */
+}
+
+.mx-10 {
+    margin-left: 2.5rem;
+    /* 40px */
+    margin-right: 2.5rem;
+    /* 40px */
+}
+
+.mx-11 {
+    margin-left: 2.75rem;
+    /* 44px */
+    margin-right: 2.75rem;
+    /* 44px */
+}
+
+.mx-12 {
+    margin-left: 3rem;
+    /* 48px */
+    margin-right: 3rem;
+    /* 48px */
+}
+
+.mx-13 {
+    margin-left: 3.25rem;
+    /* 52px */
+    margin-right: 3.25rem;
+    /* 52px */
+}
+
+.mx-14 {
+    margin-left: 3.5rem;
+    /* 56px */
+    margin-right: 3.5rem;
+    /* 56px */
+}
+
+.mx-15 {
+    margin-left: 3.75rem;
+    /* 60px */
+    margin-right: 3.75rem;
+    /* 60px */
+}
+
+/** End Margin **/
+
+
+/* Rounded Classes */
+/* Rounded Classes */
+.rounded-1 {
+    border-radius: 0.5rem;
+    /* 8px */
+}
+
+.rounded-2 {
+    border-radius: 0.75rem;
+    /* 12px */
+}
+
+.rounded-3 {
+    border-radius: 1rem;
+    /* 16px */
+}
+
+.rounded-4 {
+    border-radius: 1.25rem;
+    /* 20px */
+}
+
+.rounded-5 {
+    border-radius: 1.5rem;
+    /* 24px */
+}
+
+.rounded-6 {
+    border-radius: 1.75rem;
+    /* 28px */
+}
+
+.rounded-7 {
+    border-radius: 2rem;
+    /* 32px */
+}
+
+.rounded-8 {
+    border-radius: 2.5rem;
+    /* 40px */
+}
+
+.rounded-9 {
+    border-radius: 3rem;
+    /* 48px */
+}
+
+.rounded-10 {
+    border-radius: 3.5rem;
+    /* 56px */
+}
+
+.rounded-30 {
+    border-radius: 30px;
+}
+
+/** CSS untuk Sudut **/
+/* Sudut Kanan Atas */
+.rounded-top-right-1 {
+    border-top-right-radius: 0.5rem;
+}
+
+.rounded-top-right-2 {
+    border-top-right-radius: 0.75rem;
+}
+
+.rounded-top-right-3 {
+    border-top-right-radius: 1rem;
+}
+
+.rounded-top-right-4 {
+    border-top-right-radius: 1.25rem;
+}
+
+.rounded-top-right-5 {
+    border-top-right-radius: 1.5rem;
+}
+
+.rounded-top-right-6 {
+    border-top-right-radius: 1.75rem;
+}
+
+.rounded-top-right-7 {
+    border-top-right-radius: 2rem;
+}
+
+.rounded-top-right-8 {
+    border-top-right-radius: 2.5rem;
+}
+
+.rounded-top-right-9 {
+    border-top-right-radius: 3rem;
+}
+
+.rounded-top-right-10 {
+    border-top-right-radius: 3.5rem;
+}
+
+/* Sudut Kanan Bawah */
+.rounded-bottom-right-1 {
+    border-bottom-right-radius: 0.5rem;
+}
+
+.rounded-bottom-right-2 {
+    border-bottom-right-radius: 0.75rem;
+}
+
+.rounded-bottom-right-3 {
+    border-bottom-right-radius: 1rem;
+}
+
+.rounded-bottom-right-4 {
+    border-bottom-right-radius: 1.25rem;
+}
+
+.rounded-bottom-right-5 {
+    border-bottom-right-radius: 1.5rem;
+}
+
+.rounded-bottom-right-6 {
+    border-bottom-right-radius: 1.75rem;
+}
+
+.rounded-bottom-right-7 {
+    border-bottom-right-radius: 2rem;
+}
+
+.rounded-bottom-right-8 {
+    border-bottom-right-radius: 2.5rem;
+}
+
+.rounded-bottom-right-9 {
+    border-bottom-right-radius: 3rem;
+}
+
+.rounded-bottom-right-10 {
+    border-bottom-right-radius: 3.5rem;
+}
+
+/* Sudut Kiri Bawah */
+.rounded-bottom-left-1 {
+    border-bottom-left-radius: 0.5rem;
+}
+
+.rounded-bottom-left-2 {
+    border-bottom-left-radius: 0.75rem;
+}
+
+.rounded-bottom-left-3 {
+    border-bottom-left-radius: 1rem;
+}
+
+.rounded-bottom-left-4 {
+    border-bottom-left-radius: 1.25rem;
+}
+
+.rounded-bottom-left-5 {
+    border-bottom-left-radius: 1.5rem;
+}
+
+.rounded-bottom-left-6 {
+    border-bottom-left-radius: 1.75rem;
+}
+
+.rounded-bottom-left-7 {
+    border-bottom-left-radius: 2rem;
+}
+
+.rounded-bottom-left-8 {
+    border-bottom-left-radius: 2.5rem;
+}
+
+.rounded-bottom-left-9 {
+    border-bottom-left-radius: 3rem;
+}
+
+.rounded-bottom-left-10 {
+    border-bottom-left-radius: 3.5rem;
+}
+
+/* Sudut Kiri Atas */
+.rounded-top-left-1 {
+    border-top-left-radius: 0.5rem;
+}
+
+.rounded-top-left-2 {
+    border-top-left-radius: 0.75rem;
+}
+
+.rounded-top-left-3 {
+    border-top-left-radius: 1rem;
+}
+
+.rounded-top-left-4 {
+    border-top-left-radius: 1.25rem;
+}
+
+.rounded-top-left-5 {
+    border-top-left-radius: 1.5rem;
+}
+
+.rounded-top-left-6 {
+    border-top-left-radius: 1.75rem;
+}
+
+.rounded-top-left-7 {
+    border-top-left-radius: 2rem;
+}
+
+.rounded-top-left-8 {
+    border-top-left-radius: 2.5rem;
+}
+
+.rounded-top-left-9 {
+    border-top-left-radius: 3rem;
+}
+
+.rounded-top-left-10 {
+    border-top-left-radius: 3.5rem;
+}
+
+/** CSS untuk Sisi **/
+/* Sisi Atas */
+.rounded-top-1 {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.rounded-top-2 {
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+}
+
+.rounded-top-3 {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.rounded-top-4 {
+    border-top-left-radius: 1.25rem;
+    border-top-right-radius: 1.25rem;
+}
+
+.rounded-top-5 {
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+}
+
+.rounded-top-6 {
+    border-top-left-radius: 1.75rem;
+    border-top-right-radius: 1.75rem;
+}
+
+.rounded-top-7 {
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+}
+
+.rounded-top-8 {
+    border-top-left-radius: 2.5rem;
+    border-top-right-radius: 2.5rem;
+}
+
+.rounded-top-9 {
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+}
+
+.rounded-top-10 {
+    border-top-left-radius: 3.5rem;
+    border-top-right-radius: 3.5rem;
+}
+
+/* Sisi Kanan */
+.rounded-right-1 {
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.rounded-right-2 {
+    border-top-right-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+}
+
+.rounded-right-3 {
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.rounded-right-4 {
+    border-top-right-radius: 1.25rem;
+    border-bottom-right-radius: 1.25rem;
+}
+
+.rounded-right-5 {
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+}
+
+.rounded-right-6 {
+    border-top-right-radius: 1.75rem;
+    border-bottom-right-radius: 1.75rem;
+}
+
+.rounded-right-7 {
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+.rounded-right-8 {
+    border-top-right-radius: 2.5rem;
+    border-bottom-right-radius: 2.5rem;
+}
+
+.rounded-right-9 {
+    border-top-right-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+}
+
+.rounded-right-10 {
+    border-top-right-radius: 3.5rem;
+    border-bottom-right-radius: 3.5rem;
+}
+
+/* Sisi Bawah */
+.rounded-bottom-1 {
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.rounded-bottom-2 {
+    border-bottom-left-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+}
+
+.rounded-bottom-3 {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.rounded-bottom-4 {
+    border-bottom-left-radius: 1.25rem;
+    border-bottom-right-radius: 1.25rem;
+}
+
+.rounded-bottom-5 {
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+}
+
+.rounded-bottom-6 {
+    border-bottom-left-radius: 1.75rem;
+    border-bottom-right-radius: 1.75rem;
+}
+
+.rounded-bottom-7 {
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+.rounded-bottom-8 {
+    border-bottom-left-radius: 2.5rem;
+    border-bottom-right-radius: 2.5rem;
+}
+
+.rounded-bottom-9 {
+    border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+}
+
+.rounded-bottom-10 {
+    border-bottom-left-radius: 3.5rem;
+    border-bottom-right-radius: 3.5rem;
+}
+
+/* Sisi Kiri */
+.rounded-left-1 {
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
+.rounded-left-2 {
+    border-top-left-radius: 0.75rem;
+    border-bottom-left-radius: 0.75rem;
+}
+
+.rounded-left-3 {
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.rounded-left-4 {
+    border-top-left-radius: 1.25rem;
+    border-bottom-left-radius: 1.25rem;
+}
+
+.rounded-left-5 {
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+}
+
+.rounded-left-6 {
+    border-top-left-radius: 1.75rem;
+    border-bottom-left-radius: 1.75rem;
+}
+
+.rounded-left-7 {
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+
+.rounded-left-8 {
+    border-top-left-radius: 2.5rem;
+    border-bottom-left-radius: 2.5rem;
+}
+
+.rounded-left-9 {
+    border-top-left-radius: 3rem;
+    border-bottom-left-radius: 3rem;
+}
+
+.rounded-left-10 {
+    border-top-left-radius: 3.5rem;
+    border-bottom-left-radius: 3.5rem;
+}
+
+/** End Rounded **/
+
+
+
+/* Font Size Classes */
+.text-sm {
+    font-size: 0.875rem;
+    /* 14px */
+}
+
+.text-md {
+    font-size: 1rem;
+    /* 16px */
+}
+
+.text-lg {
+    font-size: 1.125rem;
+    /* 18px */
+}
+
+.text-xl {
+    font-size: 1.25rem;
+    /* 20px */
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+    /* 24px */
+}
+
+.text-3xl {
+    font-size: 1.875rem;
+    /* 30px */
+}
+
+.text-4xl {
+    font-size: 2.25rem;
+    /* 36px */
+}
+
+
+/* Font Size Classes based on Heading Sizes */
+.fs-1 {
+    font-size: 2.5rem;
+    /* 40px (H1) */
+}
+
+.fs-2 {
+    font-size: 2rem;
+    /* 32px (H2) */
+}
+
+.fs-3 {
+    font-size: 1.75rem;
+    /* 28px (H3) */
+}
+
+.fs-4 {
+    font-size: 1.5rem;
+    /* 24px (H4) */
+}
+
+.fs-5 {
+    font-size: 1.25rem;
+    /* 20px (H5) */
+}
+
+.fs-6 {
+    font-size: 1rem;
+    /* 16px (H6) */
+}
+
+.collapse-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    margin-top: 5px;
+    justify-content: center;
+}
+
+.collapse-content a {
+    display: block;
+    padding: 5px 30px;
+    text-decoration: none;
+    color: #2367B3;
+    /* background-color: #f9f9f9; */
+    /* border: 1px solid #ddd; */
+    margin-top: 2px;
+    margin: 10px 10px;
+}
+
+.collapse-content a:hover {
+    background-color: #2367B3;
+    color: white;
+    width: 90% !important;
+    border-radius: 5px;
+    /* center */
+    justify-content: center;
+    /* margin: 0px 10px; */
+    box-sizing: border-box;
+}
+
+
+.collapse-btn.active {
+    background-color: #E3F3FF;
+    color: #2367B3 !important;
+    width: 100% !important;
+    border-radius: 10px;
+    margin: 0px 0;
+}
+.sidebar-item.collapsed {
+    background-color: #E3F3FF;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.sidebar-dark .nav-item .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.sidebar-item.collapsed {
+    background-color: #E3F3FF;
+    border-radius: 0px 0px 2px 2px;
+}
+
+.nav-tabs .nav-link:hover {
+    border-color: #eaecf4 #eaecf4 #dddfeb;
+}
+
+.active {
+    background-color: #007bff; // Ganti dengan warna yang diinginkan
+    color: #662323; 
+    width: auto;
+  }
+  .sidebar .active {
+    width: 100% !important;
+    background-color: #e3f3ff;
+    color: #007bff;
+    color: #007bff;
+    // border-radius: 0px 0px 2px 2px;
+}
+
+.my-shadow {
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.15);
+}
+
+
+.sidebar{
+    transition: all 0.3s ease;
+
+    &.disappear{
+        margin-left: -225px;
+    }
+}
+

@@ -6,9 +6,10 @@
   }
   
   .login-background {
-    display: flex; /* Create a flexible layout */
+    /* display: flex; Create a flexible layout */
     height: 100vh; /* Full viewport height */
-    background: linear-gradient(to right, #4ca1af, #c4e0e5); /* Gradient background */
+    /* background: linear-gradient(to right, #4ca1af, #c4e0e5); Gradient background */
+    background: linear-gradient(90deg, #2367B3 0%, #ffffff 100%);
   }
   
   .login-left {
@@ -114,3 +115,11 @@
     background-color: #0056b3; /* Darker shade on hover */
   }
   
+.base-color-hover {
+  color: white;
+  background-color: #2367B3 !important;
+}
+.base-color-hover:hover {
+  color: white;
+  background-color: #478ddb !important;
+}

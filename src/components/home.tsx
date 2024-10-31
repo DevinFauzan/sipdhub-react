@@ -28,7 +28,7 @@ const Home: React.FC = () => {
           </div>
         </div>
         <div className="col-lg-6 d-flex justify-content-center">
-          <img src="http://localhost/sipd/assets/img/logo-kemendagri.PNG" height="400px" />
+          <img src="../src/assets/img/logo-kemendagri.PNG" height="400px" />
         </div>
       </div>
     </div>

@@ -9791,6 +9791,11 @@ a:focus {
 .sidebar-dark .nav-item .nav-link {
     color: rgba(255, 255, 255, 0.8);
 }
+
+.sidebar-item.collapsed {
+    background-color: #E3F3FF;
+    border-radius: 10px 10px 10px 10px;
+}
 .sidebar-dark .nav-item .nav-link i {
     color: rgba(255, 255, 255, 0.3);
 }

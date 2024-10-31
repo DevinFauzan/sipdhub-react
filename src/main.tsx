@@ -9,6 +9,7 @@ import './assets/css/sb-admin-2.min.css';
 import './assets/css/utils.css';
 import './Home.css';
 import './latihan.css'
+import './assets/css/tw-colors.scss';
 import './assets/css/custom.scss';
 import App from './App'; // Adjust the import path as needed
 

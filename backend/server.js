@@ -15,12 +15,12 @@ app.use(bodyParser.json()); // Middleware to parse JSON bodies
 
 // Dummy user data for demonstration
 const users = {
-  'admin': 'password123', // Example username and password
+  'admin': 'password123', 
 };
 
 // Simple GET request for testing
 app.get('/', (req, res) => {
-  res.send('Welcome to the API!'); // Simple message for GET requests
+  res.send('Welcome to the API!'); 
 });
 
 // Login endpoint
