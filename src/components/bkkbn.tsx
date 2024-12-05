@@ -45,29 +45,16 @@
 // import React, { useEffect, useState } from 'react';
 // import { DashboardWidget, DashboardWidgetStyleOptions, DrilldownOptions } from '@sisense/sdk-ui';
 // import { Filter } from '@sisense/sdk-data';
+// import { IDashboard } from './_models';
+// import { customStyle1, customStyle3, customStyle4, customStyle5, customStyle6, customStyle7, customStyle8, customStyle9 } from './_SisenseWidgetStyleOptions';
+
+
 // import { filterFactory } from '@sisense/sdk-data';
 // import * as DM from '../components/SIPD-BKKBN';
 
-// // Common style configurations remain the same
-// const createWidgetStyle = (height: number): DashboardWidgetStyleOptions => ({
-// 	height,
-// 	shadow: 'None',
-// 	cornerRadius: 'Medium',
-// 	header: {
-// 		hidden: false,
-// 		titleAlignment: 'Center',
-// 		backgroundColor: 'transparent',
-// 		renderToolbar: () => <div />
-// 	}
-// });
 
-// const styles = {
-// 	score0: createWidgetStyle(200),
-// 	score1: createWidgetStyle(500),
-// 	style2: createWidgetStyle(200),
-// 	style3: createWidgetStyle(600),
-// 	style4: createWidgetStyle(1000)
-// };
+// // Common style configurations remain the same
+
 
 // const DASHBOARD_ID = '6718965dfbe60a002a9f2f30';
 
@@ -183,7 +170,7 @@
 // 								widgetID="6718965dfbe60a002a9f2f31"
 // 								dashboardID={DASHBOARD_ID}
 // 								colSize="4"
-// 								styleOptions={styles.score0}
+// 								styleOptions={customStyle1}
 // 								onDataPointClick={handleDataPointsSelected("6718965dfbe60a002a9f2f31")}
 // 								filters={parsedFilters}
 // 								isSelected={isWidgetSelected("6718965dfbe60a002a9f2f31")}
@@ -193,7 +180,7 @@
 // 								title='Total Belanja Pencegahan Stunting'
 // 								dashboardID={DASHBOARD_ID}
 // 								colSize="4"
-// 								styleOptions={styles.score0}
+// 								styleOptions={customStyle1}
 // 								onDataPointClick={handleDataPointsSelected("6718965dfbe60a002a9f2f33")}
 // 								filters={parsedFilters}
 // 								isSelected={isWidgetSelected("6718965dfbe60a002a9f2f33")}
@@ -203,7 +190,7 @@
 // 								title='Total Belanja SPM Stunting'
 // 								dashboardID={DASHBOARD_ID}
 // 								colSize="4"
-// 								styleOptions={styles.score0}
+// 								styleOptions={customStyle3}
 // 								onDataPointClick={handleDataPointsSelected("6718965dfbe60a002a9f2f3e")}
 // 								filters={parsedFilters}
 // 								isSelected={isWidgetSelected("6718965dfbe60a002a9f2f3e")}
@@ -215,7 +202,7 @@
 // 								<Widget
 // 									widgetID="6718965dfbe60a002a9f2f35"
 // 									dashboardID={DASHBOARD_ID}
-// 									styleOptions={styles.score1}
+//                                     styleOptions={customStyle3}
 // 									onDataPointClick={handleDataPointsSelected("6718965dfbe60a002a9f2f35")}
 // 									filters={parsedFilters}
 // 									isSelected={isWidgetSelected("6718965dfbe60a002a9f2f35")}
@@ -225,7 +212,7 @@
 // 								<Widget
 // 									widgetID="6718965dfbe60a002a9f2f36"
 // 									dashboardID={DASHBOARD_ID}
-// 									styleOptions={styles.score1}
+//                                     styleOptions={customStyle3}
 // 									includeDashboardFilters={true}
 // 									drilldownOptions={{
 // 										drilldownDimensions: [
@@ -245,7 +232,7 @@
 // 								<Widget
 // 									widgetID="6718965dfbe60a002a9f2f3d"
 // 									dashboardID={DASHBOARD_ID}
-// 									styleOptions={styles.style3}
+//                                     styleOptions={customStyle3}
 // 									includeDashboardFilters={true}
 // 									onDataPointClick={handleDataPointsSelected("6718965dfbe60a002a9f2f3d")}
 // 									filters={parsedFilters}
@@ -256,7 +243,7 @@
 // 								<Widget
 // 									widgetID="6718965dfbe60a002a9f2f3f"
 // 									dashboardID={DASHBOARD_ID}
-// 									styleOptions={styles.style3}
+//                                     styleOptions={customStyle3}
 // 									drilldownOptions={{
 // 										drilldownDimensions: [
 // 											DM.sipd_apbd_nasional.id_bidang_urusan,
@@ -274,7 +261,7 @@
 // 							<Widget
 // 								widgetID="6718d27cfbe60a002a9f3038"
 // 								dashboardID={DASHBOARD_ID}
-// 								styleOptions={styles.style4}
+// 								styleOptions={customStyle3}
 // 								drilldownOptions={{
 // 									drilldownDimensions: [
 // 										DM.sipd_apbd_nasional.id_bidang_urusan,
@@ -296,7 +283,7 @@
 // 								<Widget
 // 									widgetID="6718965dfbe60a002a9f2f37"
 // 									dashboardID={DASHBOARD_ID}
-// 									styleOptions={styles.score0}
+//                                     styleOptions={customStyle3}
 // 									onDataPointClick={handleDataPointsSelected("6718965dfbe60a002a9f2f37")}
 // 									filters={parsedFilters}
 // 									title='Total Keluarga Sasaran'
@@ -310,7 +297,7 @@
 // 								<Widget
 // 									widgetID="6718965dfbe60a002a9f2f39"
 // 									dashboardID={DASHBOARD_ID}
-// 									styleOptions={styles.style2}
+//                                     styleOptions={customStyle3}
 // 									onDataPointClick={handleDataPointsSelected("6718965dfbe60a002a9f2f39")}
 // 									filters={parsedFilters}
 // 									title='Total keluarga Beresiko Stunting'
@@ -321,7 +308,7 @@
 // 								<Widget
 // 									widgetID="6718965dfbe60a002a9f2f38"
 // 									dashboardID={DASHBOARD_ID}
-// 									styleOptions={styles.style2}
+//                                     styleOptions={customStyle3}
 // 									onDataPointClick={handleDataPointsSelected("6718965dfbe60a002a9f2f38")}
 // 									filters={parsedFilters}
 // 									title='Total keluarga Tidak Beresiko Stunting'
@@ -334,7 +321,7 @@
 // 							<Widget
 // 								widgetID="6718965dfbe60a002a9f2f40"
 // 								dashboardID={DASHBOARD_ID}
-// 								styleOptions={styles.score1}
+// 								styleOptions={customStyle3}
 // 								onDataPointClick={handleDataPointsSelected("6718965dfbe60a002a9f2f40")}
 // 								filters={parsedFilters}
 // 								title='Keluarga Beresiko Stunting Berdasarkan Keluarga Sasaran'
@@ -347,7 +334,7 @@
 // 								<Widget
 // 									widgetID="6718965dfbe60a002a9f2f3b"
 // 									dashboardID={DASHBOARD_ID}
-// 									styleOptions={styles.score0}
+//                                     styleOptions={customStyle3}
 // 									onDataPointClick={handleDataPointsSelected("6718965dfbe60a002a9f2f3b")}
 // 									filters={parsedFilters}
 // 									title='Total PUS'
@@ -358,7 +345,7 @@
 // 								<Widget
 // 									widgetID="6718965dfbe60a002a9f2f3a"
 // 									dashboardID={DASHBOARD_ID}
-// 									styleOptions={styles.score0}
+//                                     styleOptions={customStyle3}
 // 									onDataPointClick={handleDataPointsSelected("6718965dfbe60a002a9f2f3a")}
 // 									filters={parsedFilters}
 // 									title='Total Peserta Non KB Modern'
@@ -369,7 +356,7 @@
 // 								<Widget
 // 									widgetID="6718965dfbe60a002a9f2f3c"
 // 									dashboardID={DASHBOARD_ID}
-// 									styleOptions={styles.score0}
+//                                     styleOptions={customStyle3}
 // 									onDataPointClick={handleDataPointsSelected("6718965dfbe60a002a9f2f3c")}
 // 									filters={parsedFilters}
 // 									title='Total PUS Hamil'
@@ -383,7 +370,7 @@
 // 								<Widget
 // 									widgetID="6718965dfbe60a002a9f2f43"
 // 									dashboardID={DASHBOARD_ID}
-// 									styleOptions={styles.score1}
+//                                     styleOptions={customStyle3}
 // 									onDataPointClick={handleDataPointsSelected("6718965dfbe60a002a9f2f43")}
 // 									filters={parsedFilters}
 									
@@ -394,7 +381,7 @@
 // 								<Widget
 // 									widgetID="6718965dfbe60a002a9f2f42"
 // 									dashboardID={DASHBOARD_ID}
-// 									styleOptions={styles.score1}
+//                                     styleOptions={customStyle3}
 // 									onDataPointClick={handleDataPointsSelected("6718965dfbe60a002a9f2f42")}
 // 									filters={parsedFilters}
 // 									title='Keluarga Sasaran Menurut Peringakt Kesejahteraan'
@@ -407,7 +394,7 @@
 // 							<Widget
 // 								widgetID="6718965dfbe60a002a9f2f45"
 // 								dashboardID={DASHBOARD_ID}
-// 								styleOptions={styles.score1}
+// 								styleOptions={customStyle3}
 // 								onDataPointClick={handleDataPointsSelected("6718965dfbe60a002a9f2f45")}
 // 								filters={parsedFilters}
 // 								isSelected={isWidgetSelected("6718965dfbe60a002a9f2f45")}

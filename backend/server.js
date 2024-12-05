@@ -8,7 +8,7 @@ const PORT = 5000; // Specify your Express server port
 
 // Enable CORS for requests from your frontend URL
 app.use(cors({
-  origin: ['http://localhost:5173'], // Allow requests from your frontend port
+  origin: ['http://192.168.128.63:88'], // Allow requests from your frontend port
   methods: ['GET', 'POST'], // Allow specific methods
 }));
 app.use(bodyParser.json()); // Middleware to parse JSON bodies

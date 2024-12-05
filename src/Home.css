@@ -13,6 +13,13 @@
   /* border-radius: 10px; */
 }
 
+.collapse-content.show .collapse-item.active {
+  background-color: #2367B3;
+  color: white !important;
+  width: 90% !important;
+  border-radius: 10px;
+}
+
 .nav-link:hover,
 .collapse-content a:hover,
 .collapse-btn:hover {

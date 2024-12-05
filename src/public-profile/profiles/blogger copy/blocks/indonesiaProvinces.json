@@ -1,0 +1,552 @@
+{
+    "provinces": [
+        {
+            "name": "Aceh",
+            "code": 11,
+            "districts": [
+                {"id_kab": 1101, "kab": "Banda Aceh"},
+                {"id_kab": 1102, "kab": "Langsa"},
+                {"id_kab": 1103, "kab": "Lhokseumawe"},
+                {"id_kab": 1104, "kab": "Sabang"},
+                {"id_kab": 1105, "kab": "Subulussalam"},
+                {"id_kab": 1106, "kab": "Aceh Besar"},
+                {"id_kab": 1107, "kab": "Aceh Jaya"},
+                {"id_kab": 1108, "kab": "Bireuen"},
+                {"id_kab": 1109, "kab": "Aceh Singkil"},
+                {"id_kab": 1110, "kab": "Gayo Lues"},
+                {"id_kab": 1111, "kab": "Aceh Utara"},
+                {"id_kab": 1112, "kab": "Aceh Tamiang"},
+                {"id_kab": 1113, "kab": "Nagan Raya"},
+                {"id_kab": 1114, "kab": "Pidie"},
+                {"id_kab": 1115, "kab": "Aceh Barat Daya"},
+                {"id_kab": 1116, "kab": "Bener Meriah"},
+                {"id_kab": 1117, "kab": "Simeulue"},
+                {"id_kab": 1118, "kab": "Pidie Jaya"},
+                {"id_kab": 1119, "kab": "Aceh Tengah"},
+                {"id_kab": 1120, "kab": "Kota Lhokseumawe"},
+                {"id_kab": 1121, "kab": "Kota Subulussalam"}
+            ]
+        },
+        {
+            "name": "Bali",
+            "code": 51,
+            "districts": [
+                {"id_kab": 5101, "kab": "Jembrana"},
+                {"id_kab": 5102, "kab": "Tabanan"},
+                {"id_kab": 5103, "kab": "Badung"},
+                {"id_kab": 5104, "kab": "Gianyar"},
+                {"id_kab": 5105, "kab": "Klungkung"},
+                {"id_kab": 5106, "kab": "Bangli"},
+                {"id_kab": 5107, "kab": "Karangasem"},
+                {"id_kab": 5108, "kab": "Buleleng"},
+                {"id_kab": 5171, "kab": "Denpasar"}
+            ]
+        },
+        {
+            "name": "Banten",
+            "code": 36,
+            "districts": [
+                {"id_kab": 3601, "kab": "Pandeglang"},
+                {"id_kab": 3602, "kab": "Lebak"},
+                {"id_kab": 3603, "kab": "Kabupaten Tangerang"},
+                {"id_kab": 3604, "kab": "Serang"},
+                {"id_kab": 3671, "kab": "Kota Tangerang"},
+                {"id_kab": 3672, "kab": "Cilegon"},
+                {"id_kab": 3673, "kab": "Serang"},
+                {"id_kab": 3674, "kab": "Kota Tangerang Selatan"}
+            ]
+        },
+        {
+            "name": "Bengkulu",
+            "code": 17,
+            "districts": [
+                {"id_kab": 1701, "kab": "Bengkulu Selatan"},
+                {"id_kab": 1702, "kab": "Rejang Lebong"},
+                {"id_kab": 1703, "kab": "Bengkulu Utara"},
+                {"id_kab": 1704, "kab": "Kaur"},
+                {"id_kab": 1705, "kab": "Seluma"},
+                {"id_kab": 1706, "kab": "Muko Muko"},
+                {"id_kab": 1707, "kab": "Lebong"},
+                {"id_kab": 1708, "kab": "Kepahiang"},
+                {"id_kab": 1709, "kab": "Bengkulu Tengah"},
+                {"id_kab": 1771, "kab": "Kota Bengkulu"}
+            ]
+        },
+        {
+            "name": "Daerah Istimewa Yogyakarta",
+            "code": 34,
+            "districts": [
+                {"id_kab": 3401, "kab": "Kulon Progo"},
+                {"id_kab": 3402, "kab": "Bantul"},
+                {"id_kab": 3403, "kab": "Gunungkidul"},
+                {"id_kab": 3404, "kab": "Sleman"},
+                {"id_kab": 3471, "kab": "Yogyakarta"}
+            ]
+        },
+        {
+            "name": "DKI Jakarta",
+            "code": 31,
+            "districts": [
+                {"id_kab": 3101, "kab": "Kepulauan Seribu"},
+                {"id_kab": 3171, "kab": "Jakarta Pusat"},
+                {"id_kab": 3172, "kab": "Jakarta Utara"},
+                {"id_kab": 3173, "kab": "Jakarta Barat"},
+                {"id_kab": 3174, "kab": "Jakarta Selatan"},
+                {"id_kab": 3175, "kab": "Jakarta Timur"}
+            ]
+        },
+        {
+            "name": "Gorontalo",
+            "code": 75,
+            "districts": [
+                {"id_kab": 7501, "kab": "Kabupaten Gorontalo"},
+                {"id_kab": 7502, "kab": "Boalemo"},
+                {"id_kab": 7503, "kab": "Bone Bolango"},
+                {"id_kab": 7504, "kab": "Pahuwato"},
+                {"id_kab": 7505, "kab": "Gorontalo Utara"},
+                {"id_kab": 7571, "kab": "Kabupaten Gorontalo"}
+            ]
+        },
+        {
+            "name": "Jambi",
+            "code": 15,
+            "districts": [
+                {"id_kab": 1501, "kab": "Kerinci"},
+                {"id_kab": 1502, "kab": "Merangin"},
+                {"id_kab": 1503, "kab": "Sarolangun"},
+                {"id_kab": 1504, "kab": "Batanghari"},
+                {"id_kab": 1505, "kab": "Muaro Jambi"},
+                {"id_kab": 1506, "kab": "Tanjung Jabung Barat"},
+                {"id_kab": 1507, "kab": "Tanjung Jabung Timur"},
+                {"id_kab": 1508, "kab": "Bungo"},
+                {"id_kab": 1509, "kab": "Tebo"},
+                {"id_kab": 1571, "kab": "Jambi"},
+                {"id_kab": 1572, "kab": "Sungai Penuh"}
+            ]
+        },
+        {
+            "name": "Jawa Barat",
+            "code": 32,
+            "districts": [
+                {"id_kab": 3201, "kab": "Bogor"},
+                {"id_kab": 3202, "kab": "Sukabumi"},
+                {"id_kab": 3203, "kab": "Cianjur"},
+                {"id_kab": 3204, "kab": "Bandung"},
+                {"id_kab": 3205, "kab": "Garut"},
+                {"id_kab": 3206, "kab": "Tasikmalaya"},
+                {"id_kab": 3207, "kab": "Ciamis"},
+                {"id_kab": 3208, "kab": "Kuningan"},
+                {"id_kab": 3209, "kab": "Cirebon"},
+                {"id_kab": 3210, "kab": "Majalengka"},
+                {"id_kab": 3211, "kab": "Sumedang"},
+                {"id_kab": 3212, "kab": "Indramayu"},
+                {"id_kab": 3213, "kab": "Subang"},
+                {"id_kab": 3214, "kab": "Purwakarta"},
+                {"id_kab": 3215, "kab": "Karawang"},
+                {"id_kab": 3216, "kab": "Bekasi"},
+                {"id_kab": 3217, "kab": "Bandung Barat"},
+                {"id_kab": 3218, "kab": "Pangandaran"},
+                {"id_kab": 3271, "kab": "Kota Bandung"},
+                {"id_kab": 3272, "kab": "Kota Bogor"},
+                {"id_kab": 3273, "kab": "Kota Bekasi"},
+                {"id_kab": 3274, "kab": "Kota Cirebon"},
+                {"id_kab": 3275, "kab": "Kota Depok"},
+                {"id_kab": 3276, "kab": "Kota Cimahi"},
+                {"id_kab": 3277, "kab": "Kota Sukabumi"},
+                {"id_kab": 3278, "kab": "Kota Tasikmalaya"},
+                {"id_kab": 3279, "kab": "Kota Banjar"}
+            ]
+        },
+        {
+            "name": "Jawa Tengah",
+            "code": 33,
+            "districts": [
+                {"id_kab": 3301, "kab": "Cilacap"},
+                {"id_kab": 3302, "kab": "Banyumas"},
+                {"id_kab": 3303, "kab": "Purbalingga"},
+                {"id_kab": 3304, "kab": "Kebumen"},
+                {"id_kab": 3305, "kab": "Purworejo"},
+                {"id_kab": 3306, "kab": "Wonosobo"},
+                {"id_kab": 3307, "kab": "Magelang"},
+                {"id_kab": 3308, "kab": "Klaten"},
+                {"id_kab": 3309, "kab": "Sukoharjo"},
+                {"id_kab": 3310, "kab": "Wonogiri"},
+                {"id_kab": 3311, "kab": "Sragen"},
+                {"id_kab": 3312, "kab": "Blora"},
+                {"id_kab": 3313, "kab": "Rembang"},
+                {"id_kab": 3314, "kab": "Pati"},
+                {"id_kab": 3315, "kab": "Kudus"},
+                {"id_kab": 3316, "kab": "Jepara"},
+                {"id_kab": 3317, "kab": "Demak"},
+                {"id_kab": 3318, "kab": "Semarang"},
+                {"id_kab": 3319, "kab": "Temanggung"},
+                {"id_kab": 3320, "kab": "Kendal"},
+                {"id_kab": 3321, "kab": "Batang"},
+                {"id_kab": 3322, "kab": "Bandung"},
+                {"id_kab": 3323, "kab": "Pekalongan"},
+                {"id_kab": 3324, "kab": "Purbalingga"},
+                {"id_kab": 3325, "kab": "Pekalongan"},
+                {"id_kab": 3326, "kab": "Demak"},
+                {"id_kab": 3327, "kab": "Semarang"},
+                {"id_kab": 3328, "kab": "Tegal"},
+                {"id_kab": 3329, "kab": "Brebes"},
+                {"id_kab": 3371, "kab": "Kota Magelang"},
+                {"id_kab": 3372, "kab": "Kota Surakarta"},
+                {"id_kab": 3373, "kab": "Kota Salatiga"},
+                {"id_kab": 3374, "kab": "Kota Semarang"},
+                {"id_kab": 3375, "kab": "Kota Pekalongan"},
+                {"id_kab": 3376, "kab": "Kota Tegal"}
+            ]
+        },
+        {
+            "name": "Jawa Timur",
+            "code": 35,
+            "districts": [
+                {"id_kab": 3501, "kab": "Pacitan"},
+                {"id_kab": 3502, "kab": "Ponorogo"},
+                {"id_kab": 3503, "kab": "Trenggalek"},
+                {"id_kab": 3504, "kab": "Tulungagung"},
+                {"id_kab": 3505, "kab": "Blitar"},
+                {"id_kab": 3506, "kab": "Kediri"},
+                {"id_kab": 3507, "kab": "Malang"},
+                {"id_kab": 3508, "kab": "Lumajang"},
+                {"id_kab": 3509, "kab": "Jember"},
+                {"id_kab": 3510, "kab": "Banyuwangi"},
+                {"id_kab": 3511, "kab": "Bondowoso"},
+                {"id_kab": 3512, "kab": "Probolinggo"},
+                {"id_kab": 3513, "kab": "Sidoarjo"},
+                {"id_kab": 3514, "kab": "Mojokerto"},
+                {"id_kab": 3515, "kab": "Jombang"},
+                {"id_kab": 3516, "kab": "Magetan"},
+                {"id_kab": 3517, "kab": "Ngawi"},
+                {"id_kab": 3518, "kab": "Bojonegoro"},
+                {"id_kab": 3519, "kab": "Tuban"},
+                {"id_kab": 3520, "kab": "Gresik"},
+                {"id_kab": 3521, "kab": "Lamongan"},
+                {"id_kab": 3522, "kab": "Pekalongan"},
+                {"id_kab": 3523, "kab": "Pasuruan"},
+                {"id_kab": 3524, "kab": "Banyuwangi"},
+                {"id_kab": 3525, "kab": "Sampang"},
+                {"id_kab": 3526, "kab": "Sumenep"},
+                {"id_kab": 3571, "kab": "Kota Kediri"},
+                {"id_kab": 3572, "kab": "Kota Blitar"},
+                {"id_kab": 3573, "kab": "Kota Malang"},
+                {"id_kab": 3574, "kab": "Kota Probolinggo"},
+                {"id_kab": 3575, "kab": "Kota Mojokerto"},
+                {"id_kab": 3576, "kab": "Kota Surabaya"},
+                {"id_kab": 3577, "kab": "Kota Batu"},
+                {"id_kab": 3578, "kab": "Kota Pasuruan"},
+                {"id_kab": 3579, "kab": "Kota Magetan"}
+            ]
+        },
+        {
+            "name": "Kalimantan Barat",
+            "code": 61,
+            "districts": [
+                {"id_kab": 6101, "kab": "Sambas"},
+                {"id_kab": 6102, "kab": "Mempawah"},
+                {"id_kab": 6103, "kab": "Sanggau"},
+                {"id_kab": 6104, "kab": "Ketapang"},
+                {"id_kab": 6105, "kab": "Sintang"},
+                {"id_kab": 6106, "kab": "Kapuas Hulu"},
+                {"id_kab": 6107, "kab": "Bengkayang"},
+                {"id_kab": 6108, "kab": "Landak"},
+                {"id_kab": 6109, "kab": "Sekadau"},
+                {"id_kab": 6110, "kab": "Melawi"},
+                {"id_kab": 6111, "kab": "Kayong Utara"},
+                {"id_kab": 6112, "kab": "Kubu Raya"},
+                {"id_kab": 6171, "kab": "Pontianak"},
+                {"id_kab": 6172, "kab": "Singkawang"}
+            ]
+        },
+        {
+            "name": "Kalimantan Selatan",
+            "code": 63,
+            "districts": [
+                {"id_kab": 6301, "kab": "Tanah Laut"},
+                {"id_kab": 6302, "kab": "Kotabaru"},
+                {"id_kab": 6303, "kab": "Banjar"},
+                {"id_kab": 6304, "kab": "Barito Kuala"},
+                {"id_kab": 6305, "kab": "Tapin"},
+                {"id_kab": 6306, "kab": "Hulu Sungai Selatan"},
+                {"id_kab": 6307, "kab": "Hulu Sungai Tengah"},
+                {"id_kab": 6308, "kab": "Hulu Sungai Utara"},
+                {"id_kab": 6309, "kab": "Tabalong"},
+                {"id_kab": 6310, "kab": "Tanah Bumbu"},
+                {"id_kab": 6311, "kab": "Balangan"},
+                {"id_kab": 6371, "kab": "Banjarmasin"},
+                {"id_kab": 6372, "kab": "Banjarbaru"}
+            ]
+        },
+        {
+            "name": "Kalimantan Tengah",
+            "code": 62,
+            "districts": [
+                {"id_kab": 6201, "kab": "Kotawaringin Barat"},
+                {"id_kab": 6202, "kab": "Kotawaringin Timur"},
+                {"id_kab": 6203, "kab": "Kapuas"},
+                {"id_kab": 6204, "kab": "Barito Selatan"},
+                {"id_kab": 6205, "kab": "Barito Utara"},
+                {"id_kab": 6206, "kab": "Katingan"},
+                {"id_kab": 6207, "kab": "Seruyan"},
+                {"id_kab": 6208, "kab": "Sukamara"},
+                {"id_kab": 6209, "kab": "Lamandau"},
+                {"id_kab": 6210, "kab": "Gunung Mas"},
+                {"id_kab": 6211, "kab": "Pulang Pisau"},
+                {"id_kab": 6212, "kab": "Murung Raya"},
+                {"id_kab": 6213, "kab": "Barito Timur"},
+                {"id_kab": 6271, "kab": "Palangkaraya"}
+            ]
+        },
+        {
+            "name": "Kalimantan Timur",
+            "code": 64,
+            "districts": [
+                {"id_kab": 6401, "kab": "Paser"},
+                {"id_kab": 6402, "kab": "Kutai Kartanegara"},
+                {"id_kab": 6403, "kab": "Berau"},
+                {"id_kab": 6407, "kab": "Kutai Barat"},
+                {"id_kab": 6408, "kab": "Kutai Timur"},
+                {"id_kab": 6409, "kab": "Penajam Paser Utara"},
+                {"id_kab": 6411, "kab": "Mahakam Ulu"},
+                {"id_kab": 6471, "kab": "Balikpapan"},
+                {"id_kab": 6472, "kab": "Samarinda"},
+                {"id_kab": 6474, "kab": "Bontang"}
+            ]
+        },
+        {
+            "name": "Kalimantan Utara",
+            "code": 65,
+            "districts": [
+                {"id_kab": 6501, "kab": "Bulungan"},
+                {"id_kab": 6502, "kab": "Malinau"},
+                {"id_kab": 6503, "kab": "Nunukan"},
+                {"id_kab": 6504, "kab": "Tana Tidung"},
+                {"id_kab": 6571, "kab": "Tarakan"}
+            ]
+        },
+        {
+            "name": "Kepulauan Bangka Belitung",
+            "code": 19,
+            "districts": [
+                {"id_kab": 1901, "kab": "Bangka"},
+                {"id_kab": 1902, "kab": "Belitung"},
+                {"id_kab": 1903, "kab": "Bangka Selatan"},
+                {"id_kab": 1904, "kab": "Bangka Tengah"},
+                {"id_kab": 1905, "kab": "Bangka Barat"},
+                {"id_kab": 1906, "kab": "Belitung Timur"},
+                {"id_kab": 1971, "kab": "Pangkal Pinang"}
+            ]
+        },
+        {
+            "name": "Kepulauan Riau",
+            "code": 21,
+            "districts": [
+                {"id_kab": 2101, "kab": "Bintan"},
+                {"id_kab": 2102, "kab": "Karimun"},
+                {"id_kab": 2103, "kab": "Natuna"},
+                {"id_kab": 2104, "kab": "Lingga"},
+                {"id_kab": 2105, "kab": "Kepulauan Anambas"},
+                {"id_kab": 2171, "kab": "Batam"},
+                {"id_kab": 2172, "kab": "Tanjung Pinang"}
+            ]
+        },
+        {
+            "name": "Lampung",
+            "code": 18,
+            "districts": [
+                {"id_kab": 1801, "kab": "Lampung Selatan"},
+                {"id_kab": 1802, "kab": "Lampung Tengah"},
+                {"id_kab": 1803, "kab": "Lampung Utara"},
+                {"id_kab": 1804, "kab": "Lampung Barat"},
+                {"id_kab": 1805, "kab": "Tulang Bawang"},
+                {"id_kab": 1806, "kab": "Tanggamus"},
+                {"id_kab": 1807, "kab": "Lampung Timur"},
+                {"id_kab": 1808, "kab": "Way Kanan"},
+                {"id_kab": 1809, "kab": "Pesawaran"},
+                {"id_kab": 1810, "kab": "Pringsewu"},
+                {"id_kab": 1811, "kab": "Mesuji"},
+                {"id_kab": 1812, "kab": "Tulang Bawang Barat"},
+                {"id_kab": 1813, "kab": "Pesisir Barat"},
+                {"id_kab": 1871, "kab": "Bandar Lampung"},
+                {"id_kab": 1872, "kab": "Metro"}
+            ]
+        },
+        {
+            "name": "Maluku",
+            "code": 81,
+            "districts": [
+                {"id_kab": 8101, "kab": "Maluku Tengah"},
+                {"id_kab": 8102, "kab": "Maluku Tenggara"},
+                {"id_kab": 8103, "kab": "Kepulauan Tanimbar"},
+                {"id_kab": 8104, "kab": "Buru"},
+                {"id_kab": 8105, "kab": "Seram Bagian Timur"},
+                {"id_kab": 8106, "kab": "Seram Bagian Barat"},
+                {"id_kab": 8107, "kab": "Kepulauan Aru"},
+                {"id_kab": 8108, "kab": "Maluku Barat Daya"},
+                {"id_kab": 8109, "kab": "Buru Selatan"},
+                {"id_kab": 8171, "kab": "Ambon"},
+                {"id_kab": 8172, "kab": "Tual"}
+            ]
+        },
+        {
+            "name": "Maluku Utara",
+            "code": 82,
+            "districts": [
+                {"id_kab": 8201, "kab": "Halmahera Barat"},
+                {"id_kab": 8202, "kab": "Halmahera Tengah"},
+                {"id_kab": 8203, "kab": "Halmahera Utara"},
+                {"id_kab": 8204, "kab": "Halmahera Selatan"},
+                {"id_kab": 8205, "kab": "Kepulauan Sula"},
+                {"id_kab": 8206, "kab": "Halmahera Timur"},
+                {"id_kab": 8207, "kab": "Pulau Morotai"},
+                {"id_kab": 8208, "kab": "Pulau Taliabu"},
+                {"id_kab": 8271, "kab": "Ternate"},
+                {"id_kab": 8272, "kab": "Tidore Kepulauan"}
+            ]
+        },
+        {
+            "name": "Nusa Tenggara Barat",
+            "code": 52,
+            "districts": [
+                {"id_kab": 5201, "kab": "Lombok Barat"},
+                {"id_kab": 5202, "kab": "Lombok Tengah"},
+                {"id_kab": 5203, "kab": "Lombok Timur"},
+                {"id_kab": 5204, "kab": "Sumbawa"},
+                {"id_kab": 5205, "kab": "Dompu"},
+                {"id_kab": 5206, "kab": "Bima"},
+                {"id_kab": 5207, "kab": "Sumbawa Barat"},
+                {"id_kab": 5208, "kab": "Lombok Utara"},
+                {"id_kab": 5271, "kab": "Kota Mataram"},
+                {"id_kab": 5272, "kab": "Kota Bima"}
+            ]
+        },
+        {
+            "name": "Nusa Tenggara Timur",
+            "code": 53,
+            "districts": [
+                {"id_kab": 5301, "kab": "Kupang"},
+                {"id_kab": 5302, "kab": "Timor Tengah Selatan"},
+                {"id_kab": 5303, "kab": "Timor Tengah Utara"},
+                {"id_kab": 5304, "kab": "Belu"},
+                {"id_kab": 5305, "kab": "Alor"},
+                {"id_kab": 5306, "kab": "Flores Timur"},
+                {"id_kab": 5307, "kab": "Sikka"},
+                {"id_kab": 5308, "kab": "Ende"},
+                {"id_kab": 5309, "kab": "Ngada"},
+                {"id_kab": 5310, "kab": "Manggarai"},
+                {"id_kab": 5311, "kab": "Sumba Timur"},
+                {"id_kab": 5312, "kab": "Sumba Barat"},
+                {"id_kab": 5313, "kab": "Lembata"},
+                {"id_kab": 5314, "kab": "Rote Ndao"},
+                {"id_kab": 5315, "kab": "Manggarai Barat"},
+                {"id_kab": 5316, "kab": "Nagekeo"},
+                {"id_kab": 5317, "kab": "Sumba Tengah"},
+                {"id_kab": 5318, "kab": "Sumba Barat Daya"},
+                {"id_kab": 5319, "kab": "manggarai Timur"},
+                {"id_kab": 5320, "kab": "Sabu Raijua"},
+                {"id_kab": 5321, "kab": "Malaka"},
+                {"id_kab": 5371, "kab": "Kupang"}
+            ]
+        },
+        {
+            "name": "Papua",
+            "code": 91,
+            "districts": [
+                {"id_kab": 9103, "kab": "Jayapura"},
+                {"id_kab": 9105, "kab": "Kepulauan Yapen"},
+                {"id_kab": 9106, "kab": "Biak Numfor"},
+                {"id_kab": 9110, "kab": "Sarmi"},
+                {"id_kab": 9111, "kab": "Keerom"},
+                {"id_kab": 9115, "kab": "Waropen"},
+                {"id_kab": 9119, "kab": "Supiori"},
+                {"id_kab": 9120, "kab": "Mamberamo Raya"},
+                {"id_kab": 9171, "kab": "Kota Jayapura"}
+            ]
+        },
+        {
+            "name": "Papua Barat",
+            "code": 92,
+            "districts": [
+                {"id_kab": 9202, "kab": "Manokwari"},
+                {"id_kab": 9203, "kab": "Fak Fak"},
+                {"id_kab": 9206, "kab": "Teluk Bintuni"},
+                {"id_kab": 9207, "kab": "Teluk Wondama"},
+                {"id_kab": 9208, "kab": "Kaimana"},
+                {"id_kab": 9211, "kab": "Manokwari Selatan"},
+                {"id_kab": 9212, "kab": "Pegunungan Arfak"}
+            ]
+        },
+        {
+            "name": "Papua Barat Daya",
+            "code": 96,
+            "districts": [
+                {"id_kab": 9201, "kab": "Sorong"},
+                {"id_kab": 9204, "kab": "Sorong Selatan"},
+                {"id_kab": 9205, "kab": "Raja Ampat"},
+                {"id_kab": 9209, "kab": "Tambrauw"},
+                {"id_kab": 9210, "kab": "Maybrat"},
+                {"id_kab": 9271, "kab": "Kota Sorong"}
+            ]
+        },
+        {
+            "name": "Papua Pegunungan",
+            "code": 95,
+            "districts": [
+                {"id_kab": 9501, "kab": "Jayawijaya"},
+                {"id_kab": 9502, "kab": "Pegunungan Bintang"},
+                {"id_kab": 9503, "kab": "Yahukimo"},
+                {"id_kab": 9504, "kab": "Tolikara"},
+                {"id_kab": 9505, "kab": "Mamberamo Tengah"},
+                {"id_kab": 9506, "kab": "Yalimo"},
+                {"id_kab": 9507, "kab": "Lanny Jaya"},
+                {"id_kab": 9508, "kab": "Nduga"}
+            ]
+        },
+        {
+            "name": "Papua Selatan",
+            "code": 92,
+            "districts": [
+                {"id_kab": 9201, "kab": "Sorong"},
+                {"id_kab": 9204, "kab": "Sorong Selatan"},
+                {"id_kab": 9205, "kab": "Raja Ampat"},
+                {"id_kab": 9209, "kab": "Tambrauw"},
+                {"id_kab": 9210, "kab": "Maybrat"},
+                {"id_kab": 9271, "kab": "Kota Sorong"}
+            ]
+        },
+        {
+            "name": "Papua Tengah",
+            "code": 94,
+            "districts": [
+                {"id_kab": 9401, "kab": "Nabire"},
+                {"id_kab": 9402, "kab": "Puncak Jaya"},
+                {"id_kab": 9403, "kab": "Panai"},
+                {"id_kab": 9404, "kab": "Mimika"},
+                {"id_kab": 9405, "kab": "Puncak"},
+                {"id_kab": 9406, "kab": "Dogiyai"},
+                {"id_kab": 9407, "kab": "Intan Jaya"},
+                {"id_kab": 9408, "kab": "Deiyai"}
+            ]
+        },
+        {
+            "name": "Riau",
+            "code": 14,
+            "districts": [
+                {"id_kab": 1401, "kab": "Kampar"},
+                {"id_kab": 1402, "kab": "Indragiri Hulu"},
+                {"id_kab": 1403, "kab": "Bengkalis"},
+                {"id_kab": 1404, "kab": "Indragiri Hilir"},
+                {"id_kab": 1405, "kab": "Pelalawan"},
+                {"id_kab": 1406, "kab": "Rokan Hulu"},
+                {"id_kab": 1407, "kab": "Rokan Hilir"},
+                {"id_kab": 1408, "kab": "Siak"},
+                {"id_kab": 1409, "kab": "Kuantan Singingi"},
+                {"id_kab": 1410, "kab": "Kepulauan Meranti"},  
+                {"id_kab": 1471, "kab": "Kota Pekanbaru"},
+                {"id_kab": 1472, "kab": "Kota Dumai"}
+            ]
+        }
+        
+    ]
+}

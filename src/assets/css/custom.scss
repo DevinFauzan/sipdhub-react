@@ -267,27 +267,58 @@ body {
     /* Teks di tengah */
 }
 
+
+// .widget-title-wrapper {
+//     font-size: 1.5rem;
+//     padding-top: 1.7rem;
+//     padding-bottom: 0rem;
+// }
+
 /* Media Query untuk responsivitas */
+@media (min-width: 1920px) {
+    /* Styles for screens 1920px wide or larger */
+    .widget-title-wrapper {
+        padding-top: 0.1rem;
+        padding-bottom: 0.1rem;
+        font-size: 2.5rem; /* Reduced font size for larger screens */
+    }
+}
+
+/* Breakpoint for resolution 1536px (zoom 125%) */
+@media (max-width: 1536px) {
+    /* Styles for screens 1536px wide or smaller */
+    .widget-title-wrapper {
+        font-size: 2rem; /* Further reduced font size */
+    }
+}
+
 @media (max-width: 1200px) {
     .grid-container {
-        grid-template-columns: repeat(5, 1fr);
-        /* 5 kolom */
+        grid-template-columns: repeat(5, 1fr); /* 5 columns */
+    }
+    .widget-title-wrapper {
+        font-size: 1.8rem; /* Adjusted font size for medium screens */
     }
 }
 
 @media (max-width: 992px) {
     .grid-container {
-        grid-template-columns: repeat(4, 1fr);
-        /* 4 kolom */
+        grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    }
+    .widget-title-wrapper {
+        font-size: 1.6rem; /* Further reduced font size for smaller screens */
     }
 }
 
 @media (max-width: 768px) {
     .grid-container {
-        grid-template-columns: repeat(3, 1fr);
-        /* 3 kolom */
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    }
+    .widget-title-wrapper {
+        font-size: 1.4rem; /* Smaller font size for mobile devices */
     }
 }
+
 
 /** End Custom Grid Container **/
 
@@ -306,6 +337,27 @@ body {
 
     // height: 100vh; /* Tinggi elemen */
     // background: linear-gradient(45deg, #ff7e5f, #feb47b); /* Dari merah muda ke oranye */
+}
+
+
+/* Gradient color legend */
+.gradient-legend {
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+}
+.gradient-bar {
+    width: 100px;
+    height: 20px;
+    margin-bottom: 5px;
+}
+.gradient-labels {
+    display: flex;
+    justify-content: space-between;
 }
 
 .dashboard-title {
@@ -2207,3 +2259,85 @@ body {
     }
 }
 
+.grid-container {
+    display: grid;
+    gap: 16px; /* Jarak antara kolom */
+    padding: 16px; /* Padding di dalam grid container */
+    
+    /* Kelas untuk menentukan jumlah kolom */
+    &.grid-col-1 {
+        grid-template-columns: repeat(1, 1fr); /* 1 kolom */
+    }
+
+    &.grid-col-2 {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolom */ 
+    }
+
+    &.grid-col-3 {
+        grid-template-columns: repeat(3, 1fr); /* 3 kolom */
+    }
+
+    &.grid-col-4 {
+        grid-template-columns: repeat(4, 1fr); /* 4 kolom */
+    }
+
+    &.grid-col-5 {
+        grid-template-columns: repeat(5, 1fr); /* 5 kolom */
+    }
+
+    &.grid-col-6 {
+        grid-template-columns: repeat(6, 1fr); /* 6 kolom */
+    }
+}
+
+/* Media Queries untuk responsivitas */
+@media (max-width: 1200px) {
+    .grid-container {
+        &.grid-col-6 { grid-template-columns: repeat(3, 1fr); } /* 3 kolom untuk layar kecil */
+    }
+}
+
+@media (max-width: 900px) {
+    .grid-container {
+        &.grid-col-6,
+        &.grid-col-5 { grid-template-columns: repeat(2, 1fr); } /* 2 kolom untuk layar lebih kecil */
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-container {
+        &.grid-col-4,
+        &.grid-col-5,
+        &.grid-col-6 { grid-template-columns: repeat(1, 1fr); } /* 1 kolom untuk layar kecil */
+    }
+}
+
+.legend {
+    line-height: 18px;
+    color: #555;
+
+    i {
+        width: 18px;
+        height: 18px;
+        float: left;
+        margin-right: 8px;
+        opacity: 0.7;
+    }
+}
+
+.info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.25);
+    border-radius: 5px;
+
+    h4 {
+        margin: 0 0 12px;
+        color: #444;
+    }
+}
+
+.text-labels {
+    width: unset    !important;
+}

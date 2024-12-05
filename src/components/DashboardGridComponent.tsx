@@ -1,109 +1,177 @@
-import React, { useEffect, useState } from 'react';
-import { DashboardWidget } from '@sisense/sdk-ui';
-import { Filter, filterFactory } from '@sisense/sdk-data';
-
-
+import React, { useCallback, useContext, useEffect, useState } from 'react';
 import { IFilterState, IDashboard } from './_models';
+import { DistrictWebPageFilterID, ProvinceWebPageFilterID } from './_datamodels';
 import clsx from 'clsx';
+import CustomButterflyChart from './CustomButterflyChart';
+import { CompanyProfile, FilterContext } from '../public-profile/profiles/company copy';
+import DashboardWidgetComponent from './DashboardWidgetComponent';
+import FilterProvinsiKabupaten from './filter/FilterProvinsiKabupaten';
+// import axios from 'axios';
 
+const DashboardGridComponent: React.FC<{ dashboard: IDashboard, webpageFilters?: IFilterState[] }> = ({ dashboard, webpageFilters }) => {
+  const {
+    optionsProvinsi,
+    optionsKabupaten,
+    filterProvinsi,
+    filterKabupaten,
+    setFilterProvinsi,
+    setFilterKabupaten
+  } = useContext(FilterContext);
 
-const DashboardGridComponent: React.FC<{ dashboard: IDashboard }> = ({ dashboard }) => {
-	const [selectedFilters, setSelectedFilters] = useState<IFilterState[]>([]);
-	const [parsedFilters, setParsedFilters] = useState<Filter[]>([]);
+  const [selectedFilters, setSelectedFilters] = useState<IFilterState[]>([]);
+  const [isSisenseTriggeredFilter, setIsSisenseTriggeredFilter] = useState<boolean>(true);
+  const [error] = useState<string | null>(null);
 
-	const handleDataPointsSelected = (widgetId: string) => (dataPoints: any) => {
-		if (!dataPoints?.categoryValue) return;
+  const handleDataPointsSelected = (widgetId: string, filterable: boolean | undefined) => (dataPoints: any) => {
+    if (!dataPoints?.categoryValue || !filterable) return;
 
-		setSelectedFilters(prevFilters => {
-			// Check if this widget's filter is already selected
-			const existingFilterIndex = prevFilters.findIndex(
-				filter => filter.widgetId === widgetId &&
-					filter.categoryValue === dataPoints.categoryValue
-			);
+    setSelectedFilters(prevFilters => {
+      const existingFilterIndex = prevFilters.findIndex(
+        filter =>
+          (filter.widgetId === ProvinceWebPageFilterID) ||
+          (filter.widgetId === DistrictWebPageFilterID) ||
+          (filter.widgetId === widgetId && filter.categoryValue === dataPoints.categoryValue)
+      );
 
-			if (existingFilterIndex !== -1) {
-				// Remove the filter if it's already selected
-				return prevFilters.filter((_, index) => index !== existingFilterIndex);
-			} else {
-				// Add new filter
-				const newFilter: IFilterState = {
-					widgetId,
-					categoryValue: dataPoints.categoryValue,
-					attribute: dataPoints.entries.category[0].attribute,
-					value: dataPoints.entries.category[0].value
-				};
-				return [...prevFilters, newFilter];
-			}
-		});
+      setIsSisenseTriggeredFilter(true);
 
-		console.log('Data points selected:', dataPoints);
-	};
-  
-	useEffect(() => {
-		// Convert selected filters to Sisense filter format
-		const newParsedFilters = selectedFilters.map(filter =>
-			filterFactory.equals(filter.attribute, filter.value)
-		);
-		setParsedFilters(newParsedFilters);
-	}, [selectedFilters]);
+      if (existingFilterIndex !== -1) {
+        setFilterProvinsi(null);
+        setFilterKabupaten(null);
+        return []; // Remove the filter if it's already selected
+      } else {
+        const provinsi = optionsProvinsi.find(op => op.value.toLowerCase() === dataPoints.categoryValue?.toLowerCase());
+        if (provinsi) {
+          setFilterProvinsi(provinsi);
+        }
 
-	// Helper function to check if a widget is selected
-	const isWidgetSelected = (widgetId: string) => {
-		return selectedFilters.some(filter => filter.widgetId === widgetId);
-	};
-  
-	return (
-		<div className="dashboard-grid shadow">
-			<h2 className="dashboard-title fw-semibold text-center pb-lg-5" style={{ fontFamily: 'Open Sans, sans-serif' }}>{dashboard.name}</h2>
-			<div className="widget-grid">
-				{dashboard.widgets.map((widget, index) => (
-					<div key={index} className={`widget-container col-${widget.colSpan}`}>
-						<div className={'border  rounded-3'}>
-							<div className={clsx(`widget-title-wrapper d-flex gap-4 align-items-stretch p-3 rounded-top-3`, widget.titleWrapperClass)} style={widget.titleWrapperStyle}>
-								{ widget.icon && ( 
-									<div>
-										<div className={clsx( `widget-icon border px-3 py-2 rounded-1`, widget.iconWrapperClass )} style={widget.iconWrapperStyle}>
-											{widget.icon}
-										</div> 
-									</div>
-								) }
-								<div className="d-flex align-items-center">
-									<div className="widget-title fira-sans-regular fs-5 text-gray-700 self-center" style={widget.titleStyle}>
-										{widget?.title}
-									</div>
-								</div>
-							</div>
-							<div className={clsx(`widget-content rounded-bottom-3 position-center content-center overflow-hidden`)} >
-								<div className={widget.widgetContentWrapperClass} style={{ marginTop: '-40px', ...widget.widgetContentWrapperStyle }}>
-									{widget && (
-										<DashboardWidget
-											styleOptions={{
-												...widget.styleOptions,
-												border: isWidgetSelected(widget.id) ? true : undefined,
-												header: {
-													...widget.styleOptions?.header,
-													hidden: false,
-													titleAlignment: "Center",
-													backgroundColor: "transparent",
-													titleTextColor: "black",
-													renderToolbar: () => <div></div>
-												}
-											}}
-											title={''}
-											dashboardOid={dashboard.id}
-											widgetOid={widget.id}
-											onDataPointClick={handleDataPointsSelected(widget.id)}
-											filters={parsedFilters}
-										/>
-									)}
-								</div>
-							</div>
-						</div>
-					</div>
-				))}
-			</div>
-		</div>
-	);
+        const newFilter: IFilterState = {
+          widgetId,
+          categoryValue: dataPoints.categoryValue,
+          attribute: dataPoints.entries.category[0].attribute,
+          value: dataPoints.entries.category[0].value
+        };
+        return [...prevFilters, newFilter]; // Add new filter
+      }
+    });
+  };
+
+  useEffect(() => {
+    if (isSisenseTriggeredFilter) {
+      setIsSisenseTriggeredFilter(false);
+      return;
+    }
+
+    if (webpageFilters) {
+      setSelectedFilters(webpageFilters);
+    }
+  }, [webpageFilters]);
+
+  const getApplicableSelectedFilters = useCallback((isProvinceFilterable: boolean | undefined, isDistrictFilterable: boolean | undefined) => {
+    return selectedFilters.filter((sf) => {
+      if ((typeof isProvinceFilterable !== "undefined") && !isProvinceFilterable && (sf.widgetId === ProvinceWebPageFilterID)) {
+        return false;
+      }
+
+      if ((typeof isDistrictFilterable !== "undefined") && !isDistrictFilterable && (sf.widgetId === DistrictWebPageFilterID)) {
+        return false;
+      }
+
+      return true;
+    });
+  }, [selectedFilters]);
+
+  return (
+    <div className="dashboard-grid shadow">
+      <h2 className="dashboard-title fw-semibold text-center pb-1" style={{ fontFamily: 'Open Sans, sans-serif', marginBottom: dashboard.description ? "8px" : "20px" }}>
+        {dashboard.name}
+      </h2>
+      <CompanyProfile />
+
+      <div className="pt-10 mr-3">
+        <FilterProvinsiKabupaten
+          filterProvinsi={filterProvinsi}
+          setFilterProvinsi={setFilterProvinsi}
+          filterKabupaten={filterKabupaten}
+          setFilterKabupaten={setFilterKabupaten}
+          optionsKabupaten={optionsKabupaten}
+          optionsProvinsi={optionsProvinsi}
+          labelClass="text-gray-700 text-sm font-bold"
+          errorEnabled={!!error} // Pass error state to the component
+        />
+      </div>
+
+      <div className="widget-grid mt-10 flex flex-wrap">
+        {dashboard.widgets.map((item, index) => {
+          const colSpan = item.colSpan; // Assuming colSpan is set to 9 or 3 for 3/4 and 1/4
+          const flexBasis = `${(colSpan / 12) * 100}%`; // Calculate flex basis based on colSpan
+
+          return (
+            <div key={index} className={`widget-container`} style={{ flexBasis }}>
+              {item.widgetType === 'butterfly' && item.widgetButterfly ? (
+                <CustomButterflyChart
+                  title={item.widgetButterfly.title}
+                  chartA={item.widgetButterfly.chartA}
+                  chartB={item.widgetButterfly.chartB}
+                />
+              ) : (
+                <div className={'border rounded-lg'}>
+                <div
+                  className={clsx(
+                    "widget-title-wrapper flex items-center p-3 rounded-t-lg h-16 overflow-hidden", // Tailwind classes
+                    item.widget?.titleWrapperClass
+                  )}
+                  style={item.widget?.titleWrapperStyle}
+                >
+                  {item.widget?.icon && (
+                    <div className="flex-shrink-0">
+                      <div className={clsx("widget-icon px-3 py-2 rounded", item.widget?.iconWrapperClass)} style={item.widget?.iconWrapperStyle}>
+                        {item.widget?.icon}
+                      </div>
+                    </div>
+                  )}
+                  <div className="flex-grow flex items-center justify-center">
+                    <div
+                      className="widget-title text-center text-gray-700"
+                      style={{
+                        ...item.widget?.titleStyle,
+                        overflow: 'hidden', // Hide overflow text
+                        textOverflow: 'ellipsis', // Add ellipsis for overflow text
+                        lineHeight: '1.5rem', // Set line height for better vertical alignment
+                        maxHeight: '3rem', // Set a maximum height for the title
+                        display: '-webkit-box', // Use flexbox for multi-line text
+                        WebkitBoxOrient: 'vertical', // Allow vertical orientation
+                        // overflow: 'hidden', // Hide overflow text
+                        WebkitLineClamp: 2, // Limit to 2 lines
+                        width: '100%', // Ensure it takes full width
+                      }}
+                    >
+                      {item.widget?.title}
+                    </div>
+                  </div>
+                </div>
+                <div className={clsx(`widget-content rounded-b-lg overflow-hidden`)}>
+                  <div className={clsx(`relative`, item.widget?.widgetContentWrapperClass)} style={{ marginTop: '-60px', ...item.widget?.widgetContentWrapperStyle }}>
+                    {item.widget && (
+                      <DashboardWidgetComponent
+                        item={item}
+                        selectedFilters={getApplicableSelectedFilters(item.provinceFilterable, item.districtFilterable)}
+                        dashboardID={dashboard.id}
+                        handleDataPointsSelected={handleDataPointsSelected}
+                      />
+                    )}
+                  </div>
+                </div>
+              </div>
+              
+
+              )}
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
 };
 
-export default DashboardGridComponent
+export default React.memo(DashboardGridComponent);

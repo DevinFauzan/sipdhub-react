@@ -1,5 +1,6 @@
 // src/page/Home.tsx
 import React from 'react';
+import logokemendagri from '../assets/img/logo-kemendagri.png';
 // import './Home.css'; // Import CSS for the Home component
 
 const Home: React.FC = () => {
@@ -28,7 +29,7 @@ const Home: React.FC = () => {
           </div>
         </div>
         <div className="col-lg-6 d-flex justify-content-center">
-          <img src="../src/assets/img/logo-kemendagri.PNG" height="400px" />
+          <img src={logokemendagri} height="400px" />
         </div>
       </div>
     </div>
