@@ -75,3 +75,19 @@ export interface IDashboard {
     no_kab: Attribute;
     nama_kab: Attribute;
   }
+
+  export interface SIPDBPJSDimensions extends Dimension {
+    kode_prov: Attribute;
+    nama_prov: Attribute;
+    kode_kab: Attribute;
+    nama_kab: Attribute;
+    jumlah_pst_aktif: Attribute;
+    jumlah_pst_tidak_aktif: Attribute;
+  }
+
+  export interface SIPDKemenkoDimensions extends Dimension {
+    no_prov: Attribute;
+    name_prov: Attribute;
+    no_kab: Attribute;
+    nama_kab: Attribute;
+  }

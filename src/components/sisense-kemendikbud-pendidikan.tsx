@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 
 import { IDashboard, IFilterState } from './_models';
 
-import { customStyle1, customStyle3, customStyle5, customStyle6 } from './_SisenseWidgetStyleOptions';
+import { customStyle1, customStyle12, customStyle3, customStyle5, customStyle6, customStyle7 } from './_SisenseWidgetStyleOptions';
 import DashboardGridComponent from './DashboardGridComponent';
 import { IStandardColorRange, IPopupContent } from '../public-profile/profiles/company copy/blocks/interfaces/global';
 import { MapDataContext, FilterContext } from '../public-profile/profiles/company copy';
@@ -18,7 +18,7 @@ const provinceDataColorList: Array<IStandardColorRange> = [
   },
   {
     stepMin: 20.00,
-    stepMax: 39.9999999,
+    stepMax: 39.9999999,  
     color: '#8BBADC'
   },
   {
@@ -66,29 +66,9 @@ const districtDataColorList: Array<IStandardColorRange> = [
   }
 ]
 
-const popupDataList: Array<IPopupContent> = [
-  {
-    sourceKey: "namaProv",
-    title: "Jumlah Pendidikan"
-
-  },
-  {
-    sourceKey: "jumlahBersekolah",
-    title: "Jumlah Bersekolah"
-  },
-  {
-    sourceKey : "jumlahDropout",
-    title:"Jumlah Dropout"
-  },
-  {
-    sourceKey : "jumlahBpb",
-    title : "jumlah Bpb"
-  },
-  {
-    sourceKey : "jumlahLtm",
-    title : "jumlah Ltm"
-  }
-]
+// const popupDataList: Array<IPopupContent> = [
+ 
+// ]
 
 
 const KemendikbudPendidikan: React.FC<{ isSelected: boolean}> = ({isSelected}) => {
@@ -168,8 +148,8 @@ const KemendikbudPendidikan: React.FC<{ isSelected: boolean}> = ({isSelected}) =
             styleOptions: customStyle1,
             titleWrapperClass: 'bg-blue-100',
             widgetContentWrapperClass: 'bg-blue-50',
-             widgetContentWrapperStyle: { paddingBottom: '0rem' },
-             titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
+            widgetContentWrapperStyle: { paddingBottom: '0rem' },
+            titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
             iconWrapperClass: 'bg-blue-100',
 
           },
@@ -183,8 +163,8 @@ const KemendikbudPendidikan: React.FC<{ isSelected: boolean}> = ({isSelected}) =
           widget: {
             id: '67499ed6fbe60a002a9f47c7', title: 'Siswa Bersekolah dan Drop out ',
             styleOptions: customStyle6,
-            titleWrapperClass: 'bg-blue-100',
-            widgetContentWrapperClass: 'bg-blue-50', 
+            titleWrapperClass: 'bg-sky-100',
+            widgetContentWrapperClass: 'bg-sky-50',
             widgetContentWrapperStyle: { paddingTop: '0rem' },
             titleStyle: { paddingTop: '1rem', paddingBottom: '1rem' },
             iconWrapperClass: 'bg-blue-200',
@@ -306,6 +286,138 @@ const KemendikbudPendidikan: React.FC<{ isSelected: boolean}> = ({isSelected}) =
             iconWrapperClass: 'bg-sky-200',
           },
         },
+
+        // ANGGARAN DAPODIK 
+        {
+          colSpan: 4,
+          widgetType: 'default',
+          widget: {
+            id: '67481ebdfbe60a002a9f44ca', title: 'Anggaran Nasional Urusan Bidang Pendidikan',
+            styleOptions: customStyle1,
+            titleWrapperClass: 'bg-teal-100',
+            widgetContentWrapperClass: 'bg-teal-50', widgetContentWrapperStyle: { paddingTop: '2rem' },
+            iconWrapperClass: 'bg-sky-200',
+          },
+        },
+        {
+          colSpan: 4,
+          widgetType: 'default',
+          widget: {
+            id: '67568cc5d5db91003325bfcb', title: 'Anggaran Provinsi Bidang Pendidikan',
+            styleOptions: customStyle1,
+            titleWrapperClass: 'bg-teal-100',
+            widgetContentWrapperClass: 'bg-teal-50', widgetContentWrapperStyle: { paddingTop: '2rem' },
+            iconWrapperClass: 'bg-sky-200',
+          },
+        },
+        {
+          colSpan: 4,
+          widgetType: 'default',
+          widget: {
+            id: '67568d81d5db91003325bfd5', title: 'Anggaran Kabupaten Bidang Pendidikan',
+            styleOptions: customStyle1,
+            titleWrapperClass: 'bg-teal-100',
+            widgetContentWrapperClass: 'bg-teal-50', widgetContentWrapperStyle: { paddingTop: '2rem' },
+            iconWrapperClass: 'bg-sky-200',
+          },
+        },
+        {
+          colSpan: 4,
+          widgetType: 'default',
+          widget: {
+            id: '67568cc1d5db91003325bfc9', title: 'Anggaran Urusan Bidang Pendidikan',
+            styleOptions: customStyle1,
+            titleWrapperClass: 'bg-teal-100',
+            widgetContentWrapperClass: 'bg-teal-50', widgetContentWrapperStyle: { paddingTop: '2rem' },
+            iconWrapperClass: 'bg-sky-200',
+          },
+        },
+        {
+          colSpan: 4,
+          widgetType: 'default',
+          widget: {
+            id: '67568cc8d5db91003325bfcd', title: 'APBD SPM Kabupaten Pendidikan',
+            styleOptions: customStyle1,
+            titleWrapperClass: 'bg-teal-100',
+            widgetContentWrapperClass: 'bg-teal-50', widgetContentWrapperStyle: { paddingTop: '2rem' },
+            iconWrapperClass: 'bg-sky-200',
+          },
+        },
+        {
+          colSpan: 4,
+          widgetType: 'default',
+          widget: {
+            id: '67568d84d5db91003325bfd7', title: 'APBD SPM Provinsi Pendidikan',
+            styleOptions: customStyle1,
+            titleWrapperClass: 'bg-teal-100',
+            widgetContentWrapperClass: 'bg-teal-50', widgetContentWrapperStyle: { paddingTop: '2rem' },
+            iconWrapperClass: 'bg-sky-200',
+          },
+        },
+        
+
+        {
+          colSpan: 6,
+          widgetType: 'default',
+          widget: {
+            id: '67481ebdfbe60a002a9f44cd', title: 'Anggaran Urusan Bidang Pendidikan Dengan Bidang Lainnya',
+            styleOptions: customStyle5,
+            titleWrapperClass: 'bg-teal-100',
+            widgetContentWrapperClass: 'bg-teal-50', widgetContentWrapperStyle: { paddingTop: '2rem' },
+            titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
+            iconWrapperClass: 'bg-sky-200',
+          },
+        },
+        {
+          colSpan: 6,
+          widgetType: 'default',
+          widget: {
+            id: '67481ebdfbe60a002a9f44cc', title: 'Anggaran SPM Pendidikan dan SPM Lainnya',
+            styleOptions: customStyle5,
+            titleWrapperClass: 'bg-teal-100',
+            widgetContentWrapperClass: 'bg-teal-50', widgetContentWrapperStyle: { paddingTop: '2rem' },
+            titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
+            iconWrapperClass: 'bg-sky-200',
+          },
+        },
+        {
+          colSpan: 6,
+          widgetType: 'default',
+          widget: {
+            id: '67568e32d5db91003325bfe0', title: 'Anggaran Program Bidang Pendidikan',
+            styleOptions: customStyle7,
+            titleWrapperClass: 'bg-teal-100',
+            widgetContentWrapperClass: 'bg-teal-50', widgetContentWrapperStyle: { paddingTop: '2rem' },
+            titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
+            iconWrapperClass: 'bg-sky-200',
+          },
+        },
+
+       
+        {
+          colSpan: 6,
+          widgetType: 'default',
+          widget: {
+            id: '67568fc8d5db91003325bffe', title: 'Anggaran SPM Program Bidang Pendidikan',
+            styleOptions: customStyle7,
+            titleWrapperClass: 'bg-teal-100',
+            widgetContentWrapperClass: 'bg-teal-50', widgetContentWrapperStyle: { paddingTop: '2rem' },
+            titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
+            iconWrapperClass: 'bg-sky-200',
+          },
+        },
+        // {
+        //   colSpan: 12,
+        //   widgetType: 'default',
+        //   widget: {
+        //     id: '67568d92d5db91003325bfdd', title: 'Alokasi Anggaran Pendidikan Berdasarkan GIAT Urusan Bidang Pendidikan',
+        //     styleOptions: customStyle12,
+        //     titleWrapperClass: 'bg-teal-100',
+        //     widgetContentWrapperClass: 'bg-teal-50', widgetContentWrapperStyle: { paddingTop: '2rem' },
+        //     titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
+        //     iconWrapperClass: 'bg-sky-200',
+        //   },
+        // },
       ]
     },
 
@@ -337,8 +449,8 @@ const KemendikbudPendidikan: React.FC<{ isSelected: boolean}> = ({isSelected}) =
   useEffect(() => {
     const fetch = async () => {
       try {
-        const response = await axios.get(`${import.meta.env.VITE_APP_API_URL}/kemendikbud-dapodik`, { withCredentials: true });
-        
+        const Provinceresponse = await axios.get(`${import.meta.env.VITE_APP_API_URL}/kemendikbud-dapodik`, { withCredentials: true });
+        const Districtresponse = await axios.get(`${import.meta.env.VITE_APP_API_URL}/kemendikbud-dapodik`, { withCredentials: true });
         // Assuming the response structure is as follows:
         // response.data = [
         //   { kodeProv: "11", jumlahBersekolah: 898401, jumlahDropout: 13510016, jumlahBpb: 14569672, jumlahLtm: 23975016 },
@@ -347,15 +459,16 @@ const KemendikbudPendidikan: React.FC<{ isSelected: boolean}> = ({isSelected}) =
 
         // Set province map data
         setProvinceMapData({
-          originalData: response.data,
-          dataKey: "kodeProv", // Use the correct key for your data
-          // dynamicColor: true
+          originalData: Provinceresponse.data,
+          dataKey: "jumlahBersekolah", // Use the correct key for your data
+          dynamicColor: true
         });
 
         // Set district map data if needed (you might want to adjust this based on your API response)
         setDistrictMapData({
-          originalData: response.data, // Adjust this if you have separate district data
-          dataKey: "kodeProv", // Use the correct key for your data
+          originalData: Districtresponse.data, // Adjust this if you have separate district data
+          dataKey: "jumlahBersekolah", // Use the correct key for your data
+          percentage: true
         });
 
         // Set color lists
@@ -363,8 +476,25 @@ const KemendikbudPendidikan: React.FC<{ isSelected: boolean}> = ({isSelected}) =
         setDistrictColorList(districtDataColorList);
 
         // Set popup data
-        setProvincePopupData(popupDataList);
-        setDistrictPopupData(popupDataList);
+        setProvincePopupData([
+          {
+            sourceKey: "jumlahBersekolah",
+            title: "Jumlah Bersekolah"
+          },
+          {
+            sourceKey : "jumlahDropout",
+            title:"Jumlah Dropout"
+          },
+          {
+            sourceKey : "jumlahBpb",
+            title : "jumlah Bpb"
+          },
+          {
+            sourceKey : "jumlahLtm",
+            title : "jumlah Ltm"
+          }
+        ])
+        // setDistrictPopupData(popupDataList);
 
         // Set the map legend title
         setMapLegendTitle("Jumlah Data DAPODIK");

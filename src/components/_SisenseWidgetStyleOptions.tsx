@@ -57,7 +57,19 @@ export const customStyle4: DashboardWidgetStyleOptions = {
   };
 
   export const customStyle10: DashboardWidgetStyleOptions = {
-    height: 450,
-    backgroundColor : '#f0f9ff'
+    ...customStyle1,
+    height: 650,
+    
+  };
+
+  export const customStyle11: DashboardWidgetStyleOptions = {
+    height: 250,
+    backgroundColor : '#ffffff'
+    
+  };
+
+  export const customStyle12: DashboardWidgetStyleOptions = {
+    ...customStyle1,
+    height: 150,
     
   };

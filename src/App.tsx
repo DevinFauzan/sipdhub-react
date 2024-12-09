@@ -14,6 +14,8 @@ import Sipd from './components/sipd';
 import SisenseBkkbnKeluargaStunting from './components/sisense-bkkbn-resiko-keluarga-stunting';
 import { SisenseContextProvider } from '@sisense/sdk-ui';
 import { ProfileCompanyContentCopy } from './public-profile/profiles/company copy';
+import SisenseKemenko from './components/sisesne-kemenko';
+import SisenseBPJS from './components/sisense-bpjs';
 import 'leaflet/dist/leaflet.css';
 
 const App: React.FC = () => {
@@ -29,9 +31,10 @@ const App: React.FC = () => {
             <Route element={<HomeContainer />}>
               <Route path="/home" element={<Home />} />
               <Route path="/dapodik" element={<KemendikbudPendidikan isSelected={true}/>} />
-              <Route path='/kemenko' element={<Kemenko />} />
-              <Route path='/sipd' element={<Sipd />} />
-              <Route path='/bkkbn' element={<SisenseBkkbnKeluargaStunting />} />
+              <Route path='/kemenko' element={<SisenseKemenko isSelected={true} />} />
+              {/* <Route path='/sipd' element={<Sipd />} />  */}
+              <Route path='/bpjs-kesehatan' element={<SisenseBPJS isSelected={true}/>} />
+              <Route path='/bkkbn' element={<SisenseBkkbnKeluargaStunting isSelected={true} />} />
               {/* <Route path='/latihan' element={<Latihan />} /> */}
             </Route>
           </Routes>

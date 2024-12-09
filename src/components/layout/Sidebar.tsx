@@ -54,8 +54,9 @@ const Sidebar: React.FC<SidebarProps> = ({ show }) => {
           <div className={`collapse-content ${isMenuOpen ? 'show' : ''}`}>
             <a href="/dapodik" className={clsx("collapse-item", { active: currentPath === "/dapodik" })}>Dapodik</a>
             <a href="/kemenko" className={clsx("collapse-item", { active: currentPath === "/kemenko" })}>Kemiskinan Ekstrem</a>
-            <a href="/sipd" className={clsx("collapse-item", { active: currentPath === "/sipd" })}>Anggaran Nasional</a>
+            {/* <a href="/sipd" className={clsx("collapse-item", { active: currentPath === "/sipd" })}>Anggaran Nasional</a> */}
             <a href="/bkkbn" className={clsx("collapse-item", { active: currentPath === "/bkkbn" })}>Anggaran Stunting</a>
+            <a href="/bpjs-kesehatan" className={clsx("collapse-item", { active: currentPath === "/bpjs-kesehatan" })}>BPJS </a>
           </div>
         </div>
       </li>

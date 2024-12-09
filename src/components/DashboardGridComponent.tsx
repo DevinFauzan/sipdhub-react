@@ -83,7 +83,7 @@ const DashboardGridComponent: React.FC<{ dashboard: IDashboard, webpageFilters?:
 
   return (
     <div className="dashboard-grid shadow">
-      <h2 className="dashboard-title fw-semibold text-center pb-1" style={{ fontFamily: 'Open Sans, sans-serif', marginBottom: dashboard.description ? "8px" : "20px" }}>
+      <h2 className="dashboard-title fw-semibold text-center pb-1" style={{ fontFamily: 'Open Sans, sans-serif', marginBottom: dashboard.description ? "12px" : "24px" }}>
         {dashboard.name}
       </h2>
       <CompanyProfile />
@@ -132,16 +132,16 @@ const DashboardGridComponent: React.FC<{ dashboard: IDashboard, webpageFilters?:
                   )}
                   <div className="flex-grow flex items-center justify-center">
                     <div
-                      className="widget-title text-center text-gray-700"
+                      className="widget-title text-center text-gray-900"
                       style={{
                         ...item.widget?.titleStyle,
+                        fontSize: '18px',
                         overflow: 'hidden', // Hide overflow text
                         textOverflow: 'ellipsis', // Add ellipsis for overflow text
                         lineHeight: '1.5rem', // Set line height for better vertical alignment
                         maxHeight: '3rem', // Set a maximum height for the title
                         display: '-webkit-box', // Use flexbox for multi-line text
                         WebkitBoxOrient: 'vertical', // Allow vertical orientation
-                        // overflow: 'hidden', // Hide overflow text
                         WebkitLineClamp: 2, // Limit to 2 lines
                         width: '100%', // Ensure it takes full width
                       }}
@@ -163,8 +163,6 @@ const DashboardGridComponent: React.FC<{ dashboard: IDashboard, webpageFilters?:
                   </div>
                 </div>
               </div>
-              
-
               )}
             </div>
           );
