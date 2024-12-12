@@ -10,6 +10,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ toggleSidebar, isSidebarVisible }) => {
   return (
     <nav className="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+      
       <button 
         id="" 
         className="btn btn-link   center" // Removed d-md-none to show on all sizes
@@ -22,6 +23,7 @@ const Header: React.FC<HeaderProps> = ({ toggleSidebar, isSidebarVisible }) => {
           <FaRegArrowAltCircleRight size={20} /> // Show right arrow when sidebar is hidden
         )}
       </button>
+      <h2></h2>
       <ul className="navbar-nav ml-auto">
         <li className="nav-item dropdown no-arrow d-sm-none">
           <a className="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

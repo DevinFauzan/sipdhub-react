@@ -73,3 +73,9 @@ export const customStyle4: DashboardWidgetStyleOptions = {
     height: 150,
     
   };
+
+  export const customStyle13: DashboardWidgetStyleOptions = {
+    ...customStyle1,
+    height: 550,
+    
+  };

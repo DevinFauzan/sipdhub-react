@@ -27,14 +27,14 @@ const App: React.FC = () => {
       <ProfileCompanyContentCopy>
         <Router>
           <Routes>
-            <Route path="/" element={<Login />} />
-            <Route element={<HomeContainer />}>
-              <Route path="/home" element={<Home />} />
-              <Route path="/dapodik" element={<KemendikbudPendidikan isSelected={true}/>} />
-              <Route path='/kemenko' element={<SisenseKemenko isSelected={true} />} />
+            <Route path="/sipd-hub" element={<Login />} />
+            <Route path='/sipd-hub' element={<HomeContainer />}>
+              <Route path="home" element={<Home />} />
+              <Route path="dapodik" element={<KemendikbudPendidikan isSelected={true}/>} />
+              <Route path='kemenko' element={<SisenseKemenko isSelected={true} />} />
               {/* <Route path='/sipd' element={<Sipd />} />  */}
-              <Route path='/bpjs-kesehatan' element={<SisenseBPJS isSelected={true}/>} />
-              <Route path='/bkkbn' element={<SisenseBkkbnKeluargaStunting isSelected={true} />} />
+              <Route path='bpjs-kesehatan' element={<SisenseBPJS isSelected={true}/>} />
+              <Route path='bkkbn' element={<SisenseBkkbnKeluargaStunting isSelected={true} />} />
               {/* <Route path='/latihan' element={<Latihan />} /> */}
             </Route>
           </Routes>

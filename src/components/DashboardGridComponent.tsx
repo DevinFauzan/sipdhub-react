@@ -22,9 +22,13 @@ const DashboardGridComponent: React.FC<{ dashboard: IDashboard, webpageFilters?:
   const [isSisenseTriggeredFilter, setIsSisenseTriggeredFilter] = useState<boolean>(true);
   const [error] = useState<string | null>(null);
 
-  const handleDataPointsSelected = (widgetId: string, filterable: boolean | undefined) => (dataPoints: any) => {
-    if (!dataPoints?.categoryValue || !filterable) return;
+  
 
+  const handleDataPointsSelected = (widgetId: string, filterable: boolean | undefined) => (dataPoints: any) => {
+    // console.log(!dataPoints?.categoryValue)
+    // console.log('Data points selected:',  !filterable);
+    if (!dataPoints?.categoryValue || !filterable) return;
+   
     setSelectedFilters(prevFilters => {
       const existingFilterIndex = prevFilters.findIndex(
         filter =>
@@ -32,29 +36,32 @@ const DashboardGridComponent: React.FC<{ dashboard: IDashboard, webpageFilters?:
           (filter.widgetId === DistrictWebPageFilterID) ||
           (filter.widgetId === widgetId && filter.categoryValue === dataPoints.categoryValue)
       );
-
+  
       setIsSisenseTriggeredFilter(true);
-
+      console.log('existingFilterIndex', existingFilterIndex);
       if (existingFilterIndex !== -1) {
+        // Remove the filter if it's already selected
         setFilterProvinsi(null);
         setFilterKabupaten(null);
-        return []; // Remove the filter if it's already selected
+        return prevFilters.filter((_, index) => index !== existingFilterIndex);
       } else {
         const provinsi = optionsProvinsi.find(op => op.value.toLowerCase() === dataPoints.categoryValue?.toLowerCase());
         if (provinsi) {
           setFilterProvinsi(provinsi);
         }
-
+  
         const newFilter: IFilterState = {
           widgetId,
           categoryValue: dataPoints.categoryValue,
           attribute: dataPoints.entries.category[0].attribute,
           value: dataPoints.entries.category[0].value
         };
+        console.log('Data points selected:', newFilter);
         return [...prevFilters, newFilter]; // Add new filter
       }
     });
   };
+ 
 
   useEffect(() => {
     if (isSisenseTriggeredFilter) {
@@ -80,16 +87,43 @@ const DashboardGridComponent: React.FC<{ dashboard: IDashboard, webpageFilters?:
       return true;
     });
   }, [selectedFilters]);
+  const getDynamicTitle = () => {
+    const provinceName = filterProvinsi ? filterProvinsi.label : '';
+    const districtName = filterKabupaten ? filterKabupaten.label : '';
+  
+    // Only return a title if at least one filter is selected
+    if (provinceName || districtName) {
+      return `${provinceName} ${districtName ? `- ${districtName}` : ''}`.trim();
+    }
+    
+    return ''; // Return an empty string if no filters are selected
+  };
 
   return (
-    <div className="dashboard-grid shadow">
-      <h2 className="dashboard-title fw-semibold text-center pb-1" style={{ fontFamily: 'Open Sans, sans-serif', marginBottom: dashboard.description ? "12px" : "24px" }}>
-        {dashboard.name}
+   
+      <div className="dashboard-grid shadow">
+      <h2
+        className="dashboard-title fw-semibold text-center pb-1"
+        style={{
+          fontFamily: 'Open Sans, sans-serif',
+          marginBottom: dashboard.description ? "12px" : "24px",
+          position: 'sticky',
+          top: 0,
+          backgroundColor: '#F9F9F9',
+          zIndex: 1000, 
+          padding: '10px' 
+        }}
+      >
+        <span style={{ fontWeight: 'bold' }}>{dashboard.name}</span> 
+        {getDynamicTitle() && <span style={{ margin: '0 10px' }}>||</span>} 
+        <span>{getDynamicTitle()}</span> 
       </h2>
-      <CompanyProfile />
+
+      {dashboard.withMap && <CompanyProfile />}
 
       <div className="pt-10 mr-3">
-        <FilterProvinsiKabupaten
+        {dashboard.withMapFilter && (
+          <FilterProvinsiKabupaten
           filterProvinsi={filterProvinsi}
           setFilterProvinsi={setFilterProvinsi}
           filterKabupaten={filterKabupaten}
@@ -99,6 +133,7 @@ const DashboardGridComponent: React.FC<{ dashboard: IDashboard, webpageFilters?:
           labelClass="text-gray-700 text-sm font-bold"
           errorEnabled={!!error} // Pass error state to the component
         />
+        )}
       </div>
 
       <div className="widget-grid mt-10 flex flex-wrap">

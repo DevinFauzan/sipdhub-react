@@ -32,7 +32,7 @@ const Login: React.FC = () => {
 
       // Store the access token in local storage or session storage
       localStorage.setItem('access_token', data.access_token); // Store the access token
-      navigate('/home'); // Redirect to the dashboard
+      navigate('/sipd-hub/home'); // Redirect to the dashboard
     } catch (error) {
       setErrorMessage((error as Error).message); // Set the error message for display
     }

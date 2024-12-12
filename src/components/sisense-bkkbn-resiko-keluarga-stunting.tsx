@@ -75,6 +75,8 @@ const SisenseBkkbnKeluargaStunting: React.FC<{ isSelected: boolean }> = ({ isSel
     {
       id: '67514ffdd5db91003325b982',
       name: 'KELUARGA BERESIKO STUNTING',
+      withMap: true,
+      withMapFilter: true,
       widgets: [
         {
           colSpan: 3,
@@ -135,19 +137,18 @@ const SisenseBkkbnKeluargaStunting: React.FC<{ isSelected: boolean }> = ({ isSel
             iconWrapperClass: 'bg-lime-200',
           },
         },
-
         {
           colSpan: 6,
           widgetType: 'default',
           widget: {
-            id: '67518621d5db91003325baa9', title: 'Usia Anak dan PUS',
+            id: '67518671d5db91003325baae', title: 'Pasangan Usia Subur',
             styleOptions: customStyle7,
             titleWrapperClass: 'bg-red-100',
             widgetContentWrapperClass: 'bg-red-50',
             titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
             iconWrapperClass: 'bg-lime-200',
           },
-        },
+        },  
         {
           colSpan: 6,
           widgetType: 'default',
@@ -160,11 +161,12 @@ const SisenseBkkbnKeluargaStunting: React.FC<{ isSelected: boolean }> = ({ isSel
             iconWrapperClass: 'bg-lime-200',
           },
         },
+       
         {
           colSpan: 6,
           widgetType: 'default',
           widget: {
-            id: '67518671d5db91003325baae', title: 'Pasangan Usia Subur',
+            id: '67518621d5db91003325baa9', title: 'Usia Anak dan PUS',
             styleOptions: customStyle7,
             titleWrapperClass: 'bg-red-100',
             widgetContentWrapperClass: 'bg-red-50',
@@ -187,11 +189,12 @@ const SisenseBkkbnKeluargaStunting: React.FC<{ isSelected: boolean }> = ({ isSel
         },
 
         // Anggaran 
+        // BARIS 1
         {
           colSpan: 4,
           widgetType: 'default',
           widget: {
-            id: '6752c128d5db91003325bc6a', title: 'Anggaran Urusan Stunting',
+            id: '675921b9d5db91003325c3f7', title: 'Anggaran Urusan Stunting',
             styleOptions: customStyle12,
             titleWrapperClass: 'bg-teal-100',
             widgetContentWrapperClass: 'bg-teal-50',
@@ -205,7 +208,7 @@ const SisenseBkkbnKeluargaStunting: React.FC<{ isSelected: boolean }> = ({ isSel
           colSpan: 4,
           widgetType: 'default',
           widget: {
-            id: '67567219d5db91003325becc', title: 'Anggaran Provinsi Urusan Stunting',
+            id: '675921c1d5db91003325c3f9', title: 'Anggaran Provinsi Urusan Stunting',
             styleOptions: customStyle12,
             titleWrapperClass: 'bg-teal-100',
             widgetContentWrapperClass: 'bg-teal-50',
@@ -218,7 +221,7 @@ const SisenseBkkbnKeluargaStunting: React.FC<{ isSelected: boolean }> = ({ isSel
           colSpan: 4,
           widgetType: 'default',
           widget: {
-            id: '67567224d5db91003325bed0', title: 'Anggaran Kabupaten Urusan Stunting',
+            id: '675921c4d5db91003325c3fb', title: 'Anggaran Kabupaten Urusan Stunting',
             styleOptions: customStyle12,
             titleWrapperClass: 'bg-teal-100',
             widgetContentWrapperClass: 'bg-teal-50',
@@ -227,13 +230,13 @@ const SisenseBkkbnKeluargaStunting: React.FC<{ isSelected: boolean }> = ({ isSel
             widgetContentWrapperStyle: { paddingTop: '2rem' }
           },
         },
-      
+      // BARIS 2 
        
         {
           colSpan: 4,
           widgetType: 'default',
           widget: {
-            id: '6752c12cd5db91003325bc6c', title: 'Anggaran SPM Stunting',
+            id: '67592209d5db91003325c413', title: 'Anggaran SPM Stunting',
             styleOptions: customStyle12,
             titleWrapperClass: 'bg-teal-100',
             widgetContentWrapperClass: 'bg-teal-50',
@@ -246,7 +249,7 @@ const SisenseBkkbnKeluargaStunting: React.FC<{ isSelected: boolean }> = ({ isSel
           colSpan: 4,
           widgetType: 'default',
           widget: {
-            id: '6756721fd5db91003325bece', title: 'Anggaran Provinsi SPM Stunting',
+            id: '6759220bd5db91003325c415', title: 'Anggaran Provinsi SPM Stunting',
             styleOptions: customStyle12,
             titleWrapperClass: 'bg-teal-100',
             widgetContentWrapperClass: 'bg-teal-50',
@@ -259,7 +262,7 @@ const SisenseBkkbnKeluargaStunting: React.FC<{ isSelected: boolean }> = ({ isSel
           colSpan: 4,
           widgetType: 'default',
           widget: {
-            id: '67567229d5db91003325bed2', title: 'Anggaran Kabupaten SPM Stunting',
+            id: '6759220ed5db91003325c417', title: 'Anggaran Kabupaten SPM Stunting',
             styleOptions: customStyle12,
             titleWrapperClass: 'bg-teal-100',
             widgetContentWrapperClass: 'bg-teal-50',
@@ -268,11 +271,12 @@ const SisenseBkkbnKeluargaStunting: React.FC<{ isSelected: boolean }> = ({ isSel
             widgetContentWrapperStyle: { paddingTop: '2rem' }
           },
         },
+        // BARIS 3 
         {
           colSpan: 6,
           widgetType: 'default',
           widget: {
-            id: '6752c131d5db91003325bc70', title: 'Persentase Anggaran Stunting Bidang Kesehatan Pada Anggaran Nasional',
+            id: '67592214d5db91003325c419', title: 'Persentase Anggaran Stunting Berdasarkan Anggaran Nasional',
             styleOptions: customStyle7,
             titleWrapperClass: 'bg-teal-100',
             widgetContentWrapperClass: 'bg-teal-50',
@@ -284,7 +288,7 @@ const SisenseBkkbnKeluargaStunting: React.FC<{ isSelected: boolean }> = ({ isSel
           colSpan: 6,
           widgetType: 'default',
           widget: {
-            id: '6752c135d5db91003325bc72', title: 'Persentase Anggaran Stunting Pada Anggaran Nasional',
+            id: '67592217d5db91003325c41b', title: 'Persentase Anggaran SPM Stunting Berdasarkan Anggaran SPM Nasional',
             styleOptions: customStyle7,
             titleWrapperClass: 'bg-teal-100',
             widgetContentWrapperClass: 'bg-teal-50',
@@ -292,12 +296,73 @@ const SisenseBkkbnKeluargaStunting: React.FC<{ isSelected: boolean }> = ({ isSel
             iconWrapperClass: 'bg-lime-200',
           },
         },
+        // BARIS 4
         {
-          colSpan: 6,
+          colSpan: 12,
           widgetType: 'default',
           widget: {
-            id: '6752c139d5db91003325bc74', title: 'Anggaran Stunting Berdasarkan Bidang Urusan Pemerintah',
-            styleOptions: customStyle6,
+            id: '67597affd5db91003325c7c3', title: 'Alokasi Anggaran Stunting Berdasarkan Urusan Pemerintah',
+            styleOptions: customStyle7,
+            titleWrapperClass: 'bg-teal-100',
+            widgetContentWrapperClass: 'bg-teal-50',
+            titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
+            widgetContentWrapperStyle: { paddingTop: '1rem' },
+            iconWrapperClass: 'bg-lime-200',
+          },
+          sourceFilter: true,
+          filterable: true
+        },
+        {
+          colSpan: 12,
+          widgetType: 'default',
+          widget: {
+            id: '6759223fd5db91003325c427', title: 'Alokasi Anggaran Stunting Berdasarkan Bidang Urusan Pemerintah',
+            styleOptions: customStyle7,
+            titleWrapperClass: 'bg-teal-100',
+            widgetContentWrapperClass: 'bg-teal-50',
+            titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
+            widgetContentWrapperStyle: { paddingTop: '1rem' },
+            iconWrapperClass: 'bg-lime-200',
+          },
+          sourceFilter: true,
+          filterable: true
+        },
+        {
+          colSpan: 12,
+          widgetType: 'default',
+          widget: {
+            id: '67597dfcd5db91003325c800', title: 'Alokasi Anggaran Stunting Berdasarkan GIAT Urusan Pemerintah',
+            styleOptions: customStyle7,
+            titleWrapperClass: 'bg-teal-100',
+            widgetContentWrapperClass: 'bg-teal-50',
+            titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
+            widgetContentWrapperStyle: { paddingTop: '1rem' },
+            iconWrapperClass: 'bg-lime-200',
+          },
+          sourceFilter: true,
+          filterable: true
+        },
+        {
+          colSpan: 12,
+          widgetType: 'default',
+          widget: {
+            id: '67597edbd5db91003325c814', title: 'Alokasi Anggaran Stunting Berdasarkan Sub GIAT Urusan Pemerintah',
+            styleOptions: customStyle7,
+            titleWrapperClass: 'bg-teal-100',
+            widgetContentWrapperClass: 'bg-teal-50',
+            titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
+            widgetContentWrapperStyle: { paddingTop: '1rem' },
+            iconWrapperClass: 'bg-lime-200',
+          },
+          sourceFilter: true,
+          filterable: true
+        },
+        {
+          colSpan: 12,
+          widgetType: 'default',
+          widget: {
+            id: '67597f26d5db91003325c81f', title: 'Alokasi Anggaran Stunting Berdasarkan Akun Urusan Pemerintah',
+            styleOptions: customStyle7,
             titleWrapperClass: 'bg-teal-100',
             widgetContentWrapperClass: 'bg-teal-50',
             titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
@@ -305,20 +370,6 @@ const SisenseBkkbnKeluargaStunting: React.FC<{ isSelected: boolean }> = ({ isSel
             iconWrapperClass: 'bg-lime-200',
           },
         },
-        {
-          colSpan: 6,
-          widgetType: 'default',
-          widget: {
-            id: '6752c13cd5db91003325bc76', title: 'Anggaran Stunting Berdasarkan SPM Bidang Pemerintah',
-            styleOptions: customStyle6,
-            titleWrapperClass: 'bg-teal-100',
-            widgetContentWrapperClass: 'bg-teal-50',
-            titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
-            widgetContentWrapperStyle: { paddingTop: '1rem' },
-            iconWrapperClass: 'bg-lime-200',
-          },
-        },
-
        
       ]
     },

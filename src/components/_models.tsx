@@ -59,6 +59,9 @@ export interface IDashboard {
   name?: string;
   widgets: Array<IWidgetLayout>;
   description?: string
+  withMap?:boolean
+  withMapFilter?:boolean
+
 }
 
 

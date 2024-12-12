@@ -41,3 +41,45 @@
   color: #888;
 }
 
+/* styles.css or your main CSS file */
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Full height */
+  overflow: hidden; /* Prevent body scroll */
+}
+
+#wrapper {
+  display: flex;
+  height: 100vh; /* Full height */
+}
+
+#sidebar {
+  width: 250px; /* Adjust width as needed */
+  background-color: #343a40; /* Sidebar background color */
+  position: fixed; /* Fix the sidebar */
+  height: 100%; /* Full height */
+  overflow-y: auto; /* Allow sidebar to scroll if needed */
+}
+
+#content-wrapper {
+  margin-left: 250px; /* Same as sidebar width */
+  flex: 1; /* Take remaining space */
+  display: flex;
+  flex-direction: column;
+}
+
+#content {
+  flex: 1; /* Allow content to grow */
+  overflow-y: auto; /* Allow content to scroll */
+  padding: 20px; /* Add some padding */
+}
+
+.navbar {
+  position: fixed; /* Fix the header */
+  top: 0;
+  left: 250px; /* Same as sidebar width */
+  right: 0; /* Full width */
+  z-index: 1000; /* Ensure it stays on top */
+}

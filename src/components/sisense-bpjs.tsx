@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 
 import { IDashboard, IFilterState } from './_models';
 
-import { customStyle1, customStyle10, customStyle12, customStyle2, customStyle3, customStyle4, customStyle5, customStyle6, customStyle7 } from './_SisenseWidgetStyleOptions';
+import { customStyle1, customStyle10, customStyle12, customStyle2, customStyle3, customStyle4, customStyle5, customStyle6, customStyle7, customStyle8 } from './_SisenseWidgetStyleOptions';
 import DashboardGridComponent from './DashboardGridComponent';
 import { IStandardColorRange, IPopupContent } from '../public-profile/profiles/company copy/blocks/interfaces/global';
 import { MapDataContext, FilterContext } from '../public-profile/profiles/company copy';
@@ -108,6 +108,8 @@ const SisenseBPJS: React.FC<{ isSelected: boolean }> = ({ isSelected }) => {
     {
       id: '6755bbf2d5db91003325bdc3',
       name: 'BPJS KESEHATAN',
+      withMap: true,
+      withMapFilter: true,
       widgets: [
         {
           colSpan: 4,
@@ -148,38 +150,39 @@ const SisenseBPJS: React.FC<{ isSelected: boolean }> = ({ isSelected }) => {
             // icon: <FcMoneyTransfer className='text-4xl' />
           },
         },
-        {
-          colSpan: 6,
-          widgetType: 'default',
-          widget: {
-            id: '6755bd24d5db91003325bded', title: 'Peserta Aktif vs Penduduk',
-            styleOptions: customStyle5,
-            titleWrapperClass: 'bg-orange-100',
-            widgetContentWrapperClass: 'bg-orange-50',
-            titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
-            iconWrapperClass: 'bg-sky-100',
-            // icon: <FcMoneyTransfer className='text-4xl' />
-          },
-        },
+        // {
+        //   colSpan: 6,
+        //   widgetType: 'default',
+        //   widget: {
+        //     id: '6755bd24d5db91003325bded', title: 'Peserta Aktif vs Penduduk',
+        //     styleOptions: customStyle5,
+        //     titleWrapperClass: 'bg-orange-100',
+        //     widgetContentWrapperClass: 'bg-orange-50',
+        //     titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
+        //     iconWrapperClass: 'bg-sky-100',
+        //     // icon: <FcMoneyTransfer className='text-4xl' />
+        //   },
+        // },
         {
           colSpan: 6,
           widgetType: 'default',
           widget: {
             id: '6755bd7ad5db91003325bdf8', title: 'Peserta Aktif vs Peserta Tidak Aktif',
-            styleOptions: customStyle5,
+            styleOptions: customStyle8,
             titleWrapperClass: 'bg-orange-100',
             widgetContentWrapperClass: 'bg-orange-50',
             titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
+            widgetContentWrapperStyle: { paddingTop: '1rem' },
             iconWrapperClass: 'bg-sky-100',
             // icon: <FcMoneyTransfer className='text-4xl' />
           },
         },
         {
-          colSpan: 12,
+          colSpan: 6,
           widgetType: 'default',
           widget: {
             id: '6755bd2dd5db91003325bdf1', title: 'Peserta Aktif dan Tidak Aktif BPJS',
-            styleOptions: customStyle10,
+            styleOptions: customStyle8,
             titleWrapperClass: 'bg-orange-100',
             widgetContentWrapperClass: 'bg-orange-50',
             titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
@@ -191,11 +194,13 @@ const SisenseBPJS: React.FC<{ isSelected: boolean }> = ({ isSelected }) => {
           tiangDewa: true,
           tiangDewaColor: 'bg-red-100',
         },
+        // ANGGARAN BPJS
+        // BARIS 1 
         {
           colSpan: 4,
           widgetType: 'default',
           widget: {
-            id: '6755bea8d5db91003325be02', title: 'Total Rincian apbd tahun 2024',
+            id: '6755bea8d5db91003325be02', title: 'Total Anggaran BPJS tahun 2024',
             styleOptions: customStyle1,
             titleWrapperClass: 'bg-teal-100',
             widgetContentWrapperClass: 'bg-teal-50',
@@ -238,8 +243,8 @@ const SisenseBPJS: React.FC<{ isSelected: boolean }> = ({ isSelected }) => {
           colSpan: 6,
           widgetType: 'default',
           widget: {
-            id: '6755c7cbd5db91003325be39', title: 'Tunggakan sd Desember 2023',
-            styleOptions: customStyle5,
+            id: '6755c7cbd5db91003325be39', title: 'Total Anggaran BPJS Tahun 2024',
+            styleOptions: customStyle7,
             titleWrapperClass: 'bg-teal-100',
             widgetContentWrapperClass: 'bg-teal-50',
             titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
@@ -252,8 +257,8 @@ const SisenseBPJS: React.FC<{ isSelected: boolean }> = ({ isSelected }) => {
           colSpan: 6,
           widgetType: 'default',
           widget: {
-            id: '675682f2d5db91003325bf55', title: 'Proyeksi Anggaran vs Kebutuhan Anggaran vs Penerimaan Per-Okt 2024',
-            styleOptions: customStyle5,
+            id: '675682f2d5db91003325bf55', title: 'Komparasi Total Anggaran BPJS 2024',
+            styleOptions: customStyle7,
             titleWrapperClass: 'bg-teal-100',
             widgetContentWrapperClass: 'bg-teal-50',
             titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
@@ -266,7 +271,7 @@ const SisenseBPJS: React.FC<{ isSelected: boolean }> = ({ isSelected }) => {
           colSpan: 6,
           widgetType: 'default',
           widget: {
-            id: '67567778d5db91003325bf0d', title: 'Total Rincian Apbd Tahun 2024',
+            id: '67567778d5db91003325bf0d', title: 'Rincian Anggaran BPJS Tahun 2024 Berdasarkan Segmen',
             styleOptions: customStyle6,
             titleWrapperClass: 'bg-teal-100',
             widgetContentWrapperClass: 'bg-teal-50',
@@ -280,7 +285,8 @@ const SisenseBPJS: React.FC<{ isSelected: boolean }> = ({ isSelected }) => {
           colSpan: 6,
           widgetType: 'default',
           widget: {
-            id: '6755c8dbd5db91003325be47', title: 'Proyeksi Anggaran vs Kebutuhan Anggaran vs Penerimaan Per-Okt 2024',
+            id: '6755c8dbd5db91003325be47', 
+            title: 'Komparasi Rincian Anggaran BPJS Tahun 2024 Berdasarkan Segmen',
             styleOptions: customStyle6,
             titleWrapperClass: 'bg-teal-100',
             widgetContentWrapperClass: 'bg-teal-50',
@@ -290,21 +296,36 @@ const SisenseBPJS: React.FC<{ isSelected: boolean }> = ({ isSelected }) => {
             // icon: <FcMoneyTransfer className='text-4xl' />
           },
         },
-        // {
-        //   colSpan: 12,
-        //   widgetType: 'default',
-        //   widget: {
-        //     id: '6756824bd5db91003325bf4f', title: 'Kelebihn Kekurangan',
-        //     styleOptions: customStyle10,
-        //     titleWrapperClass: 'bg-teal-100',
-        //     widgetContentWrapperClass: 'bg-teal-50',
-        //     titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
-        //     widgetContentWrapperStyle: { paddingTop: '1rem' },
-        //     iconWrapperClass: 'bg-sky-100',
+        {
+          colSpan: 12,
+          widgetType: 'default',
+          widget: {
+            id: '67596eedd5db91003325c6ed', title: 'Alokasi Anggran BPJS Berdasarkan Segmen Pemerintah',
+            styleOptions: customStyle10,
+            titleWrapperClass: 'bg-teal-100',
+            widgetContentWrapperClass: 'bg-teal-50',
+            titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
+            widgetContentWrapperStyle: { paddingTop: '1rem' },
+            iconWrapperClass: 'bg-sky-100',
             
-        //     // icon: <FcMoneyTransfer className='text-4xl' />
-        //   },
-        // }
+            // icon: <FcMoneyTransfer className='text-4xl' />
+          },
+        },
+        {
+          colSpan: 12,
+          widgetType: 'default',
+          widget: {
+            id: '67596e91d5db91003325c6eb', title: 'Alokasi Anggran BPJS Berdasarkan AKUN Pemerintah',
+            styleOptions: customStyle10,
+            titleWrapperClass: 'bg-teal-100',
+            widgetContentWrapperClass: 'bg-teal-50',
+            titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
+            widgetContentWrapperStyle: { paddingTop: '1rem' },
+            iconWrapperClass: 'bg-sky-100',
+            
+            // icon: <FcMoneyTransfer className='text-4xl' />
+          },
+        }
       ]
     },
   ];

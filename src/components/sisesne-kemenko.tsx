@@ -104,6 +104,8 @@ const SisenseKemenko: React.FC<{ isSelected: boolean }> = ({ isSelected }) => {
     {
       id: '6719fa05fbe60a002a9f30d5',
       name: 'KEMISKINAN EKSTREM',
+      withMap: true,
+      withMapFilter: true,
       widgets: [
         {
           colSpan: 6,
@@ -136,7 +138,7 @@ const SisenseKemenko: React.FC<{ isSelected: boolean }> = ({ isSelected }) => {
           colSpan: 3,
           widgetType: 'default',
           widget: {
-            id: '674d795ed5db91003325b4b2', title: 'Jumlah Kepala Keluarga Perempuan',
+            id: '674d795ed5db91003325b4b2', title: 'Jumlah Kepala Keluarga',
             styleOptions: customStyle1,
             titleWrapperClass: 'bg-sky-100',
             widgetContentWrapperClass: 'bg-sky-50',
@@ -163,7 +165,7 @@ const SisenseKemenko: React.FC<{ isSelected: boolean }> = ({ isSelected }) => {
           colSpan: 3,
           widgetType: 'default',
           widget: {
-            id: '674d4d0cd5db91003325b471', title: 'Jumlah Penduduk Individu Bekerja',
+            id: '674d4d0cd5db91003325b471', title: 'Jumlah Penduduk Individu',
             styleOptions: customStyle1,
             titleWrapperClass: 'bg-orange-100',
             widgetContentWrapperClass: 'bg-orange-50',
@@ -203,7 +205,7 @@ const SisenseKemenko: React.FC<{ isSelected: boolean }> = ({ isSelected }) => {
           widgetType: 'default',
           widget: {
             id: '674563adfbe60a002a9f4340', title: 'Status Pekerjaan Kepala Keluarga',
-            styleOptions: customStyle5,
+            styleOptions: customStyle7,
             titleWrapperClass: 'bg-sky-100',
             widgetContentWrapperClass: 'bg-sky-50',
             titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
@@ -216,7 +218,7 @@ const SisenseKemenko: React.FC<{ isSelected: boolean }> = ({ isSelected }) => {
           widgetType: 'default',
           widget: {
             id: '674d82ccd5db91003325b4f6', title: 'Jenis Pekerjaan Kepala Keluarga',
-            styleOptions: customStyle5,
+            styleOptions: customStyle7,
             titleWrapperClass: 'bg-sky-100',
             widgetContentWrapperClass: 'bg-sky-50',
             titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
@@ -229,7 +231,7 @@ const SisenseKemenko: React.FC<{ isSelected: boolean }> = ({ isSelected }) => {
           widgetType: 'default',
           widget: {
             id: '67501213d5db91003325b8d7', title: 'Status Pekerjaan Individu',
-            styleOptions: customStyle5,
+            styleOptions: customStyle7,
             titleWrapperClass: 'bg-orange-100',
             widgetContentWrapperClass: 'bg-orange-50',
             titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
@@ -242,7 +244,7 @@ const SisenseKemenko: React.FC<{ isSelected: boolean }> = ({ isSelected }) => {
           widgetType: 'default',
           widget: {
             id: '674d9dcad5db91003325b559', title: 'Jenis Pekerjaan Individu',
-            styleOptions: customStyle5,
+            styleOptions: customStyle7,
             titleWrapperClass: 'bg-orange-100',
             widgetContentWrapperClass: 'bg-orange-50',
             titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
@@ -252,81 +254,54 @@ const SisenseKemenko: React.FC<{ isSelected: boolean }> = ({ isSelected }) => {
         },
 
         {
-          colSpan: 6,
+          colSpan: 4,
           widgetType: 'default',
           widget: {
             id: '674563adfbe60a002a9f4339', title: 'Kepala Keluarga Perempuan',
-            styleOptions: customStyle5,
+            styleOptions: customStyle7,
             titleWrapperClass: 'bg-sky-100',
             widgetContentWrapperClass: 'bg-sky-50',
-            // widgetContentWrapperStyle: { paddingTop: '0.2rem' },
+            widgetContentWrapperStyle: { paddingTop: '1rem' },
             iconWrapperClass: 'bg-sky-100',
             // icon: <FcMoneyTransfer className='text-4xl' />
           },
         },
         {
-          colSpan: 6,
+          colSpan: 8,
           widgetType: 'default',
           widget: {
             id: '6751923ed5db91003325bb38', title: 'Individu Bekerja dan Tidak Bekerja',
-            styleOptions: customStyle5,
+            styleOptions: customStyle7,
             titleWrapperClass: 'bg-orange-100',
             widgetContentWrapperClass: 'bg-orange-50',
-            // widgetContentWrapperStyle: { paddingTop: '0.2rem' },
+            widgetContentWrapperStyle: { paddingTop: '1rem' },
             iconWrapperClass: 'bg-sky-100',
             // icon: <FcMoneyTransfer className='text-4xl' />
           },
         },
-
+       
         {
-          colSpan: 6,
+          colSpan: 4,
+          widgetType: 'default',
+          widget: {
+            id: '6759dab6d5db91003325c8b8', title: 'Klasifikasi Usia Lansia',
+            styleOptions: customStyle7,
+            titleWrapperClass: 'bg-sky-100',
+            widgetContentWrapperClass: 'bg-sky-50',
+            widgetContentWrapperStyle: { paddingTop: '1rem' },
+            iconWrapperClass: 'bg-sky-100',
+            // icon: <FcMoneyTransfer className='text-4xl' />
+          },
+        },
+        {
+          colSpan: 8,
           widgetType: 'default',
           widget: {
             id: '674563adfbe60a002a9f4336', title: 'Klasifikasi Usia Individu',
-            styleOptions: customStyle5,
-            titleWrapperClass: 'bg-sky-100',
-            widgetContentWrapperClass: 'bg-sky-50',
-            // widgetContentWrapperStyle: { paddingTop: '0.2rem' },
-            iconWrapperClass: 'bg-sky-100',
-            // icon: <FcMoneyTransfer className='text-4xl' />
-          },
-        },
-        {
-          colSpan: 6,
-          widgetType: 'default',
-          widget: {
-            id: '674563adfbe60a002a9f433e', title: 'Klasifikasi Usia Lansia',
-            styleOptions: customStyle5,
+            styleOptions: customStyle7,
             titleWrapperClass: 'bg-orange-100',
             widgetContentWrapperClass: 'bg-orange-50',
-            // widgetContentWrapperStyle: { paddingTop: '0.2rem' },
-            iconWrapperClass: 'bg-sky-100',
-            // icon: <FcMoneyTransfer className='text-4xl' />
-          },
-        },
-
-        {
-          colSpan: 6,
-          widgetType: 'default',
-          widget: {
-            id: '674d63c9d5db91003325b486', title: 'Fasilitas Rumah',
-            styleOptions: customStyle5,
-            titleWrapperClass: 'bg-zinc-200',
-            widgetContentWrapperClass: 'bg-zinc-100',
-            // widgetContentWrapperStyle: { paddingTop: '0.2rem' },
-            iconWrapperClass: 'bg-sky-100',
-            // icon: <FcMoneyTransfer className='text-4xl' />
-          },
-        },
-        {
-          colSpan: 6,
-          widgetType: 'default',
-          widget: {
-            id: '674d98ddd5db91003325b53a', title: 'Fasilitas Sumber Listrik',
-            styleOptions: customStyle5,
-            titleWrapperClass: 'bg-zinc-200',
-            widgetContentWrapperClass: 'bg-zinc-100',
-            // widgetContentWrapperStyle: { paddingTop: '0.2rem' },
+            widgetContentWrapperStyle: { paddingTop: '1rem' },
             iconWrapperClass: 'bg-sky-100',
             // icon: <FcMoneyTransfer className='text-4xl' />
           },
@@ -340,7 +315,21 @@ const SisenseKemenko: React.FC<{ isSelected: boolean }> = ({ isSelected }) => {
             styleOptions: customStyle5,
             titleWrapperClass: 'bg-zinc-200',
             widgetContentWrapperClass: 'bg-zinc-100',
-            // widgetContentWrapperStyle: { paddingTop: '0.2rem' },
+            widgetContentWrapperStyle: { paddingTop: '1rem' },
+            iconWrapperClass: 'bg-sky-100',
+            // icon: <FcMoneyTransfer className='text-4xl' />
+          },
+        },
+
+        {
+          colSpan: 6,
+          widgetType: 'default',
+          widget: {
+            id: '674d63c9d5db91003325b486', title: 'Fasilitas Rumah',
+            styleOptions: customStyle5,
+            titleWrapperClass: 'bg-zinc-200',
+            widgetContentWrapperClass: 'bg-zinc-100',
+            widgetContentWrapperStyle: { paddingTop: '1rem' },
             iconWrapperClass: 'bg-sky-100',
             // icon: <FcMoneyTransfer className='text-4xl' />
           },
@@ -353,48 +342,32 @@ const SisenseKemenko: React.FC<{ isSelected: boolean }> = ({ isSelected }) => {
             styleOptions: customStyle5,
             titleWrapperClass: 'bg-zinc-200',
             widgetContentWrapperClass: 'bg-zinc-100',
-            // widgetContentWrapperStyle: { paddingTop: '0.2rem' },
+            widgetContentWrapperStyle: { paddingTop: '1rem' },
             iconWrapperClass: 'bg-sky-100',
             // icon: <FcMoneyTransfer className='text-4xl' />
           },
         },
+        {
+          colSpan: 6,
+          widgetType: 'default',
+          widget: {
+            id: '674d98ddd5db91003325b53a', title: 'Fasilitas Sumber Listrik',
+            styleOptions: customStyle5,
+            titleWrapperClass: 'bg-zinc-200',
+            widgetContentWrapperClass: 'bg-zinc-100',
+            widgetContentWrapperStyle: { paddingTop: '1rem' },
+            iconWrapperClass: 'bg-sky-100',
+            // icon: <FcMoneyTransfer className='text-4xl' />
+          },
+        },
+        
         // ANGGARAN KEMENKO
 
         {
           colSpan: 4,
           widgetType: 'default',
           widget: {
-            id: '674563b7fbe60a002a9f4372', title: 'Anggaran Nasional',
-            styleOptions: customStyle12,
-            titleWrapperClass: 'bg-teal-100',
-            widgetContentWrapperClass: 'bg-teal-50',
-            titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
-            widgetContentWrapperStyle: { paddingTop: '1rem' },
-            iconWrapperClass: 'bg-lime-200',
-          },
-        },
-       
-
-        {
-          colSpan: 4,
-          widgetType: 'default',
-          widget: {
-            id: '6752dfd4d5db91003325bd7d', title: 'Anggaran Provinsi',
-            styleOptions: customStyle12,
-            titleWrapperClass: 'bg-teal-100',
-            widgetContentWrapperClass: 'bg-teal-50',
-            titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
-            widgetContentWrapperStyle: { paddingTop: '1rem' },
-            iconWrapperClass: 'bg-lime-200',
-          },
-        },
-        
-       
-        {
-          colSpan: 4,
-          widgetType: 'default',
-          widget: {
-            id: '6752dfd7d5db91003325bd7f', title: 'Anggaran Kabupaten',
+            id: '67592351d5db91003325c509', title: 'Anggaran Nasional',
             styleOptions: customStyle12,
             titleWrapperClass: 'bg-teal-100',
             widgetContentWrapperClass: 'bg-teal-50',
@@ -407,7 +380,7 @@ const SisenseKemenko: React.FC<{ isSelected: boolean }> = ({ isSelected }) => {
           colSpan: 4,
           widgetType: 'default',
           widget: {
-            id: '6752e402d5db91003325bd9c', title: 'Anggaran SPM Nasional',
+            id: '67592355d5db91003325c50b', title: 'Anggaran Provinsi',
             styleOptions: customStyle12,
             titleWrapperClass: 'bg-teal-100',
             widgetContentWrapperClass: 'bg-teal-50',
@@ -420,7 +393,7 @@ const SisenseKemenko: React.FC<{ isSelected: boolean }> = ({ isSelected }) => {
           colSpan: 4,
           widgetType: 'default',
           widget: {
-            id: '6752e408d5db91003325bd9e', title: 'Anggaran SPM Provinsi',
+            id: '67592358d5db91003325c50d', title: 'Anggaran Kabupaten',
             styleOptions: customStyle12,
             titleWrapperClass: 'bg-teal-100',
             widgetContentWrapperClass: 'bg-teal-50',
@@ -433,7 +406,33 @@ const SisenseKemenko: React.FC<{ isSelected: boolean }> = ({ isSelected }) => {
           colSpan: 4,
           widgetType: 'default',
           widget: {
-            id: '6752e40dd5db91003325bda0', title: 'Anggaran SPM Kabupaten',
+            id: '67592422d5db91003325c519', title: 'Anggaran SPM Nasional',
+            styleOptions: customStyle12,
+            titleWrapperClass: 'bg-teal-100',
+            widgetContentWrapperClass: 'bg-teal-50',
+            titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
+            widgetContentWrapperStyle: { paddingTop: '1rem' },
+            iconWrapperClass: 'bg-lime-200',
+          },
+        },
+        {
+          colSpan: 4,
+          widgetType: 'default',
+          widget: {
+            id: '67592424d5db91003325c51b', title: 'Anggaran SPM Provinsi',
+            styleOptions: customStyle12,
+            titleWrapperClass: 'bg-teal-100',
+            widgetContentWrapperClass: 'bg-teal-50',
+            titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
+            widgetContentWrapperStyle: { paddingTop: '1rem' },
+            iconWrapperClass: 'bg-lime-200',
+          },
+        },
+        {
+          colSpan: 4,
+          widgetType: 'default',
+          widget: {
+            id: '67592428d5db91003325c51d', title: 'Anggaran SPM Kabupaten',
             styleOptions: customStyle12,
             titleWrapperClass: 'bg-teal-100',
             widgetContentWrapperClass: 'bg-teal-50',
@@ -447,7 +446,7 @@ const SisenseKemenko: React.FC<{ isSelected: boolean }> = ({ isSelected }) => {
           colSpan: 6,
           widgetType: 'default',
           widget: {
-            id: '674563b7fbe60a002a9f4375', title: 'Anggaran Nasional Kemiskinan Ekstrem',
+            id: '6759242cd5db91003325c51f', title: 'Anggaran Nasional Kemiskinan Ekstrem',
             styleOptions: customStyle7,
             titleWrapperClass: 'bg-teal-100',
             widgetContentWrapperClass: 'bg-teal-50',
@@ -460,7 +459,7 @@ const SisenseKemenko: React.FC<{ isSelected: boolean }> = ({ isSelected }) => {
           colSpan: 6,
           widgetType: 'default',
           widget: {
-            id: '6752d6d4d5db91003325bd14', title: 'Anggaran SPM Kemiskinan Ekstrim',
+            id: '67592430d5db91003325c52b', title: 'Anggaran Nasional SPM Kemiskinan Ekstrim',
             styleOptions: customStyle7,
             titleWrapperClass: 'bg-teal-100',
             widgetContentWrapperClass: 'bg-teal-50',
@@ -468,39 +467,87 @@ const SisenseKemenko: React.FC<{ isSelected: boolean }> = ({ isSelected }) => {
             widgetContentWrapperStyle: { paddingTop: '1rem' },
             iconWrapperClass: 'bg-lime-200',
           },
+        },
+        {
+          colSpan: 6,
+          widgetType: 'default',
+          widget: {
+            id: '6759531bd5db91003325c5e2', title: 'Alokasi Anggaran Kemiskinan Ekstrim Berdasarkan Urusan Pemerintah',
+            styleOptions: customStyle6,
+            titleWrapperClass: 'bg-teal-100',
+            widgetContentWrapperClass: 'bg-teal-50',
+            titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
+            widgetContentWrapperStyle: { paddingTop: '1rem' },
+            iconWrapperClass: 'bg-lime-200',
+          },
+          sourceFilter: true
+        },
+        {
+          colSpan: 6,
+          widgetType: 'default',
+          widget: {
+            id: '6759247ed5db91003325c533', title: 'Alokasi Anggaran Kemiskinan Ekstrim Berdasarkan SPM Urusan Pemerintah',
+            styleOptions: customStyle6,
+            titleWrapperClass: 'bg-teal-100',
+            widgetContentWrapperClass: 'bg-teal-50',
+            titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
+            widgetContentWrapperStyle: { paddingTop: '1rem' },
+            iconWrapperClass: 'bg-lime-200',
+          },
+          sourceFilter: true,
+          filterable: true
         },
         {
           colSpan: 12,
           widgetType: 'default',
           widget: {
-            id: '6752de15d5db91003325bd51', title: 'Anggaran Urusan Pemerintahan Pilihan',
-            styleOptions: customStyle5,
+            id: '67592477d5db91003325c52f', title: 'Alokasi Anggaran Kemiskinan Ekstrim Berdasarkan Bidang Urusan Pemerintah',
+            styleOptions: customStyle6,
             titleWrapperClass: 'bg-teal-100',
             widgetContentWrapperClass: 'bg-teal-50',
             titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
             widgetContentWrapperStyle: { paddingTop: '1rem' },
             iconWrapperClass: 'bg-lime-200',
           },
+          sourceFilter: true,
+          filterable: true
         },
         {
-          colSpan: 6,
+          colSpan: 12,
           widgetType: 'default',
           widget: {
-            id: '6752df14d5db91003325bd70', title: 'Anggaran Urusan Pemerintahan Pilihan',
-            styleOptions: customStyle4,
+            id: '67595260d5db91003325c5d2', title: 'Alokasi Anggaran Kemiskinan Ekstrim Berdasarkan GIAT Urusan Pemerintah',
+            styleOptions: customStyle6,
             titleWrapperClass: 'bg-teal-100',
             widgetContentWrapperClass: 'bg-teal-50',
             titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
             widgetContentWrapperStyle: { paddingTop: '1rem' },
             iconWrapperClass: 'bg-lime-200',
           },
+          sourceFilter: true,
+          filterable: true
         },
         {
-          colSpan: 6,
+          colSpan: 12,
           widgetType: 'default',
           widget: {
-            id: '6752df4fd5db91003325bd79', title: 'Anggaran SPM Urusan Pemerintahan Pilihan',
-            styleOptions: customStyle4,
+            id: '675952bbd5db91003325c5d6', title: 'Alokasi Anggaran Kemiskinan Ekstrim Berdasarkan Sub GIAT Urusan Pemerintah',
+            styleOptions: customStyle6,
+            titleWrapperClass: 'bg-teal-100',
+            widgetContentWrapperClass: 'bg-teal-50',
+            titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
+            widgetContentWrapperStyle: { paddingTop: '1rem' },
+            iconWrapperClass: 'bg-lime-200',
+          },
+          filterable: true,
+          sourceFilter: true
+        },
+        {
+          colSpan: 12,
+          widgetType: 'default',
+          widget: {
+            id: '6759247bd5db91003325c531', title: 'Alokasi Anggaran Kemiskinan Ekstrim Berdasarkan AKUN Urusan Pemerintah',
+            styleOptions: customStyle6,
             titleWrapperClass: 'bg-teal-100',
             widgetContentWrapperClass: 'bg-teal-50',
             titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
@@ -508,7 +555,6 @@ const SisenseKemenko: React.FC<{ isSelected: boolean }> = ({ isSelected }) => {
             iconWrapperClass: 'bg-lime-200',
           },
         },
-
       ]
     },
 
