@@ -13,6 +13,7 @@ import useMapColorRange from '../../../../hooks/useMapColorRange'
 // import GradientColorRangeLegend from './GrqdientColorRangeLegend'
 import ProvinceMarker from './ProvinceMarker'
 import DistrictMarker from './DistrictMarker'
+import Dropdown from './Dropdown'
 
 interface IProfileRow {
   icon: string
@@ -66,13 +67,14 @@ const CompanyProfile = () => {
     districtPopupData,
     mapLegendTitle,
     selectedAdministrative,
-    setSelectedAdministrative
+    setSelectedAdministrative,
+    onOptionSelected,
+    dropdownOptions
   } = useContext(MapDataContext)
 
   const {
     filterJenisKandidat,
     filterProvinsi,
-    filterKabupaten,
     setFilterJenisKandidat,
     setFilterProvinsi,
     setFilterKabupaten,
@@ -279,7 +281,6 @@ const CompanyProfile = () => {
             maxBoundsViscosity={options.maxBoundsViscosity}
           >
             <TileLayer
-              attribution='Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ'
               url="https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}"
               maxZoom={10}
               opacity={0.0} // Set opacity for the tile layer
@@ -326,6 +327,9 @@ const CompanyProfile = () => {
               colorRange={colorRange}
               percentage={selectedAdministrative === "provinsi" ? provinceMapData.percentage : districtMapData.percentage}
             />
+            <Dropdown
+              options={dropdownOptions}
+              onOptionSelected={onOptionSelected} />
           </MapContainer>
         </div>
       </div>

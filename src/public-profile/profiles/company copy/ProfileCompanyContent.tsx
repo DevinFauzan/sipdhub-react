@@ -15,11 +15,11 @@ import { NetworkUserCardsTeamCrewPage } from '@/pages/network';
 import { FilterPage } from '@/pages/network/user-cards copy';
 // import TabsAnalyticsFirstComponent from './blocks/TabberAnalyticsFirst';
 // import { DPTPerComponent } from '../creator/blocks/DPT';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { SisenseContextProvider } from '@sisense/sdk-ui';
 
 import axios from 'axios';
-import { IComparisonMapDataConstructor, ILeafletData, IPopupContent, IStandardColorRange, IStandardMapDataConstructor } from './blocks/interfaces/global';
+import { IComparisonMapDataConstructor, IDropdownData, ILeafletData, IPopupContent, IStandardColorRange, IStandardMapDataConstructor } from './blocks/interfaces/global';
 
 export interface OptionType {
   value: string;
@@ -61,6 +61,12 @@ interface MapDataContextType {
   setMapLegendTitle: React.Dispatch<React.SetStateAction<string>>,
   selectedAdministrative: string,
   setSelectedAdministrative: React.Dispatch<React.SetStateAction<string>>,
+
+  dropdownOptions: IDropdownData[],
+  setDropdownOptions: (value: Array<IDropdownData>) => void,
+
+  onOptionSelected: (e: Event) => void,
+  registerOptionsHandler: (newHandler: ((e: Event) => void)) => void,
 }
 
 export const FilterContext = React.createContext<FilterContextType>({
@@ -97,7 +103,13 @@ export const MapDataContext = React.createContext<MapDataContextType>({
   mapLegendTitle: "",
   setMapLegendTitle: () => {},
   selectedAdministrative: "",
-  setSelectedAdministrative: () => {}
+  setSelectedAdministrative: () => {},
+
+  dropdownOptions: [],
+  setDropdownOptions: () => {},
+
+  onOptionSelected: () => {},
+  registerOptionsHandler: () => {}
 })
 
 const ProfileCompanyContentCopy = ({ children }) => {
@@ -105,6 +117,9 @@ const ProfileCompanyContentCopy = ({ children }) => {
 
   const [optionsProvinsi, setOptionsProvinsi] = useState<OptionType[]>([]);
   const [optionsKabupaten, setOptionsKabupaten] = useState<OptionType[]>([]);
+
+  const [dropdownOptions, setDropdownOptions] = useState<IDropdownData[]>([]);
+  const [onOptionSelected, setOnOptionSelected] = useState<(e: Event) => void>(() => () => {})
 
   const [filterProvinsi, setFilterProvinsi] = useState<OptionType | null>(null);
   const [filterKabupaten, setFilterKabupaten] = useState<OptionType | null>(null);
@@ -121,6 +136,10 @@ const ProfileCompanyContentCopy = ({ children }) => {
   const [districtPopupData, setDistrictPopupData] = useState<Array<IPopupContent>>([])
   const [mapLegendTitle, setMapLegendTitle] = useState<string>("")
   const [selectedAdministrative, setSelectedAdministrative] = useState<string>("provinsi")
+
+  const registerOptionsHandler = useCallback((newHandler: (e: Event) => void) => {
+    setOnOptionSelected(() => newHandler)
+  }, [])
 
   useEffect(() => {
     const fetch = async () => {
@@ -168,7 +187,7 @@ const ProfileCompanyContentCopy = ({ children }) => {
 
   return (
     <>
-      <MapDataContext.Provider value={{ provinceMapData, setProvinceMapData, districtMapData, setDistrictMapData, provinceColorList, setProvinceColorList, districtColorList, setDistrictColorList, provincePopupData, setProvincePopupData, districtPopupData, setDistrictPopupData, mapLegendTitle, setMapLegendTitle, selectedAdministrative, setSelectedAdministrative }}>
+      <MapDataContext.Provider value={{ provinceMapData, setProvinceMapData, districtMapData, setDistrictMapData, provinceColorList, setProvinceColorList, districtColorList, setDistrictColorList, provincePopupData, setProvincePopupData, districtPopupData, setDistrictPopupData, mapLegendTitle, setMapLegendTitle, selectedAdministrative, setSelectedAdministrative, dropdownOptions, setDropdownOptions, onOptionSelected, registerOptionsHandler }}>
         <FilterContext.Provider 
           value={{
             gubernurFilter,
@@ -184,7 +203,7 @@ const ProfileCompanyContentCopy = ({ children }) => {
             filterKotakKosong,
             setFilterKotakKosong,
             filterJenisKandidat,
-            setFilterJenisKandidat
+            setFilterJenisKandidat,
           }}
         >
           { children }

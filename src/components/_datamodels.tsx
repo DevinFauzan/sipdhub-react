@@ -25,7 +25,7 @@ export const SIPDKemendikbudDapodik = createDimension({
 }) as SIPDKemendikbudDapodikDimensions
 
 
-export const SIPDBKKBNKeluargaBeresikoStunting = createDimension({
+export const SIPDBKKBNKeluargaBeresikoStunting1 = createDimension({
     name: "bkkbn_integrasi_keluarga_beresiko_stunting_1",
     kode_prov: createAttribute({
         name: "kode_prov",
@@ -39,6 +39,35 @@ export const SIPDBKKBNKeluargaBeresikoStunting = createDimension({
     })
 
 }) as SIPDBKKBNKeluargaBeresikoStuntingDimensions
+
+export const SIPDBKKBNKeluargaBeresikoStunting2 = createDimension({
+  name: "bkkbn_integrasi_keluarga_beresiko_stunting_2",
+  kode_prov: createAttribute({
+      name: "kode_prov",
+      type: "text-attribute",
+      expression: "[bkkbn_integrasi_keluarga_beresiko_stunting_2.kode_prov]"
+  }),
+  kode_kab: createAttribute({
+      name: "kode_kab",
+      type: "text-attribute",
+      expression: "[bkkbn_integrasi_keluarga_beresiko_stunting_2.kode_kab]"
+  })
+
+}) as SIPDBKKBNKeluargaBeresikoStuntingDimensions
+
+export const SIPDAPBDNasional = createDimension({
+  name: "sipd_apbd_nasional",
+  kode_wil_prov: createAttribute({
+      name: "kode_wil_prov",
+      type: "text-attribute",
+      expression: "[sipd_apbd_nasional.kode_wil_prov]"
+  }),
+  kode_kab: createAttribute({
+      name: "kode_kab",
+      type: "text-attribute",
+      expression: "[sipd_apbd_nasional.kode_kab]"
+  })
+})
 
 
 export const SIPDBPJS = createDimension({

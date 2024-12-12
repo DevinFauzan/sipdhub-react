@@ -72,7 +72,7 @@ const districtDataColorList: Array<IStandardColorRange> = [
 
 
 const KemendikbudPendidikan: React.FC<{ isSelected: boolean}> = ({isSelected}) => {
-  const { setProvinceMapData,setMapLegendTitle,setProvinceColorList, setDistrictColorList, setDistrictMapData, setProvincePopupData, setDistrictPopupData } = useContext(MapDataContext)
+  const { setProvinceMapData,setMapLegendTitle,setProvinceColorList, setDistrictColorList, setDistrictMapData, setProvincePopupData, setDropdownOptions } = useContext(MapDataContext)
   const { filterProvinsi, filterKabupaten } = useContext(FilterContext);
 
   const [selectedFilters, setSelectedFilters] = useState<IFilterState[]>([]);
@@ -515,6 +515,8 @@ const KemendikbudPendidikan: React.FC<{ isSelected: boolean}> = ({isSelected}) =
 
         // Set the map legend title
         setMapLegendTitle("Jumlah Data DAPODIK");
+
+        setDropdownOptions([])
       } catch (error) {
         console.error("Error fetching data:", error);
       }

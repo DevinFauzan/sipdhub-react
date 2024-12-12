@@ -58,3 +58,9 @@ export interface IPopupContent {
     dataStyle?: string
     dataClass?: string
 }
+
+export interface IDropdownData {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    value: any
+    text: string 
+}

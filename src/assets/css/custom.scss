@@ -2341,3 +2341,52 @@ body {
 .text-labels {
     width: unset    !important;
 }
+
+select:not([size]) {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 10 6'%3E%3Cpath stroke='%236B7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m1 1 4 4 4-4'/%3E%3C/svg%3E");
+    background-position: right .75rem center;
+    background-repeat: no-repeat;
+    background-size: .75em .75em;
+    padding-right: 2.5rem;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+.text-gray-900 {
+    --tw-text-opacity: 1;
+    color: rgb(17 24 39/var(--tw-text-opacity));
+}
+.text-sm {
+    font-size: .875rem;
+    line-height: 1.25rem;
+}
+.p-2\.5 {
+    padding: .625rem;
+    padding-right: 0.625rem;
+}
+.bg-gray-50 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(249 250 251/var(--tw-bg-opacity));
+}
+.border-gray-300 {
+    --tw-border-opacity: 1;
+border-color: rgb(209 213 219/var(--tw-border-opacity));
+}
+.border {
+    border-width: 1px;
+}
+.rounded-lg {
+    border-radius: .5rem;
+}
+.w-full {
+    width: 100%;
+}
+.block {
+    display: block;
+}
+
+select[name="dropdown_map"] {
+    --tw-shadow: 0 0 #0000;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}

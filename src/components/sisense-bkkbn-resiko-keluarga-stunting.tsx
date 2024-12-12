@@ -1,13 +1,13 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useCallback, useContext, useEffect, useRef, useState } from 'react';
 
 import { IDashboard, IFilterState } from './_models';
 
 import { customStyle1, customStyle12, customStyle2, customStyle3, customStyle4, customStyle5, customStyle6, customStyle7 } from './_SisenseWidgetStyleOptions';
 import DashboardGridComponent from './DashboardGridComponent';
-import { IStandardColorRange, IPopupContent } from '../public-profile/profiles/company copy/blocks/interfaces/global';
+import { IStandardColorRange, IPopupContent, IDropdownData } from '../public-profile/profiles/company copy/blocks/interfaces/global';
 import { MapDataContext, FilterContext } from '../public-profile/profiles/company copy';
 import axios from 'axios';
-import { DistrictWebPageFilterID, ProvinceWebPageFilterID, SIPDBKKBNKeluargaBeresikoStunting } from './_datamodels';
+import { DistrictWebPageFilterID, ProvinceWebPageFilterID, SIPDAPBDNasional, SIPDBKKBNKeluargaBeresikoStunting1, SIPDBKKBNKeluargaBeresikoStunting2 } from './_datamodels';
 
 const provinceDataColorList: Array<IStandardColorRange> = [
   {
@@ -65,10 +65,20 @@ const districtDataColorList: Array<IStandardColorRange> = [
   }
 ]
 
+const dropdownOptions: Array<IDropdownData> = [
+  { value: "jumlah", text: "Jumlah Keluarga" },
+  { value: "sasaran", text: "Keluarga Sasaran" },
+  { value: "non_kb", text: "Peserta Non-KB Modern" },
+  { value: "pus", text: "Pasangan Usia Subur" }
+]
+
 
 const SisenseBkkbnKeluargaStunting: React.FC<{ isSelected: boolean }> = ({ isSelected }) => {
-  const { setProvinceMapData, setMapLegendTitle, setProvinceColorList, setDistrictColorList, setDistrictMapData, setProvincePopupData } = useContext(MapDataContext)
+  const { setProvinceMapData, setMapLegendTitle, setProvinceColorList, setDistrictColorList, setDistrictMapData, setProvincePopupData, setDistrictPopupData, setDropdownOptions, registerOptionsHandler } = useContext(MapDataContext)
   const { filterProvinsi, filterKabupaten } = useContext(FilterContext);
+
+  const dataBKKBNRef = useRef([])
+  const dataBKKBNKabupatenRef = useRef([])
 
   const [selectedFilters, setSelectedFilters] = useState<IFilterState[]>([]);
   const dashboards: IDashboard[] = [
@@ -257,6 +267,7 @@ const SisenseBkkbnKeluargaStunting: React.FC<{ isSelected: boolean }> = ({ isSel
             iconWrapperClass: 'bg-lime-200',
             widgetContentWrapperStyle: { paddingTop: '2rem' }
           },
+          districtFilterable: false
         },
         {
           colSpan: 4,
@@ -270,6 +281,7 @@ const SisenseBkkbnKeluargaStunting: React.FC<{ isSelected: boolean }> = ({ isSel
             iconWrapperClass: 'bg-lime-200',
             widgetContentWrapperStyle: { paddingTop: '2rem' }
           },
+          districtFilterable: false
         },
         // BARIS 3 
         {
@@ -382,7 +394,21 @@ const SisenseBkkbnKeluargaStunting: React.FC<{ isSelected: boolean }> = ({ isSel
       newFilter.push({
         widgetId: ProvinceWebPageFilterID,
         categoryValue: filterProvinsi.value,
-        attribute: SIPDBKKBNKeluargaBeresikoStunting.kode_prov,
+        attribute: SIPDBKKBNKeluargaBeresikoStunting1.kode_prov,
+        value: filterProvinsi.value
+      })
+
+      newFilter.push({
+        widgetId: ProvinceWebPageFilterID,
+        categoryValue: filterProvinsi.value,
+        attribute: SIPDBKKBNKeluargaBeresikoStunting2.kode_prov,
+        value: filterProvinsi.value
+      })
+
+      newFilter.push({
+        widgetId: ProvinceWebPageFilterID,
+        categoryValue: filterProvinsi.value,
+        attribute: SIPDAPBDNasional.kode_wil_prov,
         value: filterProvinsi.value
       })
     }
@@ -391,7 +417,21 @@ const SisenseBkkbnKeluargaStunting: React.FC<{ isSelected: boolean }> = ({ isSel
       newFilter.push({
         widgetId: DistrictWebPageFilterID,
         categoryValue: filterKabupaten.value,
-        attribute: SIPDBKKBNKeluargaBeresikoStunting.kode_kab,
+        attribute: SIPDAPBDNasional.kode_kab,
+        value: filterKabupaten.value.slice(0, 2) + "." + filterKabupaten.value.slice(2)
+      })
+
+      newFilter.push({
+        widgetId: DistrictWebPageFilterID,
+        categoryValue: filterKabupaten.value,
+        attribute: SIPDBKKBNKeluargaBeresikoStunting1.kode_kab,
+        value: filterKabupaten.value.slice(0, 2) + "." + filterKabupaten.value.slice(2)
+      })
+
+      newFilter.push({
+        widgetId: DistrictWebPageFilterID,
+        categoryValue: filterKabupaten.value,
+        attribute: SIPDBKKBNKeluargaBeresikoStunting2.kode_kab,
         value: filterKabupaten.value.slice(0, 2) + "." + filterKabupaten.value.slice(2)
       })
     }
@@ -399,21 +439,145 @@ const SisenseBkkbnKeluargaStunting: React.FC<{ isSelected: boolean }> = ({ isSel
     setSelectedFilters(newFilter)
   }, [filterProvinsi, filterKabupaten])
 
+  const onMapOptionsChanged = useCallback((e: Event) => {
+    if (e.target) {
+      switch (e.target.value) {
+        case "jumlah":
+          setProvinceMapData({
+            originalData: dataBKKBNRef.current,
+            dataKey: "keluargaStunting",
+            dynamicColor: true
+          })
+  
+          setDistrictMapData({
+            originalData: dataBKKBNKabupatenRef.current,
+            dataKey: "keluargaStunting",
+            dynamicColor: true
+          })
+
+          setProvincePopupData([
+            {
+              sourceKey: "keluargaStunting",
+              title: "Jumlah Keluarga Beresiko"
+            }
+          ])
+          setDistrictPopupData([
+            {
+              sourceKey: "keluargaStunting",
+              title: "Jumlah Keluarga Beresiko"
+            }
+          ])
+
+          setMapLegendTitle("Jumlah Data Keluarga Beresiko Stunting")
+          break
+        case "sasaran":
+          setProvinceMapData({
+            originalData: dataBKKBNRef.current,
+            dataKey: "keluargaSasaran",
+            dynamicColor: true
+          })
+  
+          setDistrictMapData({
+            originalData: dataBKKBNKabupatenRef.current,
+            dataKey: "keluargaSasaran",
+            dynamicColor: true
+          })
+
+          setProvincePopupData([
+            {
+              sourceKey: "keluargaSasaran",
+              title: "Jumlah Keluarga Sasaran"
+            }
+          ])
+          setDistrictPopupData([
+            {
+              sourceKey: "keluargaSasaran",
+              title: "Jumlah Keluarga Sasaran"
+            }
+          ])
+
+          setMapLegendTitle("Jumlah Data Keluarga Sasaran")
+          break
+        case "non_kb":
+          setProvinceMapData({
+            originalData: dataBKKBNRef.current,
+            dataKey: "pesertaNonKBModern",
+            dynamicColor: true
+          })
+  
+          setDistrictMapData({
+            originalData: dataBKKBNKabupatenRef.current,
+            dataKey: "pesertaNonKBModern",
+            dynamicColor: true
+          })
+
+          setProvincePopupData([
+            {
+              sourceKey: "pesertaNonKBModern",
+              title: "Jumlah Peserta Non KB Modern"
+            }
+          ])
+          setDistrictPopupData([
+            {
+              sourceKey: "pesertaNonKBModern",
+              title: "Jumlah Peserta Non KB Modern"
+            }
+          ])
+
+          setMapLegendTitle("Jumlah Peserta Non KB Modern")
+          break
+        case "pus":
+          setProvinceMapData({
+            originalData: dataBKKBNRef.current,
+            dataKey: "jumlahPUS",
+            dynamicColor: true
+          })
+  
+          setDistrictMapData({
+            originalData: dataBKKBNKabupatenRef.current,
+            dataKey: "jumlahPUS",
+            dynamicColor: true
+          })
+
+          setProvincePopupData([
+            {
+              sourceKey: "jumlahPUS",
+              title: "Jumlah PUS"
+            }
+          ])
+          setDistrictPopupData([
+            {
+              sourceKey: "jumlahPUS",
+              title: "Jumlah PUS"
+            }
+          ])
+
+          setMapLegendTitle("Jumlah PUS")
+          break
+        
+      }
+    }
+  }, [])
+
   useEffect(() => {
     const fetch = async () => {
       try {
         const provinceResponse = await axios.get(`${import.meta.env.VITE_APP_API_URL}/bkkbn-jumlah-keluarga-beresiko-stunting`, { withCredentials: true })
-        const districtResponse = await axios.get(`${import.meta.env.VITE_APP_API_URL}/bkkbn-jumlah-keluarga-beresiko-stunting`, { withCredentials: true })
+        const districtResponse = await axios.get(`${import.meta.env.VITE_APP_API_URL}/bkkbn-jumlah-keluarga-beresiko-stunting-kab`, { withCredentials: true })
+
+        dataBKKBNRef.current = provinceResponse.data
+        dataBKKBNKabupatenRef.current = districtResponse.data
+
         setProvinceMapData({
           originalData: provinceResponse.data,
-          dataKey: "namaProv",
+          dataKey: "keluargaStunting",
           dynamicColor: true
         })
 
         setDistrictMapData({
           originalData: districtResponse.data,
-          dataKey: "namaProv",
-          percentage: true
+          dataKey: "keluargaStunting",
+          dynamicColor: true
         })
 
         setProvinceColorList(provinceDataColorList)
@@ -421,18 +585,29 @@ const SisenseBkkbnKeluargaStunting: React.FC<{ isSelected: boolean }> = ({ isSel
 
         setProvincePopupData([
           {
-            sourceKey: "namaProv",
+            sourceKey: "keluargaStunting",
+            title: "Jumlah Keluarga"
+          }
+        ])
+
+        setDistrictPopupData([
+          {
+            sourceKey: "keluargaStunting",
             title: "Jumlah Keluarga"
           }
         ])
 
         setMapLegendTitle("Jumlah Data Keluarga Beresiko Stunting")
+        registerOptionsHandler(onMapOptionsChanged)
+
+        setDropdownOptions(dropdownOptions)
       } catch (error) {
         console.error(error)
       }
     }
     fetch();
   }, [])
+
   return (
     <div className="multi-dashboard-container">
       {dashboards.map(dashboard => (

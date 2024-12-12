@@ -99,7 +99,7 @@ const popupDataList: Array<IPopupContent> = [
 
 
 const SisenseBPJS: React.FC<{ isSelected: boolean }> = ({ isSelected }) => {
-  const { setProvinceMapData, setMapLegendTitle, setProvinceColorList, setDistrictColorList, setDistrictMapData, setProvincePopupData, setDistrictPopupData } = useContext(MapDataContext)
+  const { setProvinceMapData, setMapLegendTitle, setProvinceColorList, setDistrictColorList, setDistrictMapData, setProvincePopupData, setDistrictPopupData, setDropdownOptions } = useContext(MapDataContext)
   const { filterProvinsi, filterKabupaten } = useContext(FilterContext);
 
   const [selectedFilters, setSelectedFilters] = useState<IFilterState[]>([]);
@@ -405,6 +405,8 @@ const SisenseBPJS: React.FC<{ isSelected: boolean }> = ({ isSelected }) => {
         ])
 
         setMapLegendTitle("Jumlah Peserta BPJS Aktif")
+
+        setDropdownOptions([])
       } catch (error) {
         console.error(error)
       }
