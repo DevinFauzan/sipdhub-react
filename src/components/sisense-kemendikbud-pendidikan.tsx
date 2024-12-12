@@ -7,7 +7,7 @@ import DashboardGridComponent from './DashboardGridComponent';
 import { IStandardColorRange, IPopupContent } from '../public-profile/profiles/company copy/blocks/interfaces/global';
 import { MapDataContext, FilterContext } from '../public-profile/profiles/company copy';
 import axios from 'axios';
-import { DistrictWebPageFilterID, ProvinceWebPageFilterID, SIPDKemendikbudDapodik } from './_datamodels';
+import { DistrictWebPageFilterID, ProvinceWebPageFilterID, SIPDAPBDNasional, SIPDKemendikbudDapodik, SIPDKemendikbudDataAnakTidakSekolahBPB } from './_datamodels';
 
 
 const provinceDataColorList: Array<IStandardColorRange> = [
@@ -72,7 +72,7 @@ const districtDataColorList: Array<IStandardColorRange> = [
 
 
 const KemendikbudPendidikan: React.FC<{ isSelected: boolean}> = ({isSelected}) => {
-  const { setProvinceMapData,setMapLegendTitle,setProvinceColorList, setDistrictColorList, setDistrictMapData, setProvincePopupData, setDropdownOptions } = useContext(MapDataContext)
+  const { setProvinceMapData,setMapLegendTitle,setProvinceColorList, setDistrictColorList, setDistrictMapData, setProvincePopupData, setDropdownOptions, setDistrictPopupData } = useContext(MapDataContext)
   const { filterProvinsi, filterKabupaten } = useContext(FilterContext);
 
   const [selectedFilters, setSelectedFilters] = useState<IFilterState[]>([]);
@@ -449,6 +449,18 @@ const KemendikbudPendidikan: React.FC<{ isSelected: boolean}> = ({isSelected}) =
         attribute: SIPDKemendikbudDapodik.kode_prov,
         value: filterProvinsi.value
       });
+      newFilter.push({
+        widgetId: ProvinceWebPageFilterID,
+        categoryValue: filterProvinsi.value,
+        attribute: SIPDAPBDNasional.kode_wil_prov,
+        value: filterProvinsi.value
+      });
+      newFilter.push({
+        widgetId: ProvinceWebPageFilterID,
+        categoryValue: filterProvinsi.value,
+        attribute: SIPDKemendikbudDataAnakTidakSekolahBPB.kode_prov,
+        value: filterProvinsi.value
+      });
     }
 
     if (filterKabupaten?.value) {
@@ -456,6 +468,18 @@ const KemendikbudPendidikan: React.FC<{ isSelected: boolean}> = ({isSelected}) =
         widgetId: DistrictWebPageFilterID,
         categoryValue: filterKabupaten.value,
         attribute: SIPDKemendikbudDapodik.kode_kab,
+        value: filterKabupaten.value.slice(0, 2) + "." + filterKabupaten.value.slice(2)
+      });
+      newFilter.push({
+        widgetId: DistrictWebPageFilterID,
+        categoryValue: filterKabupaten.value,
+        attribute: SIPDAPBDNasional.kode_kab,
+        value: filterKabupaten.value.slice(0, 2) + "." + filterKabupaten.value.slice(2)
+      });
+      newFilter.push({
+        widgetId: DistrictWebPageFilterID,
+        categoryValue: filterKabupaten.value,
+        attribute: SIPDKemendikbudDataAnakTidakSekolahBPB.kode_kab,
         value: filterKabupaten.value.slice(0, 2) + "." + filterKabupaten.value.slice(2)
       });
     }
@@ -467,7 +491,7 @@ const KemendikbudPendidikan: React.FC<{ isSelected: boolean}> = ({isSelected}) =
     const fetch = async () => {
       try {
         const Provinceresponse = await axios.get(`${import.meta.env.VITE_APP_API_URL}/kemendikbud-dapodik`, { withCredentials: true });
-        const Districtresponse = await axios.get(`${import.meta.env.VITE_APP_API_URL}/kemendikbud-dapodik`, { withCredentials: true });
+        const Districtresponse = await axios.get(`${import.meta.env.VITE_APP_API_URL}/kemendikbud-dapodik-kab`, { withCredentials: true });
         // Assuming the response structure is as follows:
         // response.data = [
         //   { kodeProv: "11", jumlahBersekolah: 898401, jumlahDropout: 13510016, jumlahBpb: 14569672, jumlahLtm: 23975016 },
@@ -485,7 +509,7 @@ const KemendikbudPendidikan: React.FC<{ isSelected: boolean}> = ({isSelected}) =
         setDistrictMapData({
           originalData: Districtresponse.data, // Adjust this if you have separate district data
           dataKey: "jumlahBersekolah", // Use the correct key for your data
-          percentage: true
+          dynamicColor: true
         });
 
         // Set color lists
@@ -504,11 +528,29 @@ const KemendikbudPendidikan: React.FC<{ isSelected: boolean}> = ({isSelected}) =
           },
           {
             sourceKey : "jumlahBpb",
-            title : "jumlah Bpb"
+            title : "Jumlah Belum Pernah Bersekolah"
           },
           {
             sourceKey : "jumlahLtm",
-            title : "jumlah Ltm"
+            title : "Jumlah Lulus Tidak Lanjut Sekolah"
+          }
+        ])
+        setDistrictPopupData([
+          {
+            sourceKey: "jumlahBersekolah",
+            title: "Jumlah Bersekolah"
+          },
+          {
+            sourceKey : "jumlahDropout",
+            title:"Jumlah Dropout"
+          },
+          {
+            sourceKey : "jumlahBpb",
+            title : "Jumlah Belum Pernah Bersekolah"
+          },
+          {
+            sourceKey : "jumlahLtm",
+            title : "Jumlah Lulus Tidak Lanjut Sekolah"
           }
         ])
         // setDistrictPopupData(popupDataList);

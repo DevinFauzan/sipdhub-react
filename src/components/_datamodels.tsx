@@ -24,6 +24,19 @@ export const SIPDKemendikbudDapodik = createDimension({
     })
 }) as SIPDKemendikbudDapodikDimensions
 
+export const SIPDKemendikbudDataAnakTidakSekolahBPB = createDimension({
+  name: "kemendikbud_data_anak_tidak_sekolah_bpb",
+  kode_prov: createAttribute({
+    name: "kode_prov",
+    type: "text-attribute",
+    expression: "[kemendikbud_data_anak_tidak_sekolah_bpb.kode_prov]"
+  }),
+  kode_kab: createAttribute({
+      name: "kode_kab",
+      type: "text-attribute",
+      expression: "[kemendikbud_data_anak_tidak_sekolah_bpb.kode_kab]"
+  })
+})
 
 export const SIPDBKKBNKeluargaBeresikoStunting1 = createDimension({
     name: "bkkbn_integrasi_keluarga_beresiko_stunting_1",

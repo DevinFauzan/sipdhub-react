@@ -169,7 +169,7 @@ function Province({ enabled, mapData, colorList, colorMetadata, popupData, setSe
     return geoJSONLayer
   }, [setLayerStyle, setTextLabel])
 
-  const getProvinceFromServer = useCallback((province: string) => {
+  const getProvinceFromServer = useCallback((province: string, forceBounds?: boolean) => {
     fetch(`${import.meta.env.VITE_APP_MAP_URL}/geojson/province/${province}.geojson`)
       .then((res) => {
         return res.json()
@@ -192,6 +192,12 @@ function Province({ enabled, mapData, colorList, colorMetadata, popupData, setSe
         // Add the GeoJSON layer into the layer group and the layer list
         layerGroupRef.current?.addLayer(layer)
         geoJSONLayerListRef.current[province] = layer
+
+        // Insert the GeoJSON layer into map
+        if (forceBounds) {
+          const map = context.map
+          map.fitBounds(layer.getBounds())
+        }
       })
   }, [setLayerStyle, setTextLabel, setPopupContent, setEvents])
 
@@ -214,10 +220,14 @@ function Province({ enabled, mapData, colorList, colorMetadata, popupData, setSe
     popupDataRef.current = popupData
 
     if (filterProvinsi?.value) {
-      const geoJSONLayer = getProvinceFromList(filterProvinsi.value)
+      if (geoJSONLayerListRef.current[filterProvinsi.value]) {
+        const geoJSONLayer = getProvinceFromList(filterProvinsi.value)
 
-      // Insert the GeoJSON layer into map
-      map.fitBounds(geoJSONLayer.getBounds())
+        // Insert the GeoJSON layer into map
+        map.fitBounds(geoJSONLayer.getBounds())
+      } else {
+        getProvinceFromServer(filterProvinsi.value, true)
+      }
     } else {
       for (const province of provinceList) {
         // If filterProvinsi is not empty, then we add the provinsi into the map layer
@@ -230,6 +240,34 @@ function Province({ enabled, mapData, colorList, colorMetadata, popupData, setSe
       
       map.setZoom(5)
     }
+
+    // const localGeoJSONLayerRef = geoJSONLayerListRef.current
+    // const localLayerGroupRef = layerGroupRef.current
+    // const localTextLabelLayerGroupRef = textLabelLayerGroupRef.current
+
+    // return () => {
+    //   // Clear layer group
+    //   localLayerGroupRef.clearLayers()
+
+    //   // Clear text label layer group
+    //   const textLabelLayers = localTextLabelLayerGroupRef.getLayers()
+    //   localTextLabelLayerGroupRef.clearLayers()
+
+    //   textLabelLayers.forEach((layer) => {
+    //     layer.remove()
+    //   })
+
+    //   const provinceList = Object.keys(localGeoJSONLayerRef)
+
+    //   for (const province of provinceList) {
+    //     const layer = localGeoJSONLayerRef[province]
+
+    //     layer.clearAllEventListeners()
+    //     layer.remove()
+
+    //     delete localGeoJSONLayerRef[province]
+    //   }
+    // }
   }, [mapData, filterProvinsi, enabled])
 
   useEffect(() => {

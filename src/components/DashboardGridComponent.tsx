@@ -3,9 +3,10 @@ import { IFilterState, IDashboard } from './_models';
 import { DistrictWebPageFilterID, ProvinceWebPageFilterID } from './_datamodels';
 import clsx from 'clsx';
 import CustomButterflyChart from './CustomButterflyChart';
-import { CompanyProfile, FilterContext } from '../public-profile/profiles/company copy';
+import { FilterContext } from '../public-profile/profiles/company copy';
 import DashboardWidgetComponent from './DashboardWidgetComponent';
 import FilterProvinsiKabupaten from './filter/FilterProvinsiKabupaten';
+import CompanyProfile from '../public-profile/profiles/company copy/blocks/CompanyProfile';
 // import axios from 'axios';
 
 const DashboardGridComponent: React.FC<{ dashboard: IDashboard, webpageFilters?: IFilterState[] }> = ({ dashboard, webpageFilters }) => {

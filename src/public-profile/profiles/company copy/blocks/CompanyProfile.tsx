@@ -1,5 +1,5 @@
 import { MapContainer, TileLayer } from 'react-leaflet'
-import { useCallback, useContext, useEffect, useRef, useState } from 'react'
+import React, { useCallback, useContext, useEffect, useRef, useState } from 'react'
 import { LatLngBoundsExpression, LatLngExpression } from 'leaflet'
 import AdministrativeLegend from './AdministrativeLegend'
 import ColorRangeLegend from './ColorRangeLegend'
@@ -339,10 +339,4 @@ const CompanyProfile = () => {
   )
 }
 
-export {
-  CompanyProfile,
-  type IProfileRow,
-  type IProfileRows,
-  type IProfileProduct,
-  type IProfileProducts
-}
+export default React.memo(CompanyProfile)
