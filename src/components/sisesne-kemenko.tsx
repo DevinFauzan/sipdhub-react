@@ -7,7 +7,7 @@ import DashboardGridComponent from './DashboardGridComponent';
 import { IStandardColorRange, IPopupContent } from '../public-profile/profiles/company copy/blocks/interfaces/global';
 import { MapDataContext, FilterContext } from '../public-profile/profiles/company copy';
 import axios from 'axios';
-import { DistrictWebPageFilterID, ProvinceWebPageFilterID, SIPDBPJS, SIPDKemenko } from './_datamodels';
+import { DistrictWebPageFilterID, ProvinceWebPageFilterID, SIPDBPJS, SIPDKemenko, SIPDKemenkoFasilitasListrikRumah, SIPDKemenkoFasilitasMemasakRumah, SIPDKemenkoFasilitasSanitasi, SIPDKemenkoFasilitasStatusRumah, SIPDKemenkoJenisPekerjaan, SIPDKemenkoKepalaKeluargaPerempuan, SIPDKemenkoKlasifikasiUsia, SIPDKemenkoLansia, SIPDKemenkoPekerjaanIndividu, SIPDKemenkoPendidikanTerakhir, SIPDKemenkoStatusBekerja, SIPDKemenkoStatusBersekolah } from './_datamodels';
 
 const provinceDataColorList: Array<IStandardColorRange> = [
   {
@@ -561,23 +561,43 @@ const SisenseKemenko: React.FC<{ isSelected: boolean }> = ({ isSelected }) => {
   ];
 
   useEffect(() => {
+    const dataModels = [
+      SIPDKemenko,
+      SIPDKemenkoStatusBekerja,
+      SIPDKemenkoStatusBersekolah,
+      SIPDKemenkoJenisPekerjaan,
+      SIPDKemenkoFasilitasSanitasi,
+      SIPDKemenkoFasilitasListrikRumah,
+      SIPDKemenkoFasilitasMemasakRumah,
+      SIPDKemenkoFasilitasStatusRumah,
+      SIPDKemenkoKepalaKeluargaPerempuan,
+      SIPDKemenkoKlasifikasiUsia,
+      SIPDKemenkoPekerjaanIndividu,
+      SIPDKemenkoLansia,
+      SIPDKemenkoPendidikanTerakhir
+    ]
+
     // If the filter is triggered from Sisense's side, we just return to prevent double processing of filter
     const newFilter: Array<IFilterState> = [];
     if (filterProvinsi?.value) {
-      newFilter.push({
-        widgetId: ProvinceWebPageFilterID,
-        categoryValue: filterProvinsi.value,
-        attribute: SIPDKemenko.kode_prov,
-        value: filterProvinsi.value
+      dataModels.forEach((dm) => {
+        newFilter.push({
+          widgetId: ProvinceWebPageFilterID,
+          categoryValue: filterProvinsi.value,
+          attribute: dm.kode_prov,
+          value: filterProvinsi.value
+        })
       })
     }
 
     if (filterKabupaten?.value) {
-      newFilter.push({
-        widgetId: DistrictWebPageFilterID,
-        categoryValue: filterKabupaten.value,
-        attribute: SIPDKemenko.kode_kab,
-        value: filterKabupaten.value.slice(0, 2) + "." + filterKabupaten.value.slice(2)
+      dataModels.forEach((dm) => {
+        newFilter.push({
+          widgetId: DistrictWebPageFilterID,
+          categoryValue: filterKabupaten.value,
+          attribute: dm.kode_kab,
+          value: filterKabupaten.value.slice(0, 2) + "." + filterKabupaten.value.slice(2)
+        })
       })
     }
 
@@ -588,7 +608,7 @@ const SisenseKemenko: React.FC<{ isSelected: boolean }> = ({ isSelected }) => {
     const fetch = async () => {
       try {
         const provinceResponse = await axios.get(`${import.meta.env.VITE_APP_API_URL}/kemenko-data`, { withCredentials: true })
-        const districtResponse = await axios.get(`${import.meta.env.VITE_APP_API_URL}/kemenko-data`, { withCredentials: true })
+        const districtResponse = await axios.get(`${import.meta.env.VITE_APP_API_URL}/kemenko-data-kab`, { withCredentials: true })
         setProvinceMapData({
           originalData: provinceResponse.data,
           dataKey: "jumlahKeluarga",
@@ -638,7 +658,7 @@ const SisenseKemenko: React.FC<{ isSelected: boolean }> = ({ isSelected }) => {
           }
         ])
 
-        setMapLegendTitle("Jumlah Peserta BPJS Aktif")
+        setMapLegendTitle("Jumlah Angka Kemiskinan Ekstrem")
 
         setDropdownOptions([])
       } catch (error) {

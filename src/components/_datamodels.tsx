@@ -118,16 +118,185 @@ export const SIPDBPJS = createDimension({
   }) as SIPDBPJSDimensions
 
 
-  export const SIPDKemenko = createDimension({
-    name: "kemenko_rekapitulasi_desil_2024",
-    kode_prov: createAttribute({
-        name: "kode_prov",
-        type: "text-attribute",
-        expression: "[kemenko_rekapitulasi_desil_2024.kode_prov]"
-    }),
-    kode_kab: createAttribute({
-        name: "kode_kab",
-        type: "text-attribute",
-        expression: "[kemenko_rekapitulasi_desil_2024.kode_kab]"
-    })
-  }) as SIPDKemenkoDimensions
+export const SIPDKemenko = createDimension({
+  name: "kemenko_rekapitulasi_desil_2024",
+  kode_prov: createAttribute({
+      name: "kode_prov",
+      type: "text-attribute",
+      expression: "[kemenko_rekapitulasi_desil_2024.kode_prov]"
+  }),
+  kode_kab: createAttribute({
+      name: "kode_kab",
+      type: "text-attribute",
+      expression: "[kemenko_rekapitulasi_desil_2024.kode_kab]"
+  })
+}) as SIPDKemenkoDimensions
+
+export const SIPDKemenkoStatusBekerja = createDimension({
+  name: "kemenko_status_bekerja",
+  kode_prov: createAttribute({
+      name: "kode_prov",
+      type: "text-attribute",
+      expression: "[kemenko_status_bekerja.kode_prov]"
+  }),
+  kode_kab: createAttribute({
+      name: "kode_kab",
+      type: "text-attribute",
+      expression: "[kemenko_status_bekerja.kode_kab]"
+  })
+}) as SIPDKemenkoDimensions
+
+export const SIPDKemenkoStatusBersekolah = createDimension({
+  name: "kemenko_status_bersekolah",
+  kode_prov: createAttribute({
+      name: "kode_prov",
+      type: "text-attribute",
+      expression: "[kemenko_status_bersekolah.kode_prov]"
+  }),
+  kode_kab: createAttribute({
+      name: "kode_kab",
+      type: "text-attribute",
+      expression: "[kemenko_status_bersekolah.kode_kab]"
+  })
+}) as SIPDKemenkoDimensions
+
+export const SIPDKemenkoJenisPekerjaan = createDimension({
+  name: "kemenko_jenis_pekerjaan",
+  kode_prov: createAttribute({
+      name: "kode_prov",
+      type: "text-attribute",
+      expression: "[kemenko_jenis_pekerjaan.kode_prov]"
+  }),
+  kode_kab: createAttribute({
+      name: "kode_kab",
+      type: "text-attribute",
+      expression: "[kemenko_jenis_pekerjaan.kode_kab]"
+  })
+}) as SIPDKemenkoDimensions
+
+export const SIPDKemenkoFasilitasSanitasi = createDimension({
+  name: "kemenko_fasilitas_sanitasi",
+  kode_prov: createAttribute({
+      name: "kode_prov",
+      type: "text-attribute",
+      expression: "[kemenko_fasilitas_sanitasi.kode_prov]"
+  }),
+  kode_kab: createAttribute({
+      name: "kode_kab",
+      type: "text-attribute",
+      expression: "[kemenko_fasilitas_sanitasi.kode_kab]"
+  })
+}) as SIPDKemenkoDimensions
+
+export const SIPDKemenkoFasilitasListrikRumah = createDimension({
+  name: "kemenko_fasilitas_listrik_rumah",
+  kode_prov: createAttribute({
+      name: "kode_prov",
+      type: "text-attribute",
+      expression: "[kemenko_fasilitas_listrik_rumah.kode_prov]"
+  }),
+  kode_kab: createAttribute({
+      name: "kode_kab",
+      type: "text-attribute",
+      expression: "[kemenko_fasilitas_listrik_rumah.kode_kab]"
+  })
+}) as SIPDKemenkoDimensions
+
+export const SIPDKemenkoFasilitasMemasakRumah = createDimension({
+  name: "kemenko_fasilitas_memasak_rumah",
+  kode_prov: createAttribute({
+      name: "kode_prov",
+      type: "text-attribute",
+      expression: "[kemenko_fasilitas_memasak_rumah.kode_prov]"
+  }),
+  kode_kab: createAttribute({
+      name: "kode_kab",
+      type: "text-attribute",
+      expression: "[kemenko_fasilitas_memasak_rumah.kode_kab]"
+  })
+}) as SIPDKemenkoDimensions
+
+export const SIPDKemenkoFasilitasStatusRumah = createDimension({
+  name: "kemenko_fasilitas_status_rumah",
+  kode_prov: createAttribute({
+      name: "kode_prov",
+      type: "text-attribute",
+      expression: "[kemenko_fasilitas_status_rumah.kode_prov]"
+  }),
+  kode_kab: createAttribute({
+      name: "kode_kab",
+      type: "text-attribute",
+      expression: "[kemenko_fasilitas_status_rumah.kode_kab]"
+  })
+}) as SIPDKemenkoDimensions
+
+export const SIPDKemenkoKepalaKeluargaPerempuan = createDimension({
+  name: "kemenko_kepala_keluarga_perempuan",
+  kode_prov: createAttribute({
+      name: "kode_prov",
+      type: "text-attribute",
+      expression: "[kemenko_kepala_keluarga_perempuan.kode_prov]"
+  }),
+  kode_kab: createAttribute({
+      name: "kode_kab",
+      type: "text-attribute",
+      expression: "[kemenko_kepala_keluarga_perempuan.kode_kab]"
+  })
+}) as SIPDKemenkoDimensions
+
+export const SIPDKemenkoKlasifikasiUsia = createDimension({
+  name: "kemenko_klasifikasi_usia",
+  kode_prov: createAttribute({
+      name: "kode_prov",
+      type: "text-attribute",
+      expression: "[kemenko_klasifikasi_usia.kode_prov]"
+  }),
+  kode_kab: createAttribute({
+      name: "kode_kab",
+      type: "text-attribute",
+      expression: "[kemenko_klasifikasi_usia.kode_kab]"
+  })
+}) as SIPDKemenkoDimensions
+
+export const SIPDKemenkoPekerjaanIndividu = createDimension({
+  name: "kemenko_pekerjaan_individu",
+  kode_prov: createAttribute({
+      name: "kode_prov",
+      type: "text-attribute",
+      expression: "[kemenko_pekerjaan_individu.kode_prov]"
+  }),
+  kode_kab: createAttribute({
+      name: "kode_kab",
+      type: "text-attribute",
+      expression: "[kemenko_pekerjaan_individu.kode_kab]"
+  })
+}) as SIPDKemenkoDimensions
+
+export const SIPDKemenkoLansia = createDimension({
+  name: "kemenko_lansia",
+  kode_prov: createAttribute({
+      name: "kode_prov",
+      type: "text-attribute",
+      expression: "[kemenko_lansia.kode_prov]"
+  }),
+  kode_kab: createAttribute({
+      name: "kode_kab",
+      type: "text-attribute",
+      expression: "[kemenko_lansia.kode_kab]"
+  })
+}) as SIPDKemenkoDimensions
+
+export const SIPDKemenkoPendidikanTerakhir = createDimension({
+  name: "kemenko_pendidikan_terakhir",
+  kode_prov: createAttribute({
+      name: "kode_prov",
+      type: "text-attribute",
+      expression: "[kemenko_pendidikan_terakhir.kode_prov]"
+  }),
+  kode_kab: createAttribute({
+      name: "kode_kab",
+      type: "text-attribute",
+      expression: "[kemenko_pendidikan_terakhir.kode_kab]"
+  })
+}) as SIPDKemenkoDimensions
+
