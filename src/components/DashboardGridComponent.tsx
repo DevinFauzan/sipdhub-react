@@ -111,7 +111,7 @@ const DashboardGridComponent: React.FC<{ dashboard: IDashboard, webpageFilters?:
           position: 'sticky',
           top: 0,
           backgroundColor: '#F9F9F9',
-          zIndex: 1000, 
+          zIndex: 900, 
           padding: '10px' 
         }}
       >
