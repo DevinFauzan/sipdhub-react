@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 
 import { IDashboard, IFilterState } from './_models';
 
-import { customStyle1, customStyle11, customStyle12, customStyle13, customStyle3, customStyle5, customStyle6, customStyle7 } from './_SisenseWidgetStyleOptions';
+import { customStyle1, customStyle11, customStyle12, customStyle13, customStyle3, customStyle5, customStyle6, customStyle7, customStyle9 } from './_SisenseWidgetStyleOptions';
 import DashboardGridComponent from './DashboardGridComponent';
 import { IStandardColorRange, IPopupContent } from '../public-profile/profiles/company copy/blocks/interfaces/global';
 import { MapDataContext, FilterContext } from '../public-profile/profiles/company copy';
@@ -14,7 +14,7 @@ const provinceDataColorList: Array<IStandardColorRange> = [
   {
     stepMin: 0.00,
     stepMax: 19.9999999,
-    color: '#B9DDF1'
+    color: '#D5EAF7'
   },
   {
     stepMin: 20.00,
@@ -34,7 +34,7 @@ const provinceDataColorList: Array<IStandardColorRange> = [
   {
     stepMin: 80.00,
     stepMax: 100.00,
-    color: '#1d4ed8'
+    color: '#1841b4'
   }
 ]
 
@@ -79,7 +79,7 @@ const KemendikbudPendidikan: React.FC<{ isSelected: boolean}> = ({isSelected}) =
  
   const dashboards: IDashboard[] = [
     {
-      id: '674821d1fbe60a002a9f453b',
+      id: '674f0e24d5db91003325b7eb',
       name: 'PENDIDIKAN',
       withMap: true,
       withMapFilter: true,
@@ -306,7 +306,7 @@ const KemendikbudPendidikan: React.FC<{ isSelected: boolean}> = ({isSelected}) =
           colSpan: 4,
           widgetType: 'default',
           widget: {
-            id: '67568cc5d5db91003325bfcb', title: 'Anggaran Provinsi Bidang Pendidikan',
+            id: '67568cc5d5db91003325bfcb', title: 'Anggaran Provinsi Urusan Bidang Pendidikan',
             styleOptions: customStyle1,
             titleWrapperClass: 'bg-teal-100',
             widgetContentWrapperClass: 'bg-teal-50', widgetContentWrapperStyle: { paddingTop: '2rem' },
@@ -317,7 +317,7 @@ const KemendikbudPendidikan: React.FC<{ isSelected: boolean}> = ({isSelected}) =
           colSpan: 4,
           widgetType: 'default',
           widget: {
-            id: '67568d81d5db91003325bfd5', title: 'Anggaran Kabupaten Bidang Pendidikan',
+            id: '67568d81d5db91003325bfd5', title: 'Anggaran Kabupaten Urusan Bidang Pendidikan',
             styleOptions: customStyle1,
             titleWrapperClass: 'bg-teal-100',
             widgetContentWrapperClass: 'bg-teal-50', widgetContentWrapperStyle: { paddingTop: '2rem' },
@@ -329,7 +329,7 @@ const KemendikbudPendidikan: React.FC<{ isSelected: boolean}> = ({isSelected}) =
           colSpan: 4,
           widgetType: 'default',
           widget: {
-            id: '67568cc1d5db91003325bfc9', title: 'Anggaran Urusan Bidang Pendidikan',
+            id: '67568cc1d5db91003325bfc9', title: 'Anggaran SPM Bidang Pendidikan',
             styleOptions: customStyle1,
             titleWrapperClass: 'bg-teal-100',
             widgetContentWrapperClass: 'bg-teal-50', widgetContentWrapperStyle: { paddingTop: '2rem' },
@@ -340,7 +340,7 @@ const KemendikbudPendidikan: React.FC<{ isSelected: boolean}> = ({isSelected}) =
           colSpan: 4,
           widgetType: 'default',
           widget: {
-            id: '67568cc8d5db91003325bfcd', title: 'APBD SPM Provinsi Pendidikan',
+            id: '67568cc8d5db91003325bfcd', title: 'Anggaran SPM Provinsi Bidang Pendidikan',
             styleOptions: customStyle1,
             titleWrapperClass: 'bg-teal-100',
             widgetContentWrapperClass: 'bg-teal-50', widgetContentWrapperStyle: { paddingTop: '2rem' },
@@ -351,7 +351,7 @@ const KemendikbudPendidikan: React.FC<{ isSelected: boolean}> = ({isSelected}) =
           colSpan: 4,
           widgetType: 'default',
           widget: {
-            id: '67568d84d5db91003325bfd7', title: 'APBD SPM Kabupaten Pendidikan',
+            id: '67568d84d5db91003325bfd7', title: 'Anggaran SPM Kabupaten Bidang Pendidikan',
             styleOptions: customStyle1,
             titleWrapperClass: 'bg-teal-100',
             widgetContentWrapperClass: 'bg-teal-50', widgetContentWrapperStyle: { paddingTop: '2rem' },
@@ -364,7 +364,7 @@ const KemendikbudPendidikan: React.FC<{ isSelected: boolean}> = ({isSelected}) =
           widgetType: 'default',
           widget: {
             id: '6757ca2ed5db91003325c21b', title: 'Anggaran Urusan Bidang Pendidikan Dengan Bidang Lainnya',
-            styleOptions: customStyle7,
+            styleOptions: customStyle9,
             titleWrapperClass: 'bg-teal-100',
             widgetContentWrapperClass: 'bg-teal-50', widgetContentWrapperStyle: { paddingTop: '2rem' },
             titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
@@ -395,34 +395,65 @@ const KemendikbudPendidikan: React.FC<{ isSelected: boolean}> = ({isSelected}) =
             titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
             iconWrapperClass: 'bg-sky-200',
           },
-          sourceFilter:true
+          sourceFilter:true,
+          filterable: true
         },
         {
           colSpan: 12,
           widgetType: 'default',
           widget: {
-            id: '67595dc6d5db91003325c62a', title: 'Alokasi Anggaran Pendidikan Berdasarkan GIAT Urusan Bidang Pendidikan',
+            id: '67595dc6d5db91003325c62a', title: 'Alokasi Anggaran Pendidikan Berdasarkan Kegiatan Urusan Bidang Pendidikan',
             styleOptions: customStyle13,
             titleWrapperClass: 'bg-teal-100',
             widgetContentWrapperClass: 'bg-teal-50', widgetContentWrapperStyle: { paddingTop: '2rem' },
             titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
             iconWrapperClass: 'bg-sky-200',
           },
-          sourceFilter:true
+          sourceFilter:true,
+          filterable: true
         },
         {
           colSpan: 12,
           widgetType: 'default',
           widget: {
-            id: '6756e8f7d5db91003325c116', title: 'Alokasi Anggaran Pendidikan Berdasarkan Sub GIAT Urusan Bidang Pendidikan',
+            id: '6756e8f7d5db91003325c116', title: 'Alokasi Anggaran Pendidikan Berdasarkan Sub Kegiatan Urusan Bidang Pendidikan',
             styleOptions: customStyle13,
             titleWrapperClass: 'bg-teal-100',
             widgetContentWrapperClass: 'bg-teal-50', widgetContentWrapperStyle: { paddingTop: '2rem' },
             titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
             iconWrapperClass: 'bg-sky-200',
           },
-          sourceFilter:true
+          sourceFilter:true,
+          filterable: true
         },
+        {
+          colSpan: 12,
+          widgetType: 'default',
+          widget: {
+            id: '675f0659d5db91003325cb63', title: 'Alokasi Anggaran Pendidikan Berdasarkan SKPD Urusan Bidang Pendidikan',
+            styleOptions: customStyle13,
+            titleWrapperClass: 'bg-teal-100',
+            widgetContentWrapperClass: 'bg-teal-50', widgetContentWrapperStyle: { paddingTop: '2rem' },
+            titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
+            iconWrapperClass: 'bg-sky-200',
+          },
+          sourceFilter:true,
+          filterable: true
+        },
+        // {
+        //   colSpan: 12,
+        //   widgetType: 'default',
+        //   widget: {
+        //     id: '675f067cd5db91003325cb67', title: 'Alokasi Anggaran Pendidikan Berdasarkan Sub SKPD Urusan Bidang Pendidikan',
+        //     styleOptions: customStyle13,
+        //     titleWrapperClass: 'bg-teal-100',
+        //     widgetContentWrapperClass: 'bg-teal-50', widgetContentWrapperStyle: { paddingTop: '2rem' },
+        //     titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
+        //     iconWrapperClass: 'bg-sky-200',
+        //   },
+        //   sourceFilter:true,
+        //   filterable: true
+        // },
         {
           colSpan: 12,
           widgetType: 'default',

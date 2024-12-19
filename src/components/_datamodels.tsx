@@ -79,7 +79,12 @@ export const SIPDAPBDNasional = createDimension({
       name: "kode_kab",
       type: "text-attribute",
       expression: "[sipd_apbd_nasional.kode_kab]"
-  })
+  }),
+  kode_prov: createAttribute({
+    name: "kode_kab",
+    type: "text-attribute",
+    expression: "[sipd_apbd_nasional.kode_kab]"
+}),
 })
 
 

@@ -33,7 +33,7 @@ const provinceDataColorList: Array<IStandardColorRange> = [
   {
     stepMin: 80.00,
     stepMax: 100.00,
-    color: '#450a0a'
+    color: '#991b1b'
   }
 ]
 
@@ -61,7 +61,7 @@ const districtDataColorList: Array<IStandardColorRange> = [
   {
     stepMin: 80.00,
     stepMax: 100.00,
-    color: '#450a0a'
+    color: '#991b1b'
   }
 ]
 
@@ -147,6 +147,7 @@ const SisenseBkkbnKeluargaStunting: React.FC<{ isSelected: boolean }> = ({ isSel
             iconWrapperClass: 'bg-lime-200',
           },
         },
+        
         {
           colSpan: 6,
           widgetType: 'default',
@@ -246,7 +247,7 @@ const SisenseBkkbnKeluargaStunting: React.FC<{ isSelected: boolean }> = ({ isSel
           colSpan: 4,
           widgetType: 'default',
           widget: {
-            id: '67592209d5db91003325c413', title: 'Anggaran SPM Stunting',
+            id: '67592209d5db91003325c413', title: 'Anggaran SPM Urusan Stunting',
             styleOptions: customStyle12,
             titleWrapperClass: 'bg-teal-100',
             widgetContentWrapperClass: 'bg-teal-50',
@@ -259,7 +260,7 @@ const SisenseBkkbnKeluargaStunting: React.FC<{ isSelected: boolean }> = ({ isSel
           colSpan: 4,
           widgetType: 'default',
           widget: {
-            id: '6759220bd5db91003325c415', title: 'Anggaran Provinsi SPM Stunting',
+            id: '6759220bd5db91003325c415', title: 'Anggaran SPM Provinsi Urusan Stunting',
             styleOptions: customStyle12,
             titleWrapperClass: 'bg-teal-100',
             widgetContentWrapperClass: 'bg-teal-50',
@@ -273,7 +274,7 @@ const SisenseBkkbnKeluargaStunting: React.FC<{ isSelected: boolean }> = ({ isSel
           colSpan: 4,
           widgetType: 'default',
           widget: {
-            id: '6759220ed5db91003325c417', title: 'Anggaran Kabupaten SPM Stunting',
+            id: '6759220ed5db91003325c417', title: 'Anggaran SPM Kabupaten Urusan Stunting',
             styleOptions: customStyle12,
             titleWrapperClass: 'bg-teal-100',
             widgetContentWrapperClass: 'bg-teal-50',
@@ -309,6 +310,7 @@ const SisenseBkkbnKeluargaStunting: React.FC<{ isSelected: boolean }> = ({ isSel
           },
         },
         // BARIS 4
+        // 1
         {
           colSpan: 12,
           widgetType: 'default',
@@ -324,6 +326,7 @@ const SisenseBkkbnKeluargaStunting: React.FC<{ isSelected: boolean }> = ({ isSel
           sourceFilter: true,
           filterable: true
         },
+        // 2 
         {
           colSpan: 12,
           widgetType: 'default',
@@ -339,11 +342,12 @@ const SisenseBkkbnKeluargaStunting: React.FC<{ isSelected: boolean }> = ({ isSel
           sourceFilter: true,
           filterable: true
         },
+        // 3 
         {
           colSpan: 12,
           widgetType: 'default',
           widget: {
-            id: '67597dfcd5db91003325c800', title: 'Alokasi Anggaran Stunting Berdasarkan GIAT Urusan Pemerintah',
+            id: '675f0800d5db91003325cb75', title: 'Alokasi Anggaran Stunting Berdasarkan Program Urusan Pemerintah',
             styleOptions: customStyle7,
             titleWrapperClass: 'bg-teal-100',
             widgetContentWrapperClass: 'bg-teal-50',
@@ -354,11 +358,12 @@ const SisenseBkkbnKeluargaStunting: React.FC<{ isSelected: boolean }> = ({ isSel
           sourceFilter: true,
           filterable: true
         },
+        // 4 
         {
           colSpan: 12,
           widgetType: 'default',
           widget: {
-            id: '67597edbd5db91003325c814', title: 'Alokasi Anggaran Stunting Berdasarkan Sub GIAT Urusan Pemerintah',
+            id: '67597dfcd5db91003325c800', title: 'Alokasi Anggaran Stunting Berdasarkan Kegiatan Urusan Pemerintah',
             styleOptions: customStyle7,
             titleWrapperClass: 'bg-teal-100',
             widgetContentWrapperClass: 'bg-teal-50',
@@ -369,6 +374,55 @@ const SisenseBkkbnKeluargaStunting: React.FC<{ isSelected: boolean }> = ({ isSel
           sourceFilter: true,
           filterable: true
         },
+        // 5 
+        {
+          colSpan: 12,
+          widgetType: 'default',
+          widget: {
+            id: '67597edbd5db91003325c814', title: 'Alokasi Anggaran Stunting Berdasarkan Sub Kegiatan Urusan Pemerintah',
+            styleOptions: customStyle7,
+            titleWrapperClass: 'bg-teal-100',
+            widgetContentWrapperClass: 'bg-teal-50',
+            titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
+            widgetContentWrapperStyle: { paddingTop: '1rem' },
+            iconWrapperClass: 'bg-lime-200',
+          },
+          sourceFilter: true,
+          filterable: true
+        },
+        // 6 
+        {
+          colSpan: 12,
+          widgetType: 'default',
+          widget: {
+            id: '675f0841d5db91003325cb79', title: 'Alokasi Anggaran Stunting Berdasarkan SKPD Urusan Pemerintah',
+            styleOptions: customStyle7,
+            titleWrapperClass: 'bg-teal-100',
+            widgetContentWrapperClass: 'bg-teal-50',
+            titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
+            widgetContentWrapperStyle: { paddingTop: '1rem' },
+            iconWrapperClass: 'bg-lime-200',
+          },
+          sourceFilter: true,
+          filterable: true
+        },
+        // 7 
+        // {
+        //   colSpan: 12,
+        //   widgetType: 'default',
+        //   widget: {
+        //     id: '675f0864d5db91003325cb7d', title: 'Alokasi Anggaran Stunting Berdasarkan Sub SKPD Urusan Pemerintah',
+        //     styleOptions: customStyle7,
+        //     titleWrapperClass: 'bg-teal-100',
+        //     widgetContentWrapperClass: 'bg-teal-50',
+        //     titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
+        //     widgetContentWrapperStyle: { paddingTop: '1rem' },
+        //     iconWrapperClass: 'bg-lime-200',
+        //   },
+        //   sourceFilter: true,
+        //   filterable: true
+        // },
+        // 8 
         {
           colSpan: 12,
           widgetType: 'default',

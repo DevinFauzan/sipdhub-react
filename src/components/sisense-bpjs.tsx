@@ -117,8 +117,8 @@ const SisenseBPJS: React.FC<{ isSelected: boolean }> = ({ isSelected }) => {
           widget: {
             id: '6755bbf2d5db91003325bdc6', title: 'Jumlah Penduduk',
             styleOptions: customStyle1,
-            titleWrapperClass: 'bg-orange-100',
-            widgetContentWrapperClass: 'bg-orange-50',
+            titleWrapperClass: 'bg-lime-100',
+            widgetContentWrapperClass: 'bg-lime-50',
             titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
             iconWrapperClass: 'bg-sky-200',
             // icon: <RiEmotionSadLine className='text-4xl' />
@@ -130,8 +130,8 @@ const SisenseBPJS: React.FC<{ isSelected: boolean }> = ({ isSelected }) => {
           widget: {
             id: '6755bbf2d5db91003325bdc5', title: 'Jumlah Peserta BPJS Aktif',
             styleOptions: customStyle1,
-            titleWrapperClass: 'bg-orange-100',
-            widgetContentWrapperClass: 'bg-orange-50',
+            titleWrapperClass: 'bg-lime-100',
+            widgetContentWrapperClass: 'bg-lime-50',
             titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
             iconWrapperClass: 'bg-sky-100',
             // icon: <FcMoneyTransfer className='text-4xl' />
@@ -143,8 +143,8 @@ const SisenseBPJS: React.FC<{ isSelected: boolean }> = ({ isSelected }) => {
           widget: {
             id: '6755bbf2d5db91003325bdcb', title: 'Jumlah Peserta BPJS Tidak Aktif',
             styleOptions: customStyle1,
-            titleWrapperClass: 'bg-orange-100',
-            widgetContentWrapperClass: 'bg-orange-50',
+            titleWrapperClass: 'bg-lime-100',
+            widgetContentWrapperClass: 'bg-lime-50',
             titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
             iconWrapperClass: 'bg-sky-100',
             // icon: <FcMoneyTransfer className='text-4xl' />
@@ -156,8 +156,8 @@ const SisenseBPJS: React.FC<{ isSelected: boolean }> = ({ isSelected }) => {
         //   widget: {
         //     id: '6755bd24d5db91003325bded', title: 'Peserta Aktif vs Penduduk',
         //     styleOptions: customStyle5,
-        //     titleWrapperClass: 'bg-orange-100',
-        //     widgetContentWrapperClass: 'bg-orange-50',
+        //     titleWrapperClass: 'bg-lime-100',
+        //     widgetContentWrapperClass: 'bg-lime-50',
         //     titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
         //     iconWrapperClass: 'bg-sky-100',
         //     // icon: <FcMoneyTransfer className='text-4xl' />
@@ -169,8 +169,8 @@ const SisenseBPJS: React.FC<{ isSelected: boolean }> = ({ isSelected }) => {
           widget: {
             id: '6755bd7ad5db91003325bdf8', title: 'Peserta Aktif vs Peserta Tidak Aktif',
             styleOptions: customStyle8,
-            titleWrapperClass: 'bg-orange-100',
-            widgetContentWrapperClass: 'bg-orange-50',
+            titleWrapperClass: 'bg-lime-100',
+            widgetContentWrapperClass: 'bg-lime-50',
             titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
             widgetContentWrapperStyle: { paddingTop: '1rem' },
             iconWrapperClass: 'bg-sky-100',
@@ -183,8 +183,8 @@ const SisenseBPJS: React.FC<{ isSelected: boolean }> = ({ isSelected }) => {
           widget: {
             id: '6755bd2dd5db91003325bdf1', title: 'Peserta Aktif dan Tidak Aktif BPJS',
             styleOptions: customStyle8,
-            titleWrapperClass: 'bg-orange-100',
-            widgetContentWrapperClass: 'bg-orange-50',
+            titleWrapperClass: 'bg-lime-100',
+            widgetContentWrapperClass: 'bg-lime-50',
             titleStyle: { paddingTop: '0.3rem', paddingBottom: '1rem' },
             widgetContentWrapperStyle: { paddingTop: '1rem' },
             iconWrapperClass: 'bg-sky-100',
@@ -200,7 +200,7 @@ const SisenseBPJS: React.FC<{ isSelected: boolean }> = ({ isSelected }) => {
           colSpan: 4,
           widgetType: 'default',
           widget: {
-            id: '6755bea8d5db91003325be02', title: 'Total Anggaran BPJS tahun 2024',
+            id: '6755bea8d5db91003325be02', title: 'Anggaran BPJS tahun 2024',
             styleOptions: customStyle1,
             titleWrapperClass: 'bg-teal-100',
             widgetContentWrapperClass: 'bg-teal-50',
@@ -215,7 +215,7 @@ const SisenseBPJS: React.FC<{ isSelected: boolean }> = ({ isSelected }) => {
           colSpan: 4,
           widgetType: 'default',
           widget: {
-            id: '6755beadd5db91003325be04', title: 'Total Proyeksi Anggaran tahun 2024',
+            id: '6755beadd5db91003325be04', title: 'Proyeksi Anggaran tahun 2024',
             styleOptions: customStyle1,
             titleWrapperClass: 'bg-teal-100',
             widgetContentWrapperClass: 'bg-teal-50',
